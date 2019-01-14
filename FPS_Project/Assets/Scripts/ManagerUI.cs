@@ -3,24 +3,33 @@ using UnityEngine.UI;
 
 public class ManagerUI : MonoBehaviour
 {
-  [SerializeField]
-  private Button _btnServer;
-  [SerializeField]
-  private Button _btnClient;
-  [SerializeField]
-  private Button _btnDisconnect;
-  [SerializeField]
-  private Button _btnKillServer;
-  [SerializeField]
-  private Text _txtConsoleOutput;
+  public Button _btnServer;
+  public Button _btnClient;
+  public Button _btnDisconnect;
+  public Button _btnKillServer;
+  public Button _btnCreatePlayer;
+  public Text _txtConsoleOutput;
+  public Text _txtIP;
+  public InputField _inputIP;
+  public InputField _inputUsername;
 
   private bool _isServer;
+  [SerializeField]
+  private Transform _spawnPoint;
+  [SerializeField]
+  private GameObject _playerPrefab;
+  private GameObject _player;
   private GameObject _networkGO;
 
-  private void Awake()
+  private string _myIp;
+
+  private void Start()
   {
     _btnDisconnect.gameObject.SetActive(false);
     _btnKillServer.gameObject.SetActive(false);
+    _btnCreatePlayer.gameObject.SetActive(false);
+    _txtConsoleOutput.text = "";
+    _txtIP.text = new IP().GetIp();
   }
 
   public void StartUp(bool isServer)
@@ -28,40 +37,33 @@ public class ManagerUI : MonoBehaviour
     _networkGO = new GameObject("Network");
     if (isServer)
     {
-      _networkGO.AddComponent<Server>().Init();
+      _networkGO.AddComponent<Server>().Init(this);
     }
     else
     {
-      _networkGO.AddComponent<Client>().Init();
+      _networkGO.AddComponent<Client>().Init(this);
     }
     _isServer = isServer;
 
     ToggleButtons();
-
-    Debug.Log("Is Server: " + isServer);
   }
 
   public void Disconnect()
   {
     Shutdown();
-    Debug.Log("Disconnect from Server");
+    ConsoleMsg("Disconnect from Server");
   }
 
   public void KillServer()
   {
     Shutdown();
-    Debug.Log("Kill Server");
-  }
-
-  public void ConsoleMsg(string msg)
-  {
-    _txtConsoleOutput.text += msg + "\n";
-    Debug.Log(msg);
+    ConsoleMsg("Kill Server");
   }
 
   private void Shutdown()
   {
     ToggleButtons(true);
+    Destroy(_player);
     _networkGO.SendMessage("Shutdown");
   }
 
@@ -69,14 +71,36 @@ public class ManagerUI : MonoBehaviour
   {
     _btnServer.gameObject.SetActive(show);
     _btnClient.gameObject.SetActive(show);
+    _inputIP.gameObject.SetActive(show);
 
     if (_isServer)
-    {
       _btnKillServer.gameObject.SetActive(!show);
-    }
     else
-    {
       _btnDisconnect.gameObject.SetActive(!show);
+
+    _btnCreatePlayer.gameObject.SetActive(!show);
+
+  }
+
+  public void CreatePlayer()
+  {
+    if (!_player)
+    {
+      _player = Instantiate(_playerPrefab) as GameObject;
+      _player.SendMessage("StartUp", _networkGO);
     }
+
+    _player.transform.position = _spawnPoint.position;
+  }
+
+  public GameObject GetPlayer()
+  {
+    return _player;
+  }
+
+  public void ConsoleMsg(string msg)
+  {
+    _txtConsoleOutput.text += msg + "\n";
+    Debug.Log(msg);
   }
 }

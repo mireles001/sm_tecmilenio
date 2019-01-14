@@ -1,32 +1,26 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
 using UnityEngine.Networking;
 
 public class Client : NetworkCore
 {
-  [SerializeField]
-  private string _serverIp = "127.0.0.1";
-
-  public override void Init()
+  public override void Init(ManagerUI ui)
   {
-    base.Init();
+    base.Init(ui);
+
+    _isServer = false;
 
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
+    _unreliableChannel = cc.AddChannel(QosType.Unreliable);
 
     HostTopology topo = new HostTopology(cc, MAX_USERS);
     _hostId = NetworkTransport.AddHost(topo, 0);
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-    // Web Client
-    NetworkTransport.Connect(_hostId, _serverIp, WEB_PORT, 0, out _error);
-    Debug.Log("Connecting from web");
-#else
-    // Standalone Client
-    NetworkTransport.Connect(_hostId, _serverIp, PORT, 0, out _error);
-    Debug.Log("Connecting from standalone");
-#endif
+    _connectionId = NetworkTransport.Connect(_hostId, _serverIp, PORT, 0, out _error);
 
-    Debug.Log(string.Format("Attempting to connect on {0}", _serverIp));
+    _ui.ConsoleMsg(string.Format("Attempting to connect on {0}", _serverIp));
   }
 
   public override void UpdateMessagePump()
@@ -49,21 +43,44 @@ public class Client : NetworkCore
         break;
 
       case NetworkEventType.ConnectEvent:
-        Debug.Log("We have connected to the server");
+        _ui.ConsoleMsg("We have connected to the server.");
         break;
 
       case NetworkEventType.DisconnectEvent:
-        Debug.Log("We have been disconnected");
+        _ui.Disconnect();
         break;
 
       case NetworkEventType.DataEvent:
-        Debug.Log("Data");
+        BinaryFormatter formatter = new BinaryFormatter();
+        MemoryStream ms = new MemoryStream(recBuffer);
+        NetMsg msg = (NetMsg)formatter.Deserialize(ms);
+
+        OnData(connectionId, channelId, recHostId, msg);
         break;
 
       default:
       case NetworkEventType.BroadcastEvent:
-        Debug.Log("Unexpected network event type");
+        _ui.ConsoleMsg("Unexpected network event type");
         break;
     }
+  }
+
+  private void OnData(int cnnId, int channelId, int recHostId, NetMsg msg)
+  {
+    switch (msg.OP)
+    {
+      case NetOP.None:
+        _ui.ConsoleMsg("Unexpected NETOP");
+        break;
+
+      case NetOP.SetConnectionId:
+        SetConnectionId(cnnId, channelId, recHostId, (Net_ConnectionId)msg);
+        break;
+    }
+  }
+
+  private void SetConnectionId(int cnnId, int channelId, int recHostId, Net_ConnectionId ci)
+  {
+    _ui.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
   }
 }
