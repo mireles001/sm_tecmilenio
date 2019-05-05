@@ -87,7 +87,6 @@ public class ManagerUI : MonoBehaviour
     if (!_player)
     {
       _player = Instantiate(_playerPrefab) as GameObject;
-      _player.SendMessage("StartUp", _networkGO);
     }
 
     _player.transform.position = _spawnPoint.position;
