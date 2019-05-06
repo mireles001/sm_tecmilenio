@@ -179,13 +179,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475327593012569664}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 8937701885546901884}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!137 &4905845870002896795
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -388,14 +388,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017923654126284485}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 6180462456894207004}
   m_Father: {fileID: 8937701885546901884}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1024412267925818169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,8 +1803,9 @@ GameObject:
   - component: {fileID: 8937701885546901884}
   - component: {fileID: 1333939890857450502}
   - component: {fileID: 1605479941}
+  - component: {fileID: 7225445569887436342}
   m_Layer: 0
-  m_Name: 3pv
+  m_Name: tpv
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1857,6 +1858,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee62b3dcfad2e44eb0f6a0c38032827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7225445569887436342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5355414762300261231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f3b2205b18c9f346a4a6223a230222b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapons:
+  - {fileID: 504071990095496787, guid: c6c00f209783c5b41902c11da0343dfd, type: 3}
+  - {fileID: 5639862664436623730, guid: 208b72bbbd1eead4d9ed9b8fc3c15ed9, type: 3}
+  - {fileID: 6770229581849315129, guid: 125fc7801eff154448a57ee702b8ace5, type: 3}
+  _weaponHolder: {fileID: 6977104594629764017}
 --- !u!1 &5443732701299875778
 GameObject:
   m_ObjectHideFlags: 0

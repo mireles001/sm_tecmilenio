@@ -4,10 +4,12 @@ public class TpvAnimation : MonoBehaviour
 {
   private Animator _anim;
   private bool _isGrounded = false;
+  private WeaponsManager _weapons;
 
-  private void Start()
+  private void Awake()
   {
     _anim = GetComponent<Animator>();
+    _weapons = GetComponent<WeaponsManager>();
   }
 
   public void SetIsGrounded(bool value)
@@ -48,9 +50,10 @@ public class TpvAnimation : MonoBehaviour
     }
   }
 
-  public void WeaponChange()
+  public void WeaponChange(int index)
   {
     _anim.Play("weapon_change");
+    _weapons.WeaponChange(index);
   }
 
   public void WeaponUse()

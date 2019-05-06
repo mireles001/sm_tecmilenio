@@ -2,20 +2,21 @@
 
 public class FpvAnimation : MonoBehaviour
 {
-  private bool _isRunning;
-  private bool _isGrounded;
+  private bool _isRunning = false;
+  private bool _isGrounded = false;
   private float _inputValue;
   private PlayerMovement _player;
+  private WeaponsManager _weapons;
   private Animator _anim;
   private CharacterController _char;
 
-  private void Start()
+  private void Awake()
   {
-    _isRunning = false;
-    _isGrounded = false;
     _anim = GetComponent<Animator>();
 
-    transform.parent.parent.GetComponent<PlayerMovement>().SetFpv(this);
+    Transform player = transform.parent;
+    _weapons = GetComponent<WeaponsManager>().StartUp(player.GetComponent<PlayerWeapons>());
+    player.GetComponent<PlayerMovement>().SetFpv(this);
   }
 
   public FpvAnimation StartUp(PlayerMovement player)
@@ -75,9 +76,10 @@ public class FpvAnimation : MonoBehaviour
     _anim.Play("weapon_use");
   }
 
-  public void WeaponChange()
+  public void WeaponChange(int index)
   {
     _anim.Play("weapon_change");
+    _weapons.WeaponChange(index);
   }
 
   public void Jump()

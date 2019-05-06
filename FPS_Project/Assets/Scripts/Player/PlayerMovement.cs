@@ -2,23 +2,26 @@
 
 public class PlayerMovement : MonoBehaviour
 {
-  // Editable stats
-  public float jumpSpeed = 4f;
-  public float runSpeed = 4f;
-  public float playerHp = 100f;
-  public float camSens = 0.25f;
-  public Transform cameraPos;
-
-  private Vector3 _velocity = new Vector3();
-  private Vector3 _lastMouse = new Vector3(255, 255, 255);
-  
-  private bool _isLocked = false;
+  [SerializeField]
+  private float _jumpSpeed;
+  [SerializeField]
+  private float _runSpeed;
+  [SerializeField]
+  private float camSens = 0.5f;
+  [SerializeField]
+  private Transform _cameraPos;
+  private PlayerCore _core;
   private CharacterController _char;
   private FpvAnimation _fpv;
 
-  private void Start()
+  private Vector3 _velocity = new Vector3();
+  private Vector3 _lastMouse = new Vector3(255, 255, 255);
+
+  public void StartUp()
   {
-    Camera.main.transform.parent = cameraPos;
+    _core = GetComponent<PlayerCore>();
+
+    Camera.main.transform.parent = _cameraPos;
     Camera.main.transform.localPosition = Vector3.zero;
     Camera.main.transform.localRotation = Quaternion.identity;
     _char = GetComponent<CharacterController>();
@@ -26,23 +29,23 @@ public class PlayerMovement : MonoBehaviour
 
   private void LateUpdate()
   {
-    if (!_isLocked)
+    if (!_core.IsLocked)
     {
       _lastMouse = Input.mousePosition - _lastMouse;
       _lastMouse = new Vector3(-_lastMouse.y * camSens, _lastMouse.x * camSens, 0);
 
       transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + _lastMouse.y, 0);
-      cameraPos.eulerAngles = new Vector3(cameraPos.eulerAngles.x + _lastMouse.x, cameraPos.eulerAngles.y, 0);
+      _cameraPos.eulerAngles = new Vector3(_cameraPos.eulerAngles.x + _lastMouse.x, _cameraPos.eulerAngles.y, 0);
       _lastMouse = Input.mousePosition;
 
       if (_char.isGrounded && Input.GetButtonDown("Jump"))
       {
-        _velocity.y = jumpSpeed;
+        _velocity.y = _jumpSpeed;
       }
 
       _velocity.x = 0;
       _velocity.z = 0;
-      _velocity += GetBaseInput() * runSpeed;
+      _velocity += GetBaseInput() * _runSpeed;
 
       _velocity += Physics.gravity * Time.deltaTime;
 
@@ -74,11 +77,21 @@ public class PlayerMovement : MonoBehaviour
     }
   }
 
-  public bool IsLocked
+  public void SetSpeed(float value)
+  {
+    _runSpeed = value;
+  }
+
+  public void SetJump(float value)
+  {
+    _jumpSpeed = value;
+  }
+
+  public Transform CameraPos
   {
     get
     {
-      return _isLocked;
+      return _cameraPos;
     }
   }
 }

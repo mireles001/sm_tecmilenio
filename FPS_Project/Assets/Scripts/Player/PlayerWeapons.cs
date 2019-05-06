@@ -4,17 +4,22 @@ public class PlayerWeapons : MonoBehaviour
 {
   public int glAmmo = 5;
   public int rlAmmo = 5;
-  private int _weaponIndex = 1;
+  private Transform _weaponFireSpawn;
+  private int _weaponIndex = 0;
   private PlayerMovement _player;
+  private PlayerCore _core;
 
-  private void Start()
+  public void StartUp()
   {
+    _core = GetComponent<PlayerCore>();
     _player = GetComponent<PlayerMovement>();
+
+    ChangeWeapon(1);
   }
 
   private void LateUpdate()
   {
-    if (!_player.IsLocked)
+    if (!_core.IsLocked)
     {
       int changeWeapon = 0;
       if (Input.GetKeyDown("1"))
@@ -65,7 +70,7 @@ public class PlayerWeapons : MonoBehaviour
     {
       Debug.Log("Change weapon: " + index);
       _weaponIndex = index;
-      _player.Fpv.WeaponChange();
+      _player.Fpv.WeaponChange(index);
     }
   }
 
@@ -93,7 +98,12 @@ public class PlayerWeapons : MonoBehaviour
         break;
     }
 
-    Debug.Log("Shoot weapon: " + index);
+    Debug.Log("Shoot weapon: " + index + " at " + _weaponFireSpawn.parent.gameObject.name);
     _player.Fpv.WeaponUse();
+  }
+
+  public void SetWeaponFireSpawn(Transform fireSpawn)
+  {
+    _weaponFireSpawn = fireSpawn;
   }
 }
