@@ -19,6 +19,8 @@ public class Server : NetworkCore
     _hostId = NetworkTransport.AddHost(topo, PORT, null);
 
     _ui.ConsoleMsg(string.Format("Opening connection on port {0}", PORT));
+
+    GameState.GetInstance().init();
   }
 
   public override void UpdateMessagePump()
