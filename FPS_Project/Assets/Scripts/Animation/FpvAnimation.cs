@@ -44,7 +44,7 @@ public class FpvAnimation : MonoBehaviour
             _anim.SetBool("is_running", true);
 
           _isRunning = true;
-          _anim.SetFloat("hSpeed", _inputValue);
+          _anim.SetFloat("movement", _inputValue);
         }
         else
         {
@@ -60,7 +60,7 @@ public class FpvAnimation : MonoBehaviour
           _anim.SetBool("is_grounded", false);
 
         _isGrounded = false;
-        _anim.SetFloat("vSpeed", _char.velocity.y);
+        _anim.SetFloat("verticalSpeed", _char.velocity.y);
       }
     }
 

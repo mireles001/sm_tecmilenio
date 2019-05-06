@@ -9,25 +9,21 @@ public class PlayerMovement : MonoBehaviour
   public float camSens = 0.25f;
   public Transform cameraPos;
 
-  // Boolean to freeze player controls
-  private bool _isLocked = false;
   private Vector3 _velocity = new Vector3();
-  private Vector3 _inputVelocity = new Vector3();
   private Vector3 _lastMouse = new Vector3(255, 255, 255);
+  
+  private bool _isLocked = false;
   private CharacterController _char;
   private FpvAnimation _fpv;
 
-  // Start is called before the first frame update
   private void Start()
   {
     Camera.main.transform.parent = cameraPos;
     Camera.main.transform.localPosition = Vector3.zero;
     Camera.main.transform.localRotation = Quaternion.identity;
-
     _char = GetComponent<CharacterController>();
   }
 
-  // Update is called once per frame
   private void LateUpdate()
   {
     if (!_isLocked)

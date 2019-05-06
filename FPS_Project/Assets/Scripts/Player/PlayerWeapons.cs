@@ -43,7 +43,7 @@ public class PlayerWeapons : MonoBehaviour
       if (changeWeapon > 0 && changeWeapon != _weaponIndex)
         ChangeWeapon(changeWeapon);
 
-      if (Input.GetButton("Fire1"))
+      if (Input.GetButtonDown("Fire1"))
       {
         if (HaveAmmo())
           WeaponUse(_weaponIndex);

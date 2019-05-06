@@ -12,7 +12,7 @@ AnimatorStateTransition:
     m_ConditionEvent: is_grounded
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: vSpeed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2016781762349278124}
@@ -90,7 +90,7 @@ AnimatorStateTransition:
     m_ConditionEvent: is_grounded
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: vSpeed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1334102731729420274}
@@ -115,7 +115,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: vSpeed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1334102731729420274}
@@ -305,7 +305,7 @@ AnimatorStateTransition:
     m_ConditionEvent: is_grounded
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: vSpeed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1334102731729420274}
@@ -413,7 +413,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: hSpeed
+  - m_Name: movement
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -425,7 +425,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: vSpeed
+  - m_Name: verticalSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -589,7 +589,7 @@ AnimatorStateTransition:
     m_ConditionEvent: is_grounded
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: vSpeed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2016781762349278124}
@@ -655,7 +655,7 @@ AnimatorState:
   m_TimeParameterActive: 0
   m_Motion: {fileID: 690830802772438984, guid: d299626227d6cbc4785e33d0c3a199f0, type: 3}
   m_Tag: 
-  m_SpeedParameter: hSpeed
+  m_SpeedParameter: movement
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
