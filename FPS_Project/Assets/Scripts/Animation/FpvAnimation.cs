@@ -18,10 +18,12 @@ public class FpvAnimation : MonoBehaviour
     transform.parent.parent.GetComponent<PlayerMovement>().SetFpv(this);
   }
 
-  public void StartUp(PlayerMovement player)
+  public FpvAnimation StartUp(PlayerMovement player)
   {
     _player = player;
     _char = _player.gameObject.GetComponent<CharacterController>();
+
+    return this;
   }
 
   private void LateUpdate()
@@ -61,20 +63,30 @@ public class FpvAnimation : MonoBehaviour
         _anim.SetFloat("vSpeed", _char.velocity.y);
       }
     }
+
+    if (Input.GetKeyDown("v"))
+    {
+      Damage();
+    }
   }
 
   public void WeaponUse()
   {
-    _anim.SetTrigger("weapon_use");
+    _anim.Play("weapon_use");
   }
 
   public void WeaponChange()
   {
-    _anim.SetTrigger("weapon_change");
+    _anim.Play("weapon_change");
   }
 
   public void Jump()
   {
     _anim.SetBool("is_grounded", false);
+  }
+
+  public void Damage()
+  {
+    _anim.Play("damage");
   }
 }
