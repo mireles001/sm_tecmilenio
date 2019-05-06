@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3248241844767100369}
   - component: {fileID: 5136702614289733344}
   - component: {fileID: 2102443009903815937}
+  - component: {fileID: 5196339446903046776}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -63,13 +64,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 736806d40dd30a24ca76c39e8657c232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSpeed: 4
+  jumpSpeed: 8
   runSpeed: 4
   playerHp: 100
-  isMain: 1
-  charControl: {fileID: 5136702614289733344}
+  camSens: 0.5
   cameraPos: {fileID: 8564819896671800712}
-  charContainer: {fileID: 0}
+--- !u!114 &5196339446903046776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3248241844767100378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bf98461b2848d49aeea9f001271739, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  glAmmo: 5
+  rlAmmo: 5
 --- !u!1 &5946382262230169819
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +124,7 @@ PrefabInstance:
     - target: {fileID: 3416277785949381743, guid: a493737d04da65d45a3a221fe8bdec29,
         type: 3}
       propertyPath: m_Name
-      value: gorogoro_fpv
+      value: fpv
       objectReference: {fileID: 0}
     - target: {fileID: 1815609614348375676, guid: a493737d04da65d45a3a221fe8bdec29,
         type: 3}
@@ -166,6 +179,11 @@ PrefabInstance:
     - target: {fileID: 1815609614348375676, guid: a493737d04da65d45a3a221fe8bdec29,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2390952916422662299, guid: a493737d04da65d45a3a221fe8bdec29,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

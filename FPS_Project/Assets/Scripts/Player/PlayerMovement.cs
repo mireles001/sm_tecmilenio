@@ -1,92 +1,88 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  // editable stats
-  public float jumpSpeed = 4;
-  public float runSpeed = 4;
-  public float playerHp = 100;
-  public bool isMain = true;
+  // Editable stats
+  public float jumpSpeed = 4f;
+  public float runSpeed = 4f;
+  public float playerHp = 100f;
+  public float camSens = 0.25f;
+  public Transform cameraPos;
 
-  // values
-  private float _camSens = 0.25f; //How sensitive it with mouse
-  // float airAccRatio = 5;
-
-  // state
-  // [HideInInspector]
+  // Boolean to freeze player controls
+  private bool _isLocked = false;
   private Vector3 _velocity = new Vector3();
   private Vector3 _inputVelocity = new Vector3();
   private Vector3 _lastMouse = new Vector3(255, 255, 255);
-  private bool _jumpPressed = false;
-  private bool _jumpHold = false;
-
-  // unity reference
-  public CharacterController charControl;
-  public Transform cameraPos;
+  private CharacterController _char;
+  private FpvAnimation _fpv;
 
   // Start is called before the first frame update
-  void Start()
+  private void Start()
   {
+    Camera.main.transform.parent = cameraPos;
+    Camera.main.transform.localPosition = Vector3.zero;
+    Camera.main.transform.localRotation = Quaternion.identity;
 
-
+    _char = GetComponent<CharacterController>();
   }
 
   // Update is called once per frame
-  void Update()
+  private void LateUpdate()
   {
-    //Mouse  camera angle
-    _lastMouse = Input.mousePosition - _lastMouse;
-    _lastMouse = new Vector3(-_lastMouse.y * _camSens, _lastMouse.x * _camSens, 0);
-    // _lastMouse = new Vector3(transform.eulerAngles.x + _lastMouse.x, transform.eulerAngles.y + _lastMouse.y, 0);
-    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + _lastMouse.y, 0);
-    cameraPos.eulerAngles = new Vector3(cameraPos.eulerAngles.x + _lastMouse.x, cameraPos.eulerAngles.y, 0);
-    _lastMouse = Input.mousePosition;
-
-    if (charControl.isGrounded)
+    if (!_isLocked)
     {
-      _velocity.y = 0;
-      if (_jumpPressed) {
+      _lastMouse = Input.mousePosition - _lastMouse;
+      _lastMouse = new Vector3(-_lastMouse.y * camSens, _lastMouse.x * camSens, 0);
+
+      transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + _lastMouse.y, 0);
+      cameraPos.eulerAngles = new Vector3(cameraPos.eulerAngles.x + _lastMouse.x, cameraPos.eulerAngles.y, 0);
+      _lastMouse = Input.mousePosition;
+
+      if (_char.isGrounded && Input.GetButtonDown("Jump"))
+      {
         _velocity.y = jumpSpeed;
       }
-    } else {
 
+      _velocity.x = 0;
+      _velocity.z = 0;
+      _velocity += GetBaseInput() * runSpeed;
+
+      _velocity += Physics.gravity * Time.deltaTime;
+
+      _char.Move(_velocity * Time.deltaTime);
     }
-      
-    _velocity.x = 0;
-    _velocity.z = 0;
-    _velocity += GetBaseInput() * runSpeed;
-
-    _velocity += Physics.gravity * Time.deltaTime;
-    
-    charControl.Move(_velocity * Time.deltaTime );
-
-    Camera.main.transform.position = cameraPos.position;
-    Camera.main.transform.rotation = cameraPos.rotation;
   }
 
   private Vector3 GetBaseInput()
-  { 
-    _jumpPressed = Input.GetButtonDown("Jump");
-    _jumpHold = Input.GetButton("Jump");
-
-    //returns the basic values, if it's 0 than it's not active.
+  {
     Vector3 moveDirection = new Vector3();
     moveDirection += Input.GetAxis("Vertical") * transform.forward
     + Input.GetAxis("Horizontal") * transform.right;
     moveDirection.y = 0;
+    // TODO: Avoid going from 0 to 1. Smooth transition.
     moveDirection.Normalize();
     return moveDirection;
   }
 
-  void SetCursorState()
-  {
-    Cursor.lockState = CursorLockMode.Locked;
-  }
-
   public void SetFpv(FpvAnimation fpv)
   {
-    fpv.StartUp(this);
+    _fpv = fpv.StartUp(this);
+  }
+
+  public FpvAnimation Fpv
+  {
+    get
+    {
+      return _fpv;
+    }
+  }
+
+  public bool IsLocked
+  {
+    get
+    {
+      return _isLocked;
+    }
   }
 }
