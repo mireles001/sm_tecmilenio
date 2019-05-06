@@ -24,11 +24,13 @@ public class PlayerMovement : MonoBehaviour
 
   // unity reference
   public CharacterController charControl;
-  public Transform camera;
+  public Transform cameraPos;
+  public Transform charContainer;
 
   // Start is called before the first frame update
   void Start()
   {
+
 
   }
 
@@ -60,8 +62,8 @@ public class PlayerMovement : MonoBehaviour
     
     charControl.Move(_velocity * Time.deltaTime );
 
-    Camera.main.transform.position = camera.position;
-    Camera.main.transform.rotation = camera.rotation;
+    Camera.main.transform.position = cameraPos.position;
+    Camera.main.transform.rotation = cameraPos.rotation;
   }
 
   private Vector3 GetBaseInput()
@@ -81,5 +83,10 @@ public class PlayerMovement : MonoBehaviour
   void SetCursorState()
   {
     Cursor.lockState = CursorLockMode.Locked;
+  }
+
+  public void SetFpv(FpvAnimation fpv)
+  {
+    fpv.StartUp(this);
   }
 }
