@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
   // unity reference
   public CharacterController charControl;
   public Transform cameraPos;
-  public Transform charContainer;
 
   // Start is called before the first frame update
   void Start()
@@ -40,8 +39,9 @@ public class PlayerMovement : MonoBehaviour
     //Mouse  camera angle
     _lastMouse = Input.mousePosition - _lastMouse;
     _lastMouse = new Vector3(-_lastMouse.y * _camSens, _lastMouse.x * _camSens, 0);
-    _lastMouse = new Vector3(transform.eulerAngles.x + _lastMouse.x, transform.eulerAngles.y + _lastMouse.y, 0);
-    transform.eulerAngles = _lastMouse;
+    // _lastMouse = new Vector3(transform.eulerAngles.x + _lastMouse.x, transform.eulerAngles.y + _lastMouse.y, 0);
+    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + _lastMouse.y, 0);
+    cameraPos.eulerAngles = new Vector3(cameraPos.eulerAngles.x + _lastMouse.x, cameraPos.eulerAngles.y, 0);
     _lastMouse = Input.mousePosition;
 
     if (charControl.isGrounded)
