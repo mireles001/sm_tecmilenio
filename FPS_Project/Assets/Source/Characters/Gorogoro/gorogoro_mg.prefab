@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a2a72e29c81494aa1cd9865944ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponFireSpawn: {fileID: 6815580598403358792}
+  _projectileSpawner: {fileID: 6815580598403358792}
 --- !u!1 &4112612742908075498
 GameObject:
   m_ObjectHideFlags: 0

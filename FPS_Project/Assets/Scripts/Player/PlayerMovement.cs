@@ -3,28 +3,30 @@
 public class PlayerMovement : MonoBehaviour
 {
   [SerializeField]
-  private float _jumpSpeed;
+  private float _jumpSpeed = 0f;
   [SerializeField]
-  private float _runSpeed;
+  private float _runSpeed = 0f;
   [SerializeField]
   private float camSens = 0.5f;
   [SerializeField]
-  private Transform _cameraPos;
+  private Transform _cameraPos; // TODO: Destroy this
   private PlayerCore _core;
   private CharacterController _char;
-  private FpvAnimation _fpv;
 
   private Vector3 _velocity = new Vector3();
   private Vector3 _lastMouse = new Vector3(255, 255, 255);
 
-  public void StartUp()
+  private void Awake()
   {
     _core = GetComponent<PlayerCore>();
+    _char = GetComponent<CharacterController>();
+  }
 
+  public void StartUp()
+  {
     Camera.main.transform.parent = _cameraPos;
     Camera.main.transform.localPosition = Vector3.zero;
     Camera.main.transform.localRotation = Quaternion.identity;
-    _char = GetComponent<CharacterController>();
   }
 
   private void LateUpdate()
@@ -64,34 +66,43 @@ public class PlayerMovement : MonoBehaviour
     return moveDirection;
   }
 
-  public void SetFpv(FpvAnimation fpv)
-  {
-    _fpv = fpv.StartUp(this);
-  }
-
-  public FpvAnimation Fpv
-  {
-    get
-    {
-      return _fpv;
-    }
-  }
-
-  public void SetSpeed(float value)
-  {
-    _runSpeed = value;
-  }
-
-  public void SetJump(float value)
-  {
-    _jumpSpeed = value;
-  }
-
   public Transform CameraPos
   {
     get
     {
       return _cameraPos;
+    }
+  }
+
+  public CharacterController CharRb
+  {
+    get
+    {
+      return _char;
+    }
+  }
+
+  public float JumpSpeed
+  {
+    get
+    {
+      return _jumpSpeed;
+    }
+    set
+    {
+      _jumpSpeed = value;
+    }
+  }
+
+  public float RunSpeed
+  {
+    get
+    {
+      return _runSpeed;
+    }
+    set
+    {
+      _runSpeed = value;
     }
   }
 }

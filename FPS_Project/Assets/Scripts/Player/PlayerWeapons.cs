@@ -2,18 +2,21 @@
 
 public class PlayerWeapons : MonoBehaviour
 {
-  public int glAmmo = 5;
-  public int rlAmmo = 5;
-  private Transform _weaponFireSpawn;
+  [SerializeField]
+  private int _grenades = 0;
+  [SerializeField]
+  private int _rockets = 0;
   private int _weaponIndex = 0;
-  private PlayerMovement _player;
+  private Transform _projectileSpawner;
   private PlayerCore _core;
+
+  private void Awake()
+  {
+    _core = GetComponent<PlayerCore>();
+  }
 
   public void StartUp()
   {
-    _core = GetComponent<PlayerCore>();
-    _player = GetComponent<PlayerMovement>();
-
     ChangeWeapon(1);
   }
 
@@ -63,14 +66,14 @@ public class PlayerWeapons : MonoBehaviour
     bool validWeapon = false;
     if (index == 1)
       validWeapon = true;
-    else if ((index == 2 && glAmmo > 0) || (index == 3 && rlAmmo > 0))
+    else if ((index == 2 && _grenades > 0) || (index == 3 && _rockets > 0))
       validWeapon = true;
 
     if (validWeapon)
     {
       Debug.Log("Change weapon: " + index);
       _weaponIndex = index;
-      _player.Fpv.WeaponChange(index);
+      _core.Fpv.WeaponChange(index);
     }
   }
 
@@ -78,7 +81,7 @@ public class PlayerWeapons : MonoBehaviour
   {
     bool shoot = false;
 
-    if (_weaponIndex == 1 || (_weaponIndex == 2 && glAmmo > 0) || (_weaponIndex == 3 && rlAmmo > 0))
+    if (_weaponIndex == 1 || (_weaponIndex == 2 && _grenades > 0) || (_weaponIndex == 3 && _rockets > 0))
       shoot = true;
 
     return shoot;
@@ -89,21 +92,52 @@ public class PlayerWeapons : MonoBehaviour
     switch (index)
     {
       case 2:
-        glAmmo--;
+        _grenades--;
         break;
       case 3:
-        rlAmmo--;
+        _rockets--;
         break;
       default:
         break;
     }
 
-    Debug.Log("Shoot weapon: " + index + " at " + _weaponFireSpawn.parent.gameObject.name);
-    _player.Fpv.WeaponUse();
+    Debug.Log("Shoot weapon: " + index + " at " + _projectileSpawner.parent.gameObject.name);
+    _core.Fpv.WeaponUse();
   }
 
-  public void SetWeaponFireSpawn(Transform fireSpawn)
+  public int Grenades
   {
-    _weaponFireSpawn = fireSpawn;
+    get
+    {
+      return _grenades;
+    }
+    set
+    {
+      _grenades = value;
+    }
+  }
+
+  public int Rockets
+  {
+    get
+    {
+      return _rockets;
+    }
+    set
+    {
+      _rockets = value;
+    }
+  }
+
+  public Transform ProjectileSpawner
+  {
+    get
+    {
+      return _projectileSpawner;
+    }
+    set
+    {
+      _projectileSpawner = value;
+    }
   }
 }

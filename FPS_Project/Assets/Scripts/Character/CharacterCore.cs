@@ -4,18 +4,28 @@ using System.Collections.Generic;
 public class CharacterCore : MonoBehaviour
 {
   [SerializeField]
+  private string _characterName = "unnamed";
+  [SerializeField]
   private float _movementSpeed = 10f;
   [SerializeField]
   private float _jumpForce = 10f;
   [SerializeField]
-  private float _maxHealth = 100f;
+  private int _maxHealth = 100;
   [SerializeField]
   private float _cameraPosition = 1f;
   [SerializeField]
-  private float _colliderWidth = 0.25f;
+  private float _colliderWidth = 0.5f;
   [SerializeField]
-  private float _colliderHeight = 1f;
+  private float _colliderHeight = 2f;
   private PlayerCore _core;
+  private CharacterWeapons _weapons;
+  private FpvAnimation _fpv;
+
+  private void Awake()
+  {
+    _weapons = GetComponent<CharacterWeapons>();
+    _fpv = GetComponent<FpvAnimation>();
+  }
 
   public void StartUp(PlayerCore core)
   {
@@ -23,13 +33,43 @@ public class CharacterCore : MonoBehaviour
 
     Dictionary<string, object> characterParams = new Dictionary<string, object>();
 
+    characterParams["name"] = _characterName;
     characterParams["speed"] = _movementSpeed;
     characterParams["jump"] = _jumpForce;
     characterParams["health"] = _maxHealth;
     characterParams["camera"] = _cameraPosition;
     characterParams["width"] = _colliderWidth;
     characterParams["height"] = _colliderHeight;
+    characterParams["fpv"] = _fpv;
 
     _core.SetValues(characterParams);
   }
+
+  public PlayerCore PlayerCore
+  {
+    get
+    {
+      return _core;
+    }
+  }
+
+  public CharacterWeapons CharacterWeapons
+  {
+    get
+    {
+      return _weapons;
+    }
+  }
+
+  /*public FpvAnimation Fpv
+  {
+    get
+    {
+      return _fpv;
+    }
+    set
+    {
+      _fpv = value;
+    }
+  }*/
 }

@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a2a72e29c81494aa1cd9865944ce20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponFireSpawn: {fileID: 981619900515491024}
+  _projectileSpawner: {fileID: 981619900515491024}
 --- !u!1001 &156193704023961741
 PrefabInstance:
   m_ObjectHideFlags: 0

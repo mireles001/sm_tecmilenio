@@ -3,64 +3,65 @@ using System.Collections.Generic;
 
 public class PlayerCore : MonoBehaviour
 {
-  public float hp;
-  public float maxHp;
-
   // TODO: This will be defined by a char selector
   public string characterPath;
-  private GameObject _character;
-  private bool _characterLoaded = false;
+
   private bool _isLocked = true;
+  [SerializeField]
+  private string _characterName = "unnamed";
+  [SerializeField]
+  private int _hp = 0;
+  [SerializeField]
+  private int _maxHp = 0;
+  private GameObject _character;
+  private PlayerMovement _playerMove;
+  private PlayerWeapons _playerWeapons;
+  private CharacterCore _charCore;
+  private CharacterWeapons _charWeapons;
+  private FpvAnimation _fpv;
+
+  private void Awake()
+  {
+    _playerMove = GetComponent<PlayerMovement>();
+    _playerWeapons = GetComponent<PlayerWeapons>();
+  }
 
   private void Start()
   {
+    // TODO: Temporal internal call to character load
     LoadCharacter(characterPath);
   }
 
-  public void CharacterReady()
-  {
-    _characterLoaded = true;
-    _isLocked = false;
-  }
-
+  // Called by GameMaster Object to load character content
   public void LoadCharacter(string path)
   {
-    _characterLoaded = false;
     _isLocked = true;
 
     if (_character)
-    {
       Destroy(_character);
-    }
-    _character = Instantiate(Resources.Load(characterPath + "/fpv") as GameObject, transform);
-    _character.name = "fpv_" + path;
-    _character.transform.localPosition = Vector3.zero;
-    _character.transform.localRotation = Quaternion.identity;
 
+    _character = Instantiate(Resources.Load(characterPath + "/fpv") as GameObject, transform, false);
     _character.GetComponent<CharacterCore>().StartUp(this);
   }
 
   public void SetValues(Dictionary<string, object> characterParams)
   {
-    CharacterController charRb = GetComponent<CharacterController>();
-    charRb.radius = (float)characterParams["width"];
-    charRb.height = (float)characterParams["height"];
+    _characterName = (string)characterParams["name"];
+    _maxHp = _hp = (int)characterParams["health"];
+    _playerMove.RunSpeed = (float)characterParams["speed"];
+    _playerMove.JumpSpeed = (float)characterParams["jump"];
+    _playerMove.CharRb.radius = (float)characterParams["width"];
+    _playerMove.CharRb.height = (float)characterParams["height"];
+    // TODO: Ewww ---- INI
+    _playerMove.CameraPos.localPosition = new Vector3(0f, (float)characterParams["camera"], 0f);
+    _character.transform.parent = _playerMove.CameraPos;
+    // TODO: Ewww ---- END
+    _fpv = (FpvAnimation)characterParams["fpv"];
 
-    maxHp = (float)characterParams["health"];
-    hp = maxHp;
+    _playerMove.StartUp();
+    _playerWeapons.StartUp();
 
-    PlayerMovement movement = GetComponent<PlayerMovement>();
-    movement.SetJump((float)characterParams["jump"]);
-    movement.SetSpeed((float)characterParams["speed"]);
-
-    movement.CameraPos.localPosition = new Vector3(0f, (float)characterParams["camera"], 0f);
-
-    _character.transform.parent = movement.CameraPos;
-
-    movement.StartUp();
-    GetComponent<PlayerWeapons>().StartUp();
-
-    CharacterReady();
+    _isLocked = false;
   }
 
   public bool IsLocked
@@ -68,6 +69,62 @@ public class PlayerCore : MonoBehaviour
     get
     {
       return _isLocked;
+    }
+  }
+
+  public PlayerMovement PlayerMovement
+  {
+    get
+    {
+      return _playerMove;
+    }
+  }
+
+  public PlayerWeapons PlayerWeapons
+  {
+    get
+    {
+      return _playerWeapons;
+    }
+  }
+
+  public CharacterCore CharacterCore
+  {
+    get
+    {
+      return _charCore;
+    }
+  }
+
+  public CharacterWeapons CharacterWeapons
+  {
+    get
+    {
+      return _charWeapons;
+    }
+  }
+
+  public FpvAnimation Fpv
+  {
+    get
+    {
+      return _fpv;
+    }
+    set
+    {
+      _fpv = value;
+    }
+  }
+
+  public int Hp
+  {
+    get
+    {
+      return _hp;
+    }
+    set
+    {
+      _hp = value;
     }
   }
 }
