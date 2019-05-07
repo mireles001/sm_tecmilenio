@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1333,6 +1333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715359455}
   - component: {fileID: 715359456}
+  - component: {fileID: 715359457}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1378,6 +1379,18 @@ MonoBehaviour:
   _spawnPoint: {fileID: 1315539929}
   _playerPrefab: {fileID: 3248241844767100378, guid: ceb1d2f3ca10fae4d8400ad888c907d1,
     type: 3}
+--- !u!114 &715359457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715359454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187014d2d6462634da671babf4e7f8ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &792502384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,7 +2179,7 @@ Transform:
   m_GameObject: {fileID: 1882196525}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -2.69, z: 14.8}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
