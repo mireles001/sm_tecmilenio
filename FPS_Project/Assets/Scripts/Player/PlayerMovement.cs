@@ -8,8 +8,9 @@ public class PlayerMovement : MonoBehaviour
   private float _runSpeed = 0f;
   [SerializeField]
   private float camSens = 0.5f;
-  [SerializeField]
-  private Transform _cameraPos; // TODO: Destroy this
+  private Transform _cameraPos;
+  private Camera _mainCam;
+  private Camera _fpvCam;
   private PlayerCore _core;
   private CharacterController _char;
 
@@ -20,13 +21,36 @@ public class PlayerMovement : MonoBehaviour
   {
     _core = GetComponent<PlayerCore>();
     _char = GetComponent<CharacterController>();
+
+    _mainCam = Camera.main;
+    _fpvCam = Instantiate(_mainCam);
+    Destroy(_fpvCam.gameObject.GetComponent<AudioListener>());
+
+    _fpvCam.name = "Fpv Camera";
+    _fpvCam.gameObject.tag = "Untagged";
+    _fpvCam.depth = 1;
+    _fpvCam.clearFlags = CameraClearFlags.Depth;
+    _fpvCam.cullingMask = 1 << 9;
   }
 
-  public void StartUp()
+  public void StartUp(float pos, Transform character)
   {
-    Camera.main.transform.parent = _cameraPos;
-    Camera.main.transform.localPosition = Vector3.zero;
-    Camera.main.transform.localRotation = Quaternion.identity;
+    if (!_cameraPos)
+    {
+      _cameraPos = new GameObject("cameras").transform;
+      _cameraPos.SetPositionAndRotation(transform.position, transform.rotation);
+      _cameraPos.parent = transform;
+      _mainCam.transform.parent = _cameraPos;
+      _fpvCam.transform.parent = _cameraPos;
+    }
+
+    _cameraPos.localPosition = new Vector3(0f, pos, 0f);
+    character.parent = _cameraPos;
+
+    _mainCam.transform.SetPositionAndRotation(_cameraPos.position, _cameraPos.rotation);
+    _fpvCam.transform.SetPositionAndRotation(_cameraPos.position, _cameraPos.rotation);
+
+    _core.Fpv.StartUp();
   }
 
   private void LateUpdate()
@@ -64,14 +88,6 @@ public class PlayerMovement : MonoBehaviour
     // TODO: Avoid going from 0 to 1. Smooth transition.
     moveDirection.Normalize();
     return moveDirection;
-  }
-
-  public Transform CameraPos
-  {
-    get
-    {
-      return _cameraPos;
-    }
   }
 
   public CharacterController CharRb

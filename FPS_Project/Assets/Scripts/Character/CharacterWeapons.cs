@@ -2,25 +2,36 @@
 
 public class CharacterWeapons : MonoBehaviour
 {
+  private enum CharacterType
+  {
+    thirdPerson,
+    firstPerson
+  }
+
   [SerializeField]
   private GameObject[] _weapons;
   [SerializeField]
   private Transform _weaponHolder;
   [SerializeField]
   private float _weaponSwapTimer = 0.33f;
-  private bool _isPlayer = false;
+  [SerializeField]
+  private CharacterType _characterType;
+  private bool _isPlayer;
   private int _weaponIndex;
   private GameObject _currentWeapon;
   private CharacterCore _core;
 
   private void Start()
   {
-    // TODO: Make this selectable
-    //_isPlayer = true;
-
-    if (_isPlayer)
+    switch (_characterType.GetHashCode())
     {
-      _core = GetComponent<CharacterCore>();
+      case 0:
+        _isPlayer = false;
+        break;
+      case 1:
+        _isPlayer = true;
+        _core = GetComponent<CharacterCore>();
+        break;
     }
   }
 
@@ -61,7 +72,10 @@ public class CharacterWeapons : MonoBehaviour
       MeshRenderer rend = target.GetChild(i).GetComponent<MeshRenderer>();
 
       if (rend)
+      {
+        rend.gameObject.layer = 9;
         rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+      }
 
       DisableCastShadow(target.GetChild(i));
     }

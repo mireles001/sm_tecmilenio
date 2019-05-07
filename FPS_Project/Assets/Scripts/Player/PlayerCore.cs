@@ -16,8 +16,6 @@ public class PlayerCore : MonoBehaviour
   private GameObject _character;
   private PlayerMovement _playerMove;
   private PlayerWeapons _playerWeapons;
-  private CharacterCore _charCore;
-  private CharacterWeapons _charWeapons;
   private FpvAnimation _fpv;
 
   private void Awake()
@@ -47,21 +45,29 @@ public class PlayerCore : MonoBehaviour
   public void SetValues(Dictionary<string, object> characterParams)
   {
     _characterName = (string)characterParams["name"];
+    _character.name = "fpv_" + _characterName;
     _maxHp = _hp = (int)characterParams["health"];
     _playerMove.RunSpeed = (float)characterParams["speed"];
     _playerMove.JumpSpeed = (float)characterParams["jump"];
     _playerMove.CharRb.radius = (float)characterParams["width"];
     _playerMove.CharRb.height = (float)characterParams["height"];
-    // TODO: Ewww ---- INI
-    _playerMove.CameraPos.localPosition = new Vector3(0f, (float)characterParams["camera"], 0f);
-    _character.transform.parent = _playerMove.CameraPos;
-    // TODO: Ewww ---- END
     _fpv = (FpvAnimation)characterParams["fpv"];
-
-    _playerMove.StartUp();
+    _playerMove.StartUp((float)characterParams["camera"], _character.transform);
     _playerWeapons.StartUp();
 
     _isLocked = false;
+  }
+
+  public int Hp
+  {
+    get
+    {
+      return _hp;
+    }
+    set
+    {
+      _hp = value;
+    }
   }
 
   public bool IsLocked
@@ -88,43 +94,11 @@ public class PlayerCore : MonoBehaviour
     }
   }
 
-  public CharacterCore CharacterCore
-  {
-    get
-    {
-      return _charCore;
-    }
-  }
-
-  public CharacterWeapons CharacterWeapons
-  {
-    get
-    {
-      return _charWeapons;
-    }
-  }
-
   public FpvAnimation Fpv
   {
     get
     {
       return _fpv;
-    }
-    set
-    {
-      _fpv = value;
-    }
-  }
-
-  public int Hp
-  {
-    get
-    {
-      return _hp;
-    }
-    set
-    {
-      _hp = value;
     }
   }
 }

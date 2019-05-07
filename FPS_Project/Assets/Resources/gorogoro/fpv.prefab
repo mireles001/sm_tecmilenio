@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2874183024113905836}
   - component: {fileID: 5583947090167557177}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,6 +901,7 @@ MonoBehaviour:
   - {fileID: 6770229581849315129, guid: 125fc7801eff154448a57ee702b8ace5, type: 3}
   _weaponHolder: {fileID: 7618011604247031827}
   _weaponSwapTimer: 0.33
+  _characterType: 1
 --- !u!1 &5083887712992596115
 GameObject:
   m_ObjectHideFlags: 0

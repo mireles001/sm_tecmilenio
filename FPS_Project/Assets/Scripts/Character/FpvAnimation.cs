@@ -3,7 +3,9 @@
 public class FpvAnimation : TpvAnimation
 {
   private bool _isRunning = false;
-  private float _inputValue;
+  private float _inputVerticalValue;
+  private float _inputHorizontalValue;
+  private float _absoluteVertical;
   private CharacterController _char;
 
   public void StartUp()
@@ -21,15 +23,22 @@ public class FpvAnimation : TpvAnimation
           _animator.SetBool("is_grounded", true);
 
         _isGrounded = true;
-        _inputValue = Input.GetAxis("Vertical");
+        _inputVerticalValue = Input.GetAxis("Vertical");
+        _absoluteVertical = Mathf.Abs(_inputVerticalValue);
+        _inputHorizontalValue = Mathf.Abs(Input.GetAxis("Horizontal"));
 
-        if (Mathf.Abs(_inputValue) > 0.05f)
+        if (_absoluteVertical > 0.05f || _inputHorizontalValue > 0.05f)
         {
           if (!_isRunning)
             _animator.SetBool("is_running", true);
 
           _isRunning = true;
-          _animator.SetFloat("movement", _inputValue);
+
+          if (_inputHorizontalValue > _absoluteVertical)
+            _animator.SetFloat("movement", _inputHorizontalValue);
+          else
+            _animator.SetFloat("movement", _inputVerticalValue);
+
         }
         else
         {
