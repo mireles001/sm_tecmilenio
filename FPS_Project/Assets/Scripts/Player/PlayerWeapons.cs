@@ -2,19 +2,27 @@
 
 public class PlayerWeapons : MonoBehaviour
 {
-  public int glAmmo = 5;
-  public int rlAmmo = 5;
-  private int _weaponIndex = 1;
-  private PlayerMovement _player;
+  [SerializeField]
+  private int _grenades = 0;
+  [SerializeField]
+  private int _rockets = 0;
+  private int _weaponIndex = 0;
+  private Transform _projectileSpawner;
+  private PlayerCore _core;
 
-  private void Start()
+  private void Awake()
   {
-    _player = GetComponent<PlayerMovement>();
+    _core = GetComponent<PlayerCore>();
+  }
+
+  public void StartUp()
+  {
+    ChangeWeapon(1);
   }
 
   private void LateUpdate()
   {
-    if (!_player.IsLocked)
+    if (!_core.IsLocked)
     {
       int changeWeapon = 0;
       if (Input.GetKeyDown("1"))
@@ -43,7 +51,7 @@ public class PlayerWeapons : MonoBehaviour
       if (changeWeapon > 0 && changeWeapon != _weaponIndex)
         ChangeWeapon(changeWeapon);
 
-      if (Input.GetButton("Fire1"))
+      if (Input.GetButtonDown("Fire1"))
       {
         if (HaveAmmo())
           WeaponUse(_weaponIndex);
@@ -58,14 +66,14 @@ public class PlayerWeapons : MonoBehaviour
     bool validWeapon = false;
     if (index == 1)
       validWeapon = true;
-    else if ((index == 2 && glAmmo > 0) || (index == 3 && rlAmmo > 0))
+    else if ((index == 2 && _grenades > 0) || (index == 3 && _rockets > 0))
       validWeapon = true;
 
     if (validWeapon)
     {
       Debug.Log("Change weapon: " + index);
       _weaponIndex = index;
-      _player.Fpv.WeaponChange();
+      _core.Fpv.WeaponChange(index);
     }
   }
 
@@ -73,7 +81,7 @@ public class PlayerWeapons : MonoBehaviour
   {
     bool shoot = false;
 
-    if (_weaponIndex == 1 || (_weaponIndex == 2 && glAmmo > 0) || (_weaponIndex == 3 && rlAmmo > 0))
+    if (_weaponIndex == 1 || (_weaponIndex == 2 && _grenades > 0) || (_weaponIndex == 3 && _rockets > 0))
       shoot = true;
 
     return shoot;
@@ -84,16 +92,52 @@ public class PlayerWeapons : MonoBehaviour
     switch (index)
     {
       case 2:
-        glAmmo--;
+        _grenades--;
         break;
       case 3:
-        rlAmmo--;
+        _rockets--;
         break;
       default:
         break;
     }
 
-    Debug.Log("Shoot weapon: " + index);
-    _player.Fpv.WeaponUse();
+    Debug.Log("Shoot weapon: " + index + " at " + _projectileSpawner.parent.gameObject.name);
+    _core.Fpv.WeaponUse();
+  }
+
+  public int Grenades
+  {
+    get
+    {
+      return _grenades;
+    }
+    set
+    {
+      _grenades = value;
+    }
+  }
+
+  public int Rockets
+  {
+    get
+    {
+      return _rockets;
+    }
+    set
+    {
+      _rockets = value;
+    }
+  }
+
+  public Transform ProjectileSpawner
+  {
+    get
+    {
+      return _projectileSpawner;
+    }
+    set
+    {
+      _projectileSpawner = value;
+    }
   }
 }

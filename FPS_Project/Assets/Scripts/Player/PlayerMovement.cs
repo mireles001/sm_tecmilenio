@@ -3,52 +3,78 @@ using System;
 
 public class PlayerMovement : MonoBehaviour
 {
-  // Editable stats
-  public float jumpSpeed = 4f;
-  public float runSpeed = 4f;
-  public float playerHp = 100f;
-  public float camSens = 0.25f;
-  public Transform cameraPos;
-
-  // Boolean to freeze player controls
-  private bool _isLocked = false;
-  private Vector3 _velocity = new Vector3();
-  private Vector3 _inputVelocity = new Vector3();
-  private Vector3 _lastMouse = new Vector3(255, 255, 255);
+  [SerializeField]
+  private float _jumpSpeed = 0f;
+  [SerializeField]
+  private float _runSpeed = 0f;
+  [SerializeField]
+  private float camSens = 0.5f;
+  private Transform _cameraPos;
+  private Camera _mainCam;
+  private Camera _fpvCam;
+  private PlayerCore _core;
   private CharacterController _char;
-  private FpvAnimation _fpv;
 
-  // Start is called before the first frame update
-  private void Start()
+  private Vector3 _velocity = new Vector3();
+  private Vector3 _lastMouse = new Vector3(255, 255, 255);
+
+  private void Awake()
   {
-    Camera.main.transform.parent = cameraPos;
-    Camera.main.transform.localPosition = Vector3.zero;
-    Camera.main.transform.localRotation = Quaternion.identity;
-
+    _core = GetComponent<PlayerCore>();
     _char = GetComponent<CharacterController>();
+
+    _mainCam = Camera.main;
+    _fpvCam = Instantiate(_mainCam);
+    Destroy(_fpvCam.gameObject.GetComponent<AudioListener>());
+
+    _fpvCam.name = "Fpv Camera";
+    _fpvCam.gameObject.tag = "Untagged";
+    _fpvCam.depth = 1;
+    _fpvCam.clearFlags = CameraClearFlags.Depth;
+    _fpvCam.cullingMask = 1 << 9;
+  }
+
+  public void StartUp(float pos, Transform character)
+  {
+    if (!_cameraPos)
+    {
+      _cameraPos = new GameObject("cameras").transform;
+      _cameraPos.SetPositionAndRotation(transform.position, transform.rotation);
+      _cameraPos.parent = transform;
+      _mainCam.transform.parent = _cameraPos;
+      _fpvCam.transform.parent = _cameraPos;
+    }
+
+    _cameraPos.localPosition = new Vector3(0f, pos, 0f);
+    character.parent = _cameraPos;
+
+    _mainCam.transform.SetPositionAndRotation(_cameraPos.position, _cameraPos.rotation);
+    _fpvCam.transform.SetPositionAndRotation(_cameraPos.position, _cameraPos.rotation);
+
+    _core.Fpv.StartUp();
   }
 
   // Update is called once per frame
   // why late???
   private void LateUpdate()
   {
-    if (!_isLocked)
+    if (!_core.IsLocked)
     {
       _lastMouse = Input.mousePosition - _lastMouse;
       _lastMouse = new Vector3(-_lastMouse.y * camSens, _lastMouse.x * camSens, 0);
 
       transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + _lastMouse.y, 0);
-      cameraPos.eulerAngles = new Vector3(cameraPos.eulerAngles.x + _lastMouse.x, cameraPos.eulerAngles.y, 0);
+      _cameraPos.eulerAngles = new Vector3(_cameraPos.eulerAngles.x + _lastMouse.x, _cameraPos.eulerAngles.y, 0);
       _lastMouse = Input.mousePosition;
 
       if (_char.isGrounded && Input.GetButtonDown("Jump"))
       {
-        _velocity.y = jumpSpeed;
+        _velocity.y = _jumpSpeed;
       }
 
       _velocity.x = 0;
       _velocity.z = 0;
-      _velocity += GetBaseInput() * runSpeed;
+      _velocity += GetBaseInput() * _runSpeed;
 
       _velocity += Physics.gravity * Time.deltaTime;
 
@@ -70,24 +96,35 @@ public class PlayerMovement : MonoBehaviour
     return moveDirection;
   }
 
-  public void SetFpv(FpvAnimation fpv)
-  {
-    _fpv = fpv.StartUp(this);
-  }
-
-  public FpvAnimation Fpv
+  public CharacterController CharRb
   {
     get
     {
-      return _fpv;
+      return _char;
     }
   }
 
-  public bool IsLocked
+  public float JumpSpeed
   {
     get
     {
-      return _isLocked;
+      return _jumpSpeed;
+    }
+    set
+    {
+      _jumpSpeed = value;
+    }
+  }
+
+  public float RunSpeed
+  {
+    get
+    {
+      return _runSpeed;
+    }
+    set
+    {
+      _runSpeed = value;
     }
   }
 }
