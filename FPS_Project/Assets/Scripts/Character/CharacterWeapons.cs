@@ -7,7 +7,6 @@ public class CharacterWeapons : MonoBehaviour
     thirdPerson,
     firstPerson
   }
-
   [SerializeField]
   private GameObject[] _weapons;
   [SerializeField]
@@ -78,6 +77,18 @@ public class CharacterWeapons : MonoBehaviour
       }
 
       DisableCastShadow(target.GetChild(i));
+    }
+  }
+
+  public float WeaponSwapTimer
+  {
+    get
+    {
+      return _weaponSwapTimer;
+    }
+    set
+    {
+      _weaponSwapTimer = value;
     }
   }
 }

@@ -56,6 +56,7 @@ public class PlayerCore : MonoBehaviour
     _playerWeapons.StartUp();
 
     _isLocked = false;
+    Cursor.lockState = CursorLockMode.Locked;
   }
 
   public int Hp
