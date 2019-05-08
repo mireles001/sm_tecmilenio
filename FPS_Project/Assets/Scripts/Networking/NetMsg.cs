@@ -3,6 +3,7 @@
   public const int None = 0;
   public const int SetUsername = 1;
   public const int SetConnectionId = 2;
+  public const int PlayerPushUpdate = 3;
 }
 
 [System.Serializable]

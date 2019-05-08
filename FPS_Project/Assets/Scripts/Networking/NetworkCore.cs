@@ -31,6 +31,8 @@ public class NetworkCore : MonoBehaviour
   {
     UpdateMessagePump();
 
+    // UpdateGameState();
+
     if (_isStarted && !_isServer && Input.GetButtonDown("Fire1"))
     {
       TESTFUCNTION();
@@ -70,6 +72,12 @@ public class NetworkCore : MonoBehaviour
       return;
   }
 
+  public virtual void UpdateGameState()
+  {
+    if (!_isStarted)
+      return;
+  }
+
   #region Send
   // Client Code
   public void SendServer(NetMsg msg)
@@ -81,6 +89,8 @@ public class NetworkCore : MonoBehaviour
     BinaryFormatter formatter = new BinaryFormatter();
     MemoryStream ms = new MemoryStream(buffer);
     formatter.Serialize(ms, msg);
+            Debug.Log("data send---------");
+        Debug.Log(msg);
 
     NetworkTransport.Send(_hostId, _connectionId, _reliableChannel, buffer, BYTE_SIZE, out _error);
   }
@@ -102,8 +112,13 @@ public class NetworkCore : MonoBehaviour
 
   public void TESTFUCNTION()
   {
-    Net_SetUsername su = new Net_SetUsername();
-    su.Username = _ui._inputUsername.textComponent.text;
-    SendServer(su);
+    Debug.Log("TESTFUNCTION");
+    var p = GameState.GetInstance().localPlayer;
+    Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
+    up.posX = p.position.x;
+    up.posY = p.position.y;
+    up.posZ = p.position.z;
+    SendServer(up);
+    
   }
 }

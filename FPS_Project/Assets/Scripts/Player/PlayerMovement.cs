@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
   }
 
   // Update is called once per frame
+  // why late???
   private void LateUpdate()
   {
     if (!_isLocked)
@@ -52,6 +53,9 @@ public class PlayerMovement : MonoBehaviour
       _velocity += Physics.gravity * Time.deltaTime;
 
       _char.Move(_velocity * Time.deltaTime);
+
+      var state = GameState.GetInstance();
+      state.localPlayer.position = transform.position;
     }
   }
 

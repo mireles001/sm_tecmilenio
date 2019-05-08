@@ -83,4 +83,6 @@ public class Client : NetworkCore
   {
     _ui.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
   }
+
+
 }

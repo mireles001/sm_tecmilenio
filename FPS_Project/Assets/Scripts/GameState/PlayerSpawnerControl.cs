@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSpawnerControl : MonoBehaviour
 {
 
-    public Dictionary<uint, GameObject> dict = new Dictionary<uint, GameObject>();
+    public Dictionary<int, GameObject> dict = new Dictionary<int, GameObject>();
 
     public Transform spawnContainer;
     // Start is called before the first frame update
@@ -18,19 +18,18 @@ public class PlayerSpawnerControl : MonoBehaviour
     void Update()
     {
         var pls = GameState.GetInstance().players;
-        for (var i = 0; i < pls.Count; i++) {
-            if (!dict.ContainsKey(pls[i].id)) {
+        foreach(KeyValuePair<int , PlayerInstance> entry in pls) {
+            if (!dict.ContainsKey(entry.Key)) {
                 dict.Add(
-                    pls[i].id,
+                    entry.Key,
                     (GameObject)Instantiate(
                         Resources.Load("gorogoro/3pv"),
-                        pls[i].position,
+                        entry.Value.position,
                         Quaternion.identity
                     )
                 );
-                dict[pls[i].id].transform.parent = spawnContainer;
+                dict[entry.Key].transform.parent = spawnContainer;
             }
-
         }
     }
 }

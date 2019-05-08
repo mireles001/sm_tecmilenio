@@ -46,6 +46,7 @@ public class Server : NetworkCore
         _ui.ConsoleMsg(string.Format("User {0} has connected!", connectionId));
         Net_ConnectionId cnnId = new Net_ConnectionId();
         cnnId.ConnectionId = connectionId;
+        GameState.GetInstance().addPlayer(new PlayerInstance("testUsername", connectionId));
         SendClient(connectionId, cnnId);
         break;
 
@@ -79,11 +80,27 @@ public class Server : NetworkCore
       case NetOP.SetUsername:
         SetUsername(cnnId, channelId, recHostId, (Net_SetUsername)msg);
         break;
+
+      case NetOP.PlayerPushUpdate:
+        UpdatePlayer(cnnId, channelId, recHostId, (Net_PlayerPushUpdate)msg);
+        break;
     }
   }
 
   private void SetUsername(int cnnId, int channelId, int recHostId, Net_SetUsername su)
   {
     _ui.ConsoleMsg(string.Format("Set username: {0}", su.Username));
+    
+  }
+
+  private void UpdatePlayer(int cnnId, int channelId, int recHostId, Net_PlayerPushUpdate playerDef)
+  {
+    _ui.ConsoleMsg(string.Format("update player received: {0}", cnnId));
+    GameState.GetInstance().updatePlayer(
+      cnnId,
+      playerDef.posX,
+      playerDef.posY,
+      playerDef.posZ
+    );
   }
 }
