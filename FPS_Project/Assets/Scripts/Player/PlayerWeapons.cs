@@ -29,7 +29,7 @@ public class PlayerWeapons : MonoBehaviour
     ChangeWeapon(1);
   }
 
-  private void LateUpdate()
+  private void Update()
   {
     if (!_core.IsLocked)
     {

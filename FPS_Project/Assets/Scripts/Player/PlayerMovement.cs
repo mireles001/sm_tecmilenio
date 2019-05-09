@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
   {
     if (!_innerContainer)
     {
-      _innerContainer = new GameObject("cameras").transform;
+      _innerContainer = new GameObject("First Person View").transform;
       _innerContainer.SetPositionAndRotation(transform.position, transform.rotation);
       _innerContainer.parent = transform;
       _mainCam.transform.parent = _innerContainer;
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
     _core.Fpv.StartUp();
   }
 
-  private void LateUpdate()
+  private void Update()
   {
     if (!_core.IsLocked)
     {
