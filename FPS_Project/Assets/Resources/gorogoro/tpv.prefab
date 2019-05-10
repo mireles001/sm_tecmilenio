@@ -1858,6 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ee62b3dcfad2e44eb0f6a0c38032827, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  changeWeaponAnimation: gorogoro|change_weapon
 --- !u!114 &7225445569887436342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1876,6 +1877,7 @@ MonoBehaviour:
   - {fileID: 6770229581849315129, guid: 125fc7801eff154448a57ee702b8ace5, type: 3}
   _weaponHolder: {fileID: 6977104594629764017}
   _weaponSwapTimer: 0.33
+  _characterType: 0
 --- !u!1 &5443732701299875778
 GameObject:
   m_ObjectHideFlags: 0

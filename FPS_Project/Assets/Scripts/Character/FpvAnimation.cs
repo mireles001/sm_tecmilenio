@@ -13,7 +13,7 @@ public class FpvAnimation : TpvAnimation
     _char = GetComponent<CharacterCore>().PlayerCore.PlayerMovement.CharRb;
   }
 
-  private void LateUpdate()
+  private void Update()
   {
     if (_char)
     {

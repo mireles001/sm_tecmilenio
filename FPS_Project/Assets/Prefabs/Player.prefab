@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2102443009903815937}
   - component: {fileID: 5196339446903046776}
   m_Layer: 0
-  m_Name: PlayerPrefab
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _jumpSpeed: 0
   _runSpeed: 0
-  camSens: 0.5
+  _lookSpeed: 5
 --- !u!114 &5196339446903046776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _grenades: 0
   _rockets: 0
+  _machineGunFireRate: 0.2
+  _grenadeFireRate: 0.8
+  _rocketFireRate: 0.6
