@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class PlayerCore : MonoBehaviour
 {
   // TODO: This will be defined by a char selector
-  public string characterPath;
+  public string characterPath = "gorogoro";
 
   private bool _isLocked = true;
   [SerializeField]
@@ -38,7 +38,8 @@ public class PlayerCore : MonoBehaviour
     if (_character)
       Destroy(_character);
 
-    _character = Instantiate(Resources.Load(characterPath + "/fpv") as GameObject, transform, false);
+    //_character = Instantiate(Resources.Load(characterPath + "/fpv") as GameObject, transform, false);
+    _character = Instantiate(Resources.Load("gorogoro/fpv") as GameObject, transform, false);
     _character.GetComponent<CharacterCore>().StartUp(this);
   }
 

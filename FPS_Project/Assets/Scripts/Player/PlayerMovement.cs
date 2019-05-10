@@ -73,15 +73,10 @@ public class PlayerMovement : MonoBehaviour
     _velocity += Physics.gravity * 2f * Time.deltaTime;
 
     _char.Move(_velocity * Time.deltaTime);
+    var state = GameState.GetInstance();
+    state.localPlayer.position = transform.position;
   }
 
-<<<<<<< HEAD
-      _char.Move(_velocity * Time.deltaTime);
-
-      var state = GameState.GetInstance();
-      state.localPlayer.position = transform.position;
-    }
-=======
   private void MouseLook()
   {
     _lookRotation.y += Input.GetAxis("Mouse X");
@@ -89,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
     _lookRotation.x = Mathf.Clamp(_lookRotation.x, -_lookClamp, _lookClamp);
     transform.eulerAngles = new Vector2(0, _lookRotation.y) * _lookSpeed;
     _innerContainer.localRotation = Quaternion.Euler(_lookRotation.x * _lookSpeed, 0, 0);
->>>>>>> 7ad0b6aec0c7e3c806ee311163100dc9d9187d6d
+
   }
 
   private Vector3 GetBaseInput()

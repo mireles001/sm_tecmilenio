@@ -23,13 +23,14 @@ public class PlayerSpawnerControl : MonoBehaviour
                 dict.Add(
                     entry.Key,
                     (GameObject)Instantiate(
-                        Resources.Load("gorogoro/3pv"),
+                        Resources.Load("gorogoro/tpv"),
                         entry.Value.position,
                         Quaternion.identity
                     )
                 );
                 dict[entry.Key].transform.parent = spawnContainer;
             }
+            dict[entry.Key].transform.position = entry.Value.position;
         }
     }
 }
