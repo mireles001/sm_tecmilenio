@@ -49,7 +49,9 @@ public class NetworkCore : MonoBehaviour
 
     _serverIp = ui._inputIP.textComponent.text;
     if (_serverIp.Length == 0)
+    {
       _serverIp = "127.0.0.1";
+    }
 
     NetworkTransport.Init();
 
@@ -67,7 +69,9 @@ public class NetworkCore : MonoBehaviour
   public virtual void UpdateMessagePump()
   {
     if (!_isStarted)
+    {
       return;
+    }
   }
 
   #region Send

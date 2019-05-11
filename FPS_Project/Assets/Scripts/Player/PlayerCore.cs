@@ -3,16 +3,12 @@ using System.Collections.Generic;
 
 public class PlayerCore : MonoBehaviour
 {
-  // TODO: This will be defined by a char selector
-  public string characterPath;
+  public GameObject _characterPrefab;
+  public int _hp = 0;
+  public int _maxHp = 0;
 
   private bool _isLocked = true;
-  [SerializeField]
   private string _characterName = "unnamed";
-  [SerializeField]
-  private int _hp = 0;
-  [SerializeField]
-  private int _maxHp = 0;
   private GameObject _character;
   private PlayerMovement _playerMove;
   private PlayerWeapons _playerWeapons;
@@ -27,18 +23,28 @@ public class PlayerCore : MonoBehaviour
   private void Start()
   {
     // TODO: Temporal internal call to character load
-    LoadCharacter(characterPath);
+    LoadCharacter(_characterPrefab);
+  }
+
+  private void LateUpdate()
+  {
+    if (Input.GetKeyDown("escape"))
+    {
+      ToggleControls();
+    }
   }
 
   // Called by GameMaster Object to load character content
-  public void LoadCharacter(string path)
+  public void LoadCharacter(GameObject prefab)
   {
     _isLocked = true;
 
     if (_character)
+    {
       Destroy(_character);
+    }
 
-    _character = Instantiate(Resources.Load(characterPath + "/fpv") as GameObject, transform, false);
+    _character = Instantiate(prefab, transform, false);
     _character.GetComponent<CharacterCore>().StartUp(this);
   }
 
@@ -55,19 +61,57 @@ public class PlayerCore : MonoBehaviour
     _playerMove.StartUp((float)characterParams["camera"], _character.transform);
     _playerWeapons.StartUp();
 
-    _isLocked = false;
-    Cursor.lockState = CursorLockMode.Locked;
+    ToggleControls();
   }
 
-  public int Hp
+  private void RegisterDeath()
   {
-    get
+    Debug.Log("Register Death by player");
+  }
+
+  public void ModifyHealth(int val)
+  {
+    _hp += val;
+
+    if (_hp > _maxHp)
     {
-      return _hp;
+      _hp = _maxHp;
     }
-    set
+    else if (_hp <= 0)
     {
-      _hp = value;
+      RegisterDeath();
+    }
+  }
+
+  public void GotPickUp(int pickUpType, int amount)
+  {
+    switch (pickUpType)
+    {
+      case 1:
+        _playerWeapons.Grenades += amount;
+        break;
+      case 2:
+        _playerWeapons.Rockets += amount;
+        break;
+      default:
+        ModifyHealth(amount);
+        break;
+    }
+  }
+
+  private void ToggleControls()
+  {
+    _isLocked = !_isLocked;
+
+    if (_isLocked)
+    {
+      Cursor.lockState = CursorLockMode.None;
+      Debug.Log("Character Locked");
+    }
+    else
+    {
+      Cursor.lockState = CursorLockMode.Locked;
+      Debug.Log("Character Unlocked");
     }
   }
 

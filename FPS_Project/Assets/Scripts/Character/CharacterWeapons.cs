@@ -8,13 +8,14 @@ public class CharacterWeapons : MonoBehaviour
     firstPerson
   }
   [SerializeField]
-  private GameObject[] _weapons;
+  private CharacterType _characterType = CharacterType.firstPerson;
+  [SerializeField]
+  private GameObject[] _weapons = new GameObject[3];
   [SerializeField]
   private Transform _weaponHolder;
+
   [SerializeField]
   private float _weaponSwapTimer = 0.33f;
-  [SerializeField]
-  private CharacterType _characterType;
   private bool _isPlayer;
   private int _weaponIndex;
   private GameObject _currentWeapon;
@@ -32,6 +33,11 @@ public class CharacterWeapons : MonoBehaviour
         _core = GetComponent<CharacterCore>();
         break;
     }
+
+    if (!_weaponHolder)
+    {
+      _weaponHolder = transform;
+    }
   }
 
   public void WeaponChange(int index)
@@ -46,24 +52,24 @@ public class CharacterWeapons : MonoBehaviour
   private void WeaponChangeInvoke()
   {
     if (_currentWeapon)
+    {
       Destroy(_currentWeapon);
+    }
 
     _currentWeapon = Instantiate(_weapons[_weaponIndex - 1]);
     _currentWeapon.transform.parent = _weaponHolder;
     _currentWeapon.transform.localPosition = Vector3.zero;
     _currentWeapon.transform.localRotation = Quaternion.identity;
 
-    // This only runs when its FirstPersonView
     if (_isPlayer)
     {
       _core.PlayerCore.PlayerWeapons.ProjectileSpawner = _currentWeapon.GetComponent<Weapon>().ProjectileSpawner;
-
-      DisableCastShadow(_currentWeapon.transform);
+      ChildrenRendererMod(_currentWeapon.transform);
     }
   }
 
   // Disable Cast Shadow for GameObject and children (recursive)
-  private void DisableCastShadow(Transform target)
+  private void ChildrenRendererMod(Transform target, int setLayer = 9, bool castShadow = true)
   {
     int children = target.childCount;
     for (int i = 0; i < children; ++i)
@@ -72,11 +78,18 @@ public class CharacterWeapons : MonoBehaviour
 
       if (rend)
       {
-        rend.gameObject.layer = 9;
-        rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        rend.gameObject.layer = setLayer;
+        if (castShadow)
+        {
+          rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+        }
+        else
+        {
+          rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        }
       }
 
-      DisableCastShadow(target.GetChild(i));
+      ChildrenRendererMod(target.GetChild(i), setLayer, castShadow);
     }
   }
 

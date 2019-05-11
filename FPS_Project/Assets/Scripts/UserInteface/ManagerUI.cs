@@ -74,9 +74,13 @@ public class ManagerUI : MonoBehaviour
     _inputIP.gameObject.SetActive(show);
 
     if (_isServer)
+    {
       _btnKillServer.gameObject.SetActive(!show);
+    }
     else
+    {
       _btnDisconnect.gameObject.SetActive(!show);
+    }
 
     _btnCreatePlayer.gameObject.SetActive(!show);
 

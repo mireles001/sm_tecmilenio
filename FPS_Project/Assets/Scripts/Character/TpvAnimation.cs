@@ -62,12 +62,16 @@ public class TpvAnimation : MonoBehaviour
   public void Damage()
   {
     if (_isGrounded)
+    {
       _animator.Play("damage", -1, 0f);
+    }
   }
 
   public void Death()
   {
     if (_isGrounded)
+    {
       _animator.Play("death");
+    }
   }
 }

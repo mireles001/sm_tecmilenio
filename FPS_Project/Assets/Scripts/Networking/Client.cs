@@ -26,7 +26,9 @@ public class Client : NetworkCore
   public override void UpdateMessagePump()
   {
     if (!_isStarted)
+    {
       return;
+    }
 
     int recHostId;    // Is this from Web or Standalone?
     int connectionId; // Which user is sending me this?
