@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: kitsunen
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: kitsunen_tpv
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.L/Leg.Bottom.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.L/Leg.Bottom.L/Leg.Foot.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.L/Leg.Bottom.L/Leg.Foot.L/Leg.Toes.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.L/Leg.Bottom.L/Leg.Foot.L/Leg.Toes.L/Leg.Toes.L_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.R
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.R/Leg.Bottom.R
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.R/Leg.Bottom.R/Leg.Foot.R
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.R/Leg.Bottom.R/Leg.Foot.R/Leg.Toes.R
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Leg.Top.R/Leg.Bottom.R/Leg.Foot.R/Leg.Toes.R/Leg.Toes.R_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L/Fingers.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L/Fingers.L/Fingers.L_end
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L/Thumb.Bottom.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L/Thumb.Bottom.L/Thumb.Top.L
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.L/Arm.Top.L/Arm.Bottom.L/Hand.L/Thumb.Bottom.L/Thumb.Top.L/Thumb.Top.L_end
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R/Fingers.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R/Fingers.R/Fingers.R_end
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R/Thumb.Bottom.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R/Thumb.Bottom.R/Thumb.Top.R
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Collar.Bone.R/Arm.Top.R/Arm.Bottom.R/Hand.R/Thumb.Bottom.R/Thumb.Top.R/Thumb.Top.R_end
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Neck
+    m_Weight: 1
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Neck/Head
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Spine Bottom/Spine MIddle/Spine Top/Neck/Head/Head_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Tail.A
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Tail.A/Tail.B
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Tail.A/Tail.B/Tail.C
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Tail.A/Tail.B/Tail.C/Tail.D
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Hip/Tail.A/Tail.B/Tail.C/Tail.D/Tail.D_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/IK.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/IK.L/IK.L_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/IK.R
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/IK.R/IK.R_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Pole.L
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Pole.L/Pole.L_end
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Pole.R.001
+    m_Weight: 0
+  - m_Path: kitsunen_tpv/Root/Pole.R.001/Pole.R.001_end
+    m_Weight: 0
+  - m_Path: mesh
+    m_Weight: 0

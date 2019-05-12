@@ -38,6 +38,29 @@ public class CharacterWeapons : MonoBehaviour
     {
       _weaponHolder = transform;
     }
+
+    if (_isPlayer)
+    {
+      OffscreenUpdater(transform);
+    }
+  }
+
+  private void OffscreenUpdater(Transform target)
+  {
+    int children = target.childCount;
+    for (int i = 0; i < children; ++i)
+    {
+      SkinnedMeshRenderer rend = target.GetChild(i).GetComponent<SkinnedMeshRenderer>();
+
+      if (rend)
+      {
+        rend.gameObject.layer = 9;
+        rend.updateWhenOffscreen = true;
+        rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+      }
+
+      OffscreenUpdater(target.GetChild(i));
+    }
   }
 
   public void WeaponChange(int index)
@@ -69,7 +92,7 @@ public class CharacterWeapons : MonoBehaviour
   }
 
   // Disable Cast Shadow for GameObject and children (recursive)
-  private void ChildrenRendererMod(Transform target, int setLayer = 9, bool castShadow = true)
+  private void ChildrenRendererMod(Transform target)
   {
     int children = target.childCount;
     for (int i = 0; i < children; ++i)
@@ -78,18 +101,11 @@ public class CharacterWeapons : MonoBehaviour
 
       if (rend)
       {
-        rend.gameObject.layer = setLayer;
-        if (castShadow)
-        {
-          rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
-        }
-        else
-        {
-          rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-        }
+        rend.gameObject.layer = 9;
+        rend.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
       }
 
-      ChildrenRendererMod(target.GetChild(i), setLayer, castShadow);
+      ChildrenRendererMod(target.GetChild(i));
     }
   }
 

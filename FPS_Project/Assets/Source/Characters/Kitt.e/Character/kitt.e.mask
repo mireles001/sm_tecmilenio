@@ -1,0 +1,182 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: kitt.e
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: kitt.e_tpv
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left/Foot.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left/Foot.Left/Toes.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left/Foot.Left/Toes.Left/Toes.Left_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Right/Leg.Bottom.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Right/Leg.Bottom.Right/Foot.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Right/Leg.Bottom.Right/Foot.Right/Toes.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Leg.Top.Right/Leg.Bottom.Right/Foot.Right/Toes.Right/Toes.Right_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Ponytail.A
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Ponytail.A/Ponytail.B
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Ponytail.A/Ponytail.B/Ponytail.C
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Ponytail.A/Ponytail.B/Ponytail.C/Ponytail.D
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Ponytail.A/Ponytail.B/Ponytail.C/Ponytail.D/Ponytail.D_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Index.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Index.Top.Left/Index.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Index.Top.Left/Index.Mid.Left/Index.Bottom.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Index.Top.Left/Index.Mid.Left/Index.Bottom.Left/Index.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Middle.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Middle.Top.Left/Middle.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Middle.Top.Left/Middle.Mid.Left/Middle.Bottom.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Middle.Top.Left/Middle.Mid.Left/Middle.Bottom.Left/Middle.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Pinky.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left/Pinky.Bottom.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left/Pinky.Bottom.Left/Pinky.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Ring.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left/Ring.Bottom.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left/Ring.Bottom.Left/Ring.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Thumb.Top.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Thumb.Top.Left/Thumb.Mid.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Thumb.Top.Left/Thumb.Mid.Left/Thumb.Bottom.Left
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Hand.Left/Thumb.Top.Left/Thumb.Mid.Left/Thumb.Bottom.Left/Thumb.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Index.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Index.Top.Right/Index.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Index.Top.Right/Index.Mid.Right/Index.Bottom.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Index.Top.Right/Index.Mid.Right/Index.Bottom.Right/Index.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Middle.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Middle.Top.Right/Middle.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Middle.Top.Right/Middle.Mid.Right/Middle.Bottom.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Middle.Top.Right/Middle.Mid.Right/Middle.Bottom.Right/Middle.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Pinky.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right/Pinky.Bottom.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right/Pinky.Bottom.Right/Pinky.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Ring.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right/Ring.Bottom.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right/Ring.Bottom.Right/Ring.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Thumb.Top.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Thumb.Top.Right/Thumb.Mid.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Thumb.Top.Right/Thumb.Mid.Right/Thumb.Bottom.Right
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Mid.Right/Hand.Right/Thumb.Top.Right/Thumb.Mid.Right/Thumb.Bottom.Right/Thumb.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Tail.A
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Tail.A/Tail.B
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Tail.A/Tail.B/Tail.C
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Tail.A/Tail.B/Tail.C/Tail.D
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Hips/Spine.Bottom/Tail.A/Tail.B/Tail.C/Tail.D/Tail.D_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/IK.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/IK.Left/IK.Left_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/IK.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/IK.Right/IK.Right_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Pole.Left
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Pole.Left/Pole.Left_end
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Pole.Right
+    m_Weight: 0
+  - m_Path: kitt.e_tpv/Root/Pole.Right/Pole.Right_end
+    m_Weight: 0
+  - m_Path: mesh
+    m_Weight: 0

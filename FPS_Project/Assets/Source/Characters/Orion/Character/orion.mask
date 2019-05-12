@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: orion
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Body
+    m_Weight: 0
+  - m_Path: Boot_l
+    m_Weight: 0
+  - m_Path: Boot_r
+    m_Weight: 0
+  - m_Path: chest
+    m_Weight: 0
+  - m_Path: guante_d
+    m_Weight: 0
+  - m_Path: guante_i
+    m_Weight: 0
+  - m_Path: orion_tpv
+    m_Weight: 0
+  - m_Path: orion_tpv/root
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_left/leg_middle_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_left/leg_middle_left/foot_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_left/leg_middle_left/foot_left/toes_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_left/leg_middle_left/foot_left/toes_left/toes_left_end
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_right
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_right/leg_middle_right
+    m_Weight: 0
+  - m_Path: orion_tpv/root/hip/leg_top_right/leg_middle_right/foot_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/leg_top_right/leg_middle_right/foot_right/toes_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/leg_top_right/leg_middle_right/foot_right/toes_right/toes_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/neck
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/neck/head
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/neck/head/head_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/index_top_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/index_top_left/index_middle_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/index_top_left/index_middle_left/index_bottom_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/index_top_left/index_middle_left/index_bottom_left/index_bottom_left_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/middle_top_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/middle_top_left/middle_middle_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/middle_top_left/middle_middle_left/middle_bottom_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/middle_top_left/middle_middle_left/middle_bottom_left/middle_bottom_left_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/pinky_top_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/pinky_top_left/pinky_middle_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/pinky_top_left/pinky_middle_left/pinky_bottom_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/pinky_top_left/pinky_middle_left/pinky_bottom_left/pinky_bottom_left_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/ring_top_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/ring_top_left/ring_middle_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/ring_top_left/ring_middle_left/ring_bottom_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/ring_top_left/ring_middle_left/ring_bottom_left/ring_bottom_left_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/thumb_top_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/thumb_top_left/thumb_middle_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/thumb_top_left/thumb_middle_left/thumb_bottom_left
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_left/arm_left/forearm_left/hand_left/thumb_top_left/thumb_middle_left/thumb_bottom_left/thumb_bottom_left_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/index_top_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/index_top_right/index_middle_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/index_top_right/index_middle_right/index_bottom_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/index_top_right/index_middle_right/index_bottom_right/index_bottom_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/middle_top_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/middle_top_right/middle_middle_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/middle_top_right/middle_middle_right/middle_bottom_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/middle_top_right/middle_middle_right/middle_bottom_right/middle_bottom_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/pinky_top_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/pinky_top_right/pinky_middle_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/pinky_top_right/pinky_middle_right/pinky_bottom_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/pinky_top_right/pinky_middle_right/pinky_bottom_right/pinky_bottom_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/ring_top_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/ring_top_right/ring_middle_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/ring_top_right/ring_middle_right/ring_bottom_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/ring_top_right/ring_middle_right/ring_bottom_right/ring_bottom_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/thumb_top_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/thumb_top_right/thumb_middle_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/thumb_top_right/thumb_middle_right/thumb_bottom_right
+    m_Weight: 1
+  - m_Path: orion_tpv/root/hip/spine_bottom/spine_top/chest 1/shoulder_right/arm_right/forearm_right/hand_right/thumb_top_right/thumb_middle_right/thumb_bottom_right/thumb_bottom_right_end
+    m_Weight: 1
+  - m_Path: orion_tpv/root/ik_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/ik_left/ik_left_end
+    m_Weight: 0
+  - m_Path: orion_tpv/root/ik_right
+    m_Weight: 0
+  - m_Path: orion_tpv/root/ik_right/ik_right_end
+    m_Weight: 0
+  - m_Path: orion_tpv/root/pole_left
+    m_Weight: 0
+  - m_Path: orion_tpv/root/pole_left/pole_left_end
+    m_Weight: 0
+  - m_Path: orion_tpv/root/pole_right
+    m_Weight: 0
+  - m_Path: orion_tpv/root/pole_right/pole_right_end
+    m_Weight: 0
