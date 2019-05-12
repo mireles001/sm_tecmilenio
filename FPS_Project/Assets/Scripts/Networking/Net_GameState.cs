@@ -8,9 +8,6 @@ public class Net_GameState : NetMsg
     OP = NetOP.GameState;
   }
 
-  List<float> a = new List<float>();
+  public List<PlayerInstance> players;
 
-  //   public float isGrounded { set; get; }
-  //   public float isRunning { set; get; }
-  //   public float isFiring { set; get; }
 }

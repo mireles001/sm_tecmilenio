@@ -26,14 +26,22 @@ public class PlayerSpawnerControl : MonoBehaviour
         entry.Key,
         (GameObject)Instantiate(
           Resources.Load("gorogoro/tpv"),
-          entry.Value.position,
+          new Vector3(
+            entry.Value.posX,
+            entry.Value.posY,
+            entry.Value.posZ
+          ),
           Quaternion.identity
         )
         );
         dict[entry.Key].transform.parent = spawnContainer;
       }
-      dict[entry.Key].transform.position = entry.Value.position;
-      dict[entry.Key].transform.rotation = Quaternion.Euler(0, entry.Value.rotation.y, 0);
+      dict[entry.Key].transform.position = new Vector3(
+        entry.Value.posX,
+        entry.Value.posY,
+        entry.Value.posZ
+      );
+      dict[entry.Key].transform.rotation = Quaternion.Euler(0, entry.Value.rotY, 0);
       dict[entry.Key].SetActive(entry.Key != GameState.GetInstance().localPlayer.id);
     }
   }

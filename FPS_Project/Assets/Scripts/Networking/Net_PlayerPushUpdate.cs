@@ -6,14 +6,5 @@ public class Net_PlayerPushUpdate : NetMsg
     OP = NetOP.PlayerPushUpdate;
   }
 
-  public float posX { set; get; }
-  public float posY { set; get; }
-  public float posZ { set; get; }
-
-  public float rotX { set; get; }
-  public float rotY { set; get; }
-
-//   public float isGrounded { set; get; }
-//   public float isRunning { set; get; }
-//   public float isFiring { set; get; }
+  public PlayerInstance player;
 }

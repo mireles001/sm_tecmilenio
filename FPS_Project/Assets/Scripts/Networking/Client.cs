@@ -85,11 +85,7 @@ public class Client : NetworkCore
     Debug.Log("send message number: " + _currentNumberUpdates++);
     var p = GameState.GetInstance().localPlayer;
     Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
-    up.posX = p.position.x;
-    up.posY = p.position.y;
-    up.posZ = p.position.z;
-    up.rotX = p.rotation.x;
-    up.rotY = p.rotation.y;
+    up.player = p;
     SendServer(up, _stateUpdateChannel);
   }
 
@@ -104,6 +100,9 @@ public class Client : NetworkCore
       case NetOP.SetConnectionId:
         SetConnectionId(cnnId, channelId, recHostId, (Net_ConnectionId)msg);
         break;
+      case NetOP.GameState:
+        updateGameState(cnnId, channelId, recHostId, (Net_GameState)msg);
+        break;
     }
   }
 
@@ -112,5 +111,8 @@ public class Client : NetworkCore
     _ui.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
   }
 
-
-}
+  private void updateGameState(int cnnId, int channelId, int recHostId, Net_GameState gs)
+  {
+    GameState.GetInstance().updateState(gs.players);
+  }
+ }

@@ -74,7 +74,9 @@ public class PlayerMovement : MonoBehaviour
 
     _char.Move(_velocity * Time.deltaTime);
     var state = GameState.GetInstance();
-    state.localPlayer.position = transform.position;
+    state.localPlayer.posX = transform.position.x;
+    state.localPlayer.posY = transform.position.y;
+    state.localPlayer.posZ = transform.position.z;
   }
 
   private void MouseLook()
@@ -85,7 +87,8 @@ public class PlayerMovement : MonoBehaviour
     transform.rotation = Quaternion.Euler(0, _lookRotation.y, 0);
     _innerContainer.localRotation = Quaternion.Euler(_lookRotation.x, 0, 0);
     var state = GameState.GetInstance();
-    state.localPlayer.rotation = new Vector2(_lookRotation.x, _lookRotation.y);
+    state.localPlayer.rotX = _lookRotation.x;
+    state.localPlayer.rotY = _lookRotation.y;
   }
 
   private Vector3 GetBaseInput()

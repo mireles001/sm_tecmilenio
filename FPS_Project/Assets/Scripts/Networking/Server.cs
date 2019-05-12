@@ -26,6 +26,9 @@ public class Server : NetworkCore
     _ui.ConsoleMsg(string.Format("Opening connection on port {0}", PORT));
 
     GameState.GetInstance().init();
+    PlayerInstance p = new PlayerInstance("server", 0);
+    GameState.GetInstance().localPlayer = p;
+    GameState.GetInstance().addPlayer(p);
   }
 
   public override void UpdateMessagePump()
@@ -86,10 +89,10 @@ public class Server : NetworkCore
   {
     if (!_isStarted)
       return;
-    var pls = GameState.GetInstance().players;
-    Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
-    
-    SendServer(up, _stateUpdateChannel);
+    var pls = GameState.GetInstance().getPlayerList();
+    Net_GameState gs = new Net_GameState();
+    gs.players = pls;
+    LameBroadCast(gs, _stateUpdateChannel);
   }
 
   private void OnData(int cnnId, int channelId, int recHostId, NetMsg msg)
@@ -120,12 +123,7 @@ public class Server : NetworkCore
   {
     Debug.Log("Number of packages got: "+currentNumberOfData++);
     GameState.GetInstance().updatePlayer(
-      cnnId,
-      playerDef.posX,
-      playerDef.posY,
-      playerDef.posZ,
-      playerDef.rotX,
-      playerDef.rotY
+      playerDef.player
     );
   }
 }
