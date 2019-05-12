@@ -8,7 +8,7 @@ public class GameState {
     public Dictionary<int, PlayerInstance> players;
     public PlayerInstance localPlayer = new PlayerInstance("", 0);
 
-  private List<PlayerInstance> _playerList;
+  //private List<PlayerInstance> _playerList;
 
     #region Singleton Implementation
   private static object locker = new object();
@@ -33,12 +33,12 @@ public class GameState {
 
   public void init() {
     players = new Dictionary<int, PlayerInstance>();
-    _playerList = new List<PlayerInstance>();
+    //_playerList = new List<PlayerInstance>();
   }
 
   public void addPlayer(PlayerInstance player) {
     players.Add(player.id, player);
-    _playerList.Add(player);
+    //_playerList.Add(player);
   }
 
   public void removePlayer()
@@ -48,12 +48,18 @@ public class GameState {
 
   public List<PlayerInstance> getPlayerList()
   {
-    return _playerList;
+    List<PlayerInstance> playerList = new List<PlayerInstance>();
+    foreach (KeyValuePair<int, PlayerInstance> entry in players)
+    {
+      playerList.Add(entry.Value);
+    }
+    return playerList;
   }
     
   public void updatePlayer(
     PlayerInstance player
   ) {
+    Debug.Log("updating from client " + player.id);
     if (players.ContainsKey(player.id)) {
       players[player.id] = player;
     } else {
@@ -63,8 +69,10 @@ public class GameState {
 
   public void updateState(List<PlayerInstance> newList)
   {
+    Debug.Log("updating from server. mi id is: " + localPlayer.id);
     for (int i = 0; i < newList.Count; i++)
     {
+      Debug.Log("id " + newList[i].id);
       players[newList[i].id] = newList[i];
     }
   }

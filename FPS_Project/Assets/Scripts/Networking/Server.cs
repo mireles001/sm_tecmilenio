@@ -121,7 +121,7 @@ public class Server : NetworkCore
 
   private void UpdatePlayer(int cnnId, int channelId, int recHostId, Net_PlayerPushUpdate playerDef)
   {
-    Debug.Log("Number of packages got: "+currentNumberOfData++);
+    Debug.Log("got update fron cnnid: " + cnnId + " and p.id "+playerDef.player.id);
     GameState.GetInstance().updatePlayer(
       playerDef.player
     );

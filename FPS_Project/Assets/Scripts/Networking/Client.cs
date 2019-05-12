@@ -86,6 +86,7 @@ public class Client : NetworkCore
     var p = GameState.GetInstance().localPlayer;
     Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
     up.player = p;
+    Debug.Log("toy mandando al server con id de: " + p.id);
     SendServer(up, _stateUpdateChannel);
   }
 
@@ -109,6 +110,7 @@ public class Client : NetworkCore
   private void SetConnectionId(int cnnId, int channelId, int recHostId, Net_ConnectionId ci)
   {
     _ui.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
+    GameState.GetInstance().localPlayer.id = ci.ConnectionId;
   }
 
   private void updateGameState(int cnnId, int channelId, int recHostId, Net_GameState gs)
