@@ -2,15 +2,19 @@
 using System.IO;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Collections.Generic;
 
 public class NetworkCore : MonoBehaviour
 {
   protected const int PORT = 26501;
   protected const int MAX_USERS = 16;
   protected const int BYTE_SIZE = 1024;
+  protected const int CLIENT_UPDATE_TIME_MS = 1000;
+  protected const int SERVER_UPDATE_TIME_MS = 1000;
 
   protected byte _reliableChannel;
   protected byte _unreliableChannel;
+  protected byte _stateUpdateChannel;
   protected int _connectionId;
 
   protected bool _isStarted;
@@ -30,13 +34,6 @@ public class NetworkCore : MonoBehaviour
   private void Update()
   {
     UpdateMessagePump();
-
-    // UpdateGameState();
-
-    if (_isStarted && !_isServer && Input.GetButtonDown("Fire1"))
-    {
-      TESTFUCNTION();
-    }
   }
   #endregion
 
@@ -72,15 +69,9 @@ public class NetworkCore : MonoBehaviour
       return;
   }
 
-  public virtual void UpdateGameState()
-  {
-    if (!_isStarted)
-      return;
-  }
-
   #region Send
   // Client Code
-  public void SendServer(NetMsg msg)
+  public void SendServer(NetMsg msg, byte chan)
   {
     // This is where we hold our data
     byte[] buffer = new byte[BYTE_SIZE];
@@ -89,14 +80,11 @@ public class NetworkCore : MonoBehaviour
     BinaryFormatter formatter = new BinaryFormatter();
     MemoryStream ms = new MemoryStream(buffer);
     formatter.Serialize(ms, msg);
-            Debug.Log("data send---------");
-        Debug.Log(msg);
-
-    NetworkTransport.Send(_hostId, _connectionId, _reliableChannel, buffer, BYTE_SIZE, out _error);
+    NetworkTransport.Send(_hostId, _connectionId, chan , buffer, BYTE_SIZE, out _error);
   }
 
   // Server Code
-  public void SendClient(int cnnId, NetMsg msg)
+  public void SendClient(int cnnId, NetMsg msg, byte chan)
   {
     // This is where we hold our data
     byte[] buffer = new byte[BYTE_SIZE];
@@ -106,19 +94,32 @@ public class NetworkCore : MonoBehaviour
     MemoryStream ms = new MemoryStream(buffer);
     formatter.Serialize(ms, msg);
 
-    NetworkTransport.Send(_hostId, cnnId, _reliableChannel, buffer, BYTE_SIZE, out _error);
+    NetworkTransport.Send(_hostId, cnnId, chan, buffer, BYTE_SIZE, out _error);
+    //NetworkTransport.GetBroadcastConnectionInfo;
+    //NetworkTransport.GetBroadcastConnectionMessage;
+    //NetworkTransport.SendMulticast()
+    
+  }
+
+  public void LameBroadCast(NetMsg msg, byte chan)
+  {
+    var pls = GameState.GetInstance().players;
+    foreach (KeyValuePair<int, PlayerInstance> entry in pls)
+    {
+      SendClient(entry.Key, msg, chan);
+    }
   }
   #endregion
 
-  public void TESTFUCNTION()
-  {
-    Debug.Log("TESTFUNCTION");
-    var p = GameState.GetInstance().localPlayer;
-    Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
-    up.posX = p.position.x;
-    up.posY = p.position.y;
-    up.posZ = p.position.z;
-    SendServer(up);
+  // public void TESTFUCNTION()
+  // {
+  //   Debug.Log("TESTFUNCTION");
+  //   var p = GameState.GetInstance().localPlayer;
+  //   Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
+  //   up.posX = p.position.x;
+  //   up.posY = p.position.y;
+  //   up.posZ = p.position.z;
+  //   SendServer(up);
     
-  }
+  // }
 }

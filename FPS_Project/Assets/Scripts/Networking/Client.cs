@@ -5,6 +5,10 @@ using UnityEngine.Networking;
 
 public class Client : NetworkCore
 {
+
+  protected float _currentUpdateTime = 0;
+  protected float _currentNumberUpdates = 0;
+
   public override void Init(ManagerUI ui)
   {
     base.Init(ui);
@@ -14,6 +18,7 @@ public class Client : NetworkCore
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
     _unreliableChannel = cc.AddChannel(QosType.Unreliable);
+    _stateUpdateChannel = cc.AddChannel(QosType.StateUpdate);
 
     HostTopology topo = new HostTopology(cc, MAX_USERS);
     _hostId = NetworkTransport.AddHost(topo, 0);
@@ -44,6 +49,7 @@ public class Client : NetworkCore
 
       case NetworkEventType.ConnectEvent:
         _ui.ConsoleMsg("We have connected to the server.");
+        GameState.GetInstance().localPlayer.id = connectionId;
         break;
 
       case NetworkEventType.DisconnectEvent:
@@ -63,6 +69,28 @@ public class Client : NetworkCore
         _ui.ConsoleMsg("Unexpected network event type");
         break;
     }
+
+    _currentUpdateTime += Time.deltaTime * 1000;
+    if (_currentUpdateTime >= CLIENT_UPDATE_TIME_MS) {
+      _currentUpdateTime -= CLIENT_UPDATE_TIME_MS;
+      UpdateGameState();
+    }
+
+  }
+
+  public virtual void UpdateGameState()
+  {
+    if (!_isStarted)
+      return;
+    Debug.Log("send message number: " + _currentNumberUpdates++);
+    var p = GameState.GetInstance().localPlayer;
+    Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
+    up.posX = p.position.x;
+    up.posY = p.position.y;
+    up.posZ = p.position.z;
+    up.rotX = p.rotation.x;
+    up.rotY = p.rotation.y;
+    SendServer(up, _stateUpdateChannel);
   }
 
   private void OnData(int cnnId, int channelId, int recHostId, NetMsg msg)

@@ -30,25 +30,29 @@ public class GameState {
   #endregion
 
   public void init() {
-    // players = new List<PlayerInstance>();
     players = new Dictionary<int, PlayerInstance>();
-    // var pl = new PlayerInstance();
-    // pl.id = 2;
-    // players.Add(pl);
   }
 
   public void addPlayer(PlayerInstance player) {
     players.Add(player.id, player);
+  }
+
+  public void removePlayer()
+  {
+
   }
     
   public void updatePlayer(
       int id,
       float posX,
       float posY,
-      float posZ
+      float posZ,
+      float rotX,
+      float rotY
   ) {
     if (players.ContainsKey(id)) {
         players[id].position = new Vector3(posX, posY, posZ);
+        players[id].rotation = new Vector2(rotX, rotY);
     } else {
         Debug.Log("player not created " + id);
     }

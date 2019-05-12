@@ -4,6 +4,7 @@
   public const int SetUsername = 1;
   public const int SetConnectionId = 2;
   public const int PlayerPushUpdate = 3;
+  public const int GameState = 4;
 }
 
 [System.Serializable]

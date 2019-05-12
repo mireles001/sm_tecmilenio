@@ -5,15 +5,20 @@ using UnityEngine.Networking;
 
 public class Server : NetworkCore
 {
+  private int currentNumberOfData = 0;
+  private float _currentUpdateTime = 0;
+  
   public override void Init(ManagerUI ui)
   {
     base.Init(ui);
 
     _isServer = true;
 
+
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
     _unreliableChannel = cc.AddChannel(QosType.Unreliable);
+    _stateUpdateChannel = cc.AddChannel(QosType.StateUpdate);
 
     HostTopology topo = new HostTopology(cc, MAX_USERS);
     _hostId = NetworkTransport.AddHost(topo, PORT, null);
@@ -47,11 +52,12 @@ public class Server : NetworkCore
         Net_ConnectionId cnnId = new Net_ConnectionId();
         cnnId.ConnectionId = connectionId;
         GameState.GetInstance().addPlayer(new PlayerInstance("testUsername", connectionId));
-        SendClient(connectionId, cnnId);
+        SendClient(connectionId, cnnId, _reliableChannel);
         break;
 
       case NetworkEventType.DisconnectEvent:
         _ui.ConsoleMsg(string.Format("User {0} has disconnected :(", connectionId));
+        GameState.GetInstance().removePlayer();
         break;
 
       case NetworkEventType.DataEvent:
@@ -67,6 +73,23 @@ public class Server : NetworkCore
         _ui.ConsoleMsg("Unexpected network event type");
         break;
     }
+
+    _currentUpdateTime += Time.deltaTime * 1000;
+    if (_currentUpdateTime >= SERVER_UPDATE_TIME_MS)
+    {
+      _currentUpdateTime -= SERVER_UPDATE_TIME_MS;
+      UpdateGameState();
+    }
+  }
+
+  public virtual void UpdateGameState()
+  {
+    if (!_isStarted)
+      return;
+    var pls = GameState.GetInstance().players;
+    Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
+    
+    SendServer(up, _stateUpdateChannel);
   }
 
   private void OnData(int cnnId, int channelId, int recHostId, NetMsg msg)
@@ -95,12 +118,14 @@ public class Server : NetworkCore
 
   private void UpdatePlayer(int cnnId, int channelId, int recHostId, Net_PlayerPushUpdate playerDef)
   {
-    _ui.ConsoleMsg(string.Format("update player received: {0}", cnnId));
+    Debug.Log("Number of packages got: "+currentNumberOfData++);
     GameState.GetInstance().updatePlayer(
       cnnId,
       playerDef.posX,
       playerDef.posY,
-      playerDef.posZ
+      playerDef.posZ,
+      playerDef.rotX,
+      playerDef.rotY
     );
   }
 }

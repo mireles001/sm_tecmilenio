@@ -79,12 +79,13 @@ public class PlayerMovement : MonoBehaviour
 
   private void MouseLook()
   {
-    _lookRotation.y += Input.GetAxis("Mouse X");
-    _lookRotation.x += -Input.GetAxis("Mouse Y");
-    _lookRotation.x = Mathf.Clamp(_lookRotation.x, -_lookClamp, _lookClamp);
-    transform.eulerAngles = new Vector2(0, _lookRotation.y) * _lookSpeed;
-    _innerContainer.localRotation = Quaternion.Euler(_lookRotation.x * _lookSpeed, 0, 0);
-
+    _lookRotation.y += Input.GetAxis("Mouse X") * _lookSpeed;
+    _lookRotation.x += -Input.GetAxis("Mouse Y") * _lookSpeed;
+    _lookRotation.x = Mathf.Clamp(_lookRotation.x, -_lookClamp * _lookSpeed, _lookClamp * _lookSpeed);
+    transform.rotation = Quaternion.Euler(0, _lookRotation.y, 0);
+    _innerContainer.localRotation = Quaternion.Euler(_lookRotation.x, 0, 0);
+    var state = GameState.GetInstance();
+    state.localPlayer.rotation = new Vector2(_lookRotation.x, _lookRotation.y);
   }
 
   private Vector3 GetBaseInput()
