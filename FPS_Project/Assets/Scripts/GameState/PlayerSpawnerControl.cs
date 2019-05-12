@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerSpawnerControl : MonoBehaviour
 {
-
+  public GameObject thirdpensonviewprefab;
   public Dictionary<int, GameObject> dict = new Dictionary<int, GameObject>();
 
   public Transform spawnContainer;
@@ -25,7 +25,7 @@ public class PlayerSpawnerControl : MonoBehaviour
         dict.Add(
         entry.Key,
         (GameObject)Instantiate(
-          Resources.Load("gorogoro/tpv"),
+          thirdpensonviewprefab,
           new Vector3(
             entry.Value.posX,
             entry.Value.posY,

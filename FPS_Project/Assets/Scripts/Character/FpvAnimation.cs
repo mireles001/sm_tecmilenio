@@ -20,7 +20,9 @@ public class FpvAnimation : TpvAnimation
       if (_char.isGrounded)
       {
         if (!_isGrounded)
+        {
           _animator.SetBool("is_grounded", true);
+        }
 
         _isGrounded = true;
         _inputVerticalValue = Input.GetAxis("Vertical");
@@ -30,20 +32,27 @@ public class FpvAnimation : TpvAnimation
         if (_absoluteVertical > 0.05f || _inputHorizontalValue > 0.05f)
         {
           if (!_isRunning)
+          {
             _animator.SetBool("is_running", true);
+          }
 
           _isRunning = true;
 
           if (_inputHorizontalValue > _absoluteVertical)
+          {
             _animator.SetFloat("movement", _inputHorizontalValue);
+          }
           else
+          {
             _animator.SetFloat("movement", _inputVerticalValue);
-
+          }
         }
         else
         {
           if (_isRunning)
+          {
             _animator.SetBool("is_running", false);
+          }
 
           _isRunning = false;
         }
@@ -51,7 +60,9 @@ public class FpvAnimation : TpvAnimation
       else
       {
         if (_isGrounded)
+        {
           _animator.SetBool("is_grounded", false);
+        }
 
         _isGrounded = false;
         _animator.SetFloat("verticalSpeed", _char.velocity.y);

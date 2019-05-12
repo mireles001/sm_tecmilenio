@@ -1421,6 +1421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 187014d2d6462634da671babf4e7f8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thirdpensonviewprefab: {fileID: 5355414762300261231, guid: 8dec80fbdeeb0ba48ac2f8f9bec6f0aa,
+    type: 3}
   spawnContainer: {fileID: 462508412}
 --- !u!1 &792502384
 GameObject:

@@ -66,7 +66,9 @@ public class PlayerMovement : MonoBehaviour
       _velocity.y = 0f;
 
       if (Input.GetButtonDown("Jump"))
+      {
         _velocity.y = _jumpSpeed;
+      }
     }
 
     _velocity += GetBaseInput() * _runSpeed;
@@ -97,7 +99,9 @@ public class PlayerMovement : MonoBehaviour
     _moveDirection += Input.GetAxis("Vertical") * transform.forward
     + Input.GetAxis("Horizontal") * transform.right;
     if (_moveDirection != Vector3.zero && _moveDirection.magnitude > 1)
+    {
       _moveDirection.Normalize();
+    }
 
     return _moveDirection;
   }

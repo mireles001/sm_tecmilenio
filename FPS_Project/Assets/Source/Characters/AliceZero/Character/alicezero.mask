@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: alicezero
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: alicezero
+    m_Weight: 0
+  - m_Path: alicezero/Root
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/C_Top
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/C_Top/C_Mid
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/C_Top/C_Mid/C_Bottom
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/C_Top/C_Mid/C_Bottom/C_Bottom_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Left/Leg.Bottom.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Left/Leg.Bottom.Left/Foot.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Left/Leg.Bottom.Left/Foot.Left/Toes.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Left/Leg.Bottom.Left/Foot.Left/Toes.Left/Toes.Left_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Right
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Right/Leg.Bottom.Right
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Right/Leg.Bottom.Right/Foot.Right
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Right/Leg.Bottom.Right/Foot.Right/Toes.Righ
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Leg.top.Right/Leg.Bottom.Right/Foot.Right/Toes.Righ/Toes.Righ_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/Hips/Spine.Bottom
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Head_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Index.Top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Index.Top.Left/Index.Mid.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Index.Top.Left/Index.Mid.Left/Index.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Index.Top.Left/Index.Mid.Left/Index.Bottom.Left/Index.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/MIddle.Top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/MIddle.Top.Left/MIddle.Mid.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/MIddle.Top.Left/MIddle.Mid.Left/MIddle.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/MIddle.Top.Left/MIddle.Mid.Left/MIddle.Bottom.Left/MIddle.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Pinky.Top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left/Pinky.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Pinky.Top.Left/Pinky.Mid.Left/Pinky.Bottom.Left/Pinky.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Ring.Top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left/Ring.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Ring.Top.Left/Ring.Mid.Left/Ring.Bottom.Left/Ring.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Thumb.top.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Thumb.top.Left/Thumb.Mid.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Thumb.top.Left/Thumb.Mid.Left/Thumb.Bottom.Left
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Bottom.Left/Hand.Left/Thumb.top.Left/Thumb.Mid.Left/Thumb.Bottom.Left/Thumb.Bottom.Left_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Index.Top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Index.Top.Right/Index.Mid.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Index.Top.Right/Index.Mid.Right/Index.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Index.Top.Right/Index.Mid.Right/Index.Bottom.Right/Index.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/MIddle.Top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/MIddle.Top.Right/MIddle.Mid.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/MIddle.Top.Right/MIddle.Mid.Right/MIddle.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/MIddle.Top.Right/MIddle.Mid.Right/MIddle.Bottom.Right/MIddle.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Pinky.Top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right/Pinky.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Pinky.Top.Right/Pinky.Mid.Right/Pinky.Bottom.Right/Pinky.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Ring.Top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right/Ring.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Ring.Top.Right/Ring.Mid.Right/Ring.Bottom.Right/Ring.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Thumb.top.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Thumb.top.Right/Thumb.Mid.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Thumb.top.Right/Thumb.Mid.Right/Thumb.Bottom.Right
+    m_Weight: 1
+  - m_Path: alicezero/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Right/Arm.Top.Right/Arm.Bottom.Right/Hand.Right/Thumb.top.Right/Thumb.Mid.Right/Thumb.Bottom.Right/Thumb.Bottom.Right_end
+    m_Weight: 1
+  - m_Path: alicezero/Root/IK.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/IK.Left/IK.Left_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/IK.Right
+    m_Weight: 0
+  - m_Path: alicezero/Root/IK.Right/IK.Right_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/Pole.Left
+    m_Weight: 0
+  - m_Path: alicezero/Root/Pole.Left/Pole.Left_end
+    m_Weight: 0
+  - m_Path: alicezero/Root/Pole.Right
+    m_Weight: 0
+  - m_Path: alicezero/Root/Pole.Right/Pole.Right_end
+    m_Weight: 0
+  - m_Path: mesh
+    m_Weight: 0

@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: qdroid
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: mesh
+    m_Weight: 0
+  - m_Path: qdroid_tpv
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left/Leg.Toe.Left
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left/Leg.Bottom.Left/Leg.Toe.Left/Leg.Toe.Left_end
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left.001
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left.001/Leg.Bottom.Left.001
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left.001/Leg.Bottom.Left.001/Leg.Toe.Left.001
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Leg.Top.Left.001/Leg.Bottom.Left.001/Leg.Toe.Left.001/Leg.Toe.Left.001_end
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Neck/Head/Head_end
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Arm.Buttom.Left
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Arm.Buttom.Left/Hand.left
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left/Arm.Top.Left/Arm.Mid.Left/Arm.Buttom.Left/Hand.left/Hand.left_end
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001/Arm.Top.Right.001
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001/Arm.Top.Right.001/Arm.Mid.Left.001
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001/Arm.Top.Right.001/Arm.Mid.Left.001/Arm.Buttom.Left.001
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001/Arm.Top.Right.001/Arm.Mid.Left.001/Arm.Buttom.Left.001/Hand.left.001
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/Hips/Spine.Bottom/Spine.Mid/Spine.Top/Shoulder.Left.001/Arm.Top.Right.001/Arm.Mid.Left.001/Arm.Buttom.Left.001/Hand.left.001/Hand.left.001_end
+    m_Weight: 1
+  - m_Path: qdroid_tpv/Root/IK.Left
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/IK.Left/IK.Left_end
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/IK.Left.001
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/IK.Left.001/IK.Left.001_end
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Pole.Left
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Pole.Left/Pole.Left_end
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Pole.Left.001
+    m_Weight: 0
+  - m_Path: qdroid_tpv/Root/Pole.Left.001/Pole.Left.001_end
+    m_Weight: 0

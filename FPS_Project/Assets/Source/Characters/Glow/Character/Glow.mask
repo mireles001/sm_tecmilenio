@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Glow
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Glow
+    m_Weight: 0
+  - m_Path: Glow_tpv
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Left
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Left/Leg_Bottom_Left
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Left/Leg_Bottom_Left/Foot_Left
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Right
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Right/Leg_Bottom_Right
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Leg_Top_Right/Leg_Bottom_Right/Foot_Right
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Index_Top_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Index_Top_Left/Index_Middle_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Index_Top_Left/Index_Middle_Left/Index_Bottom_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Middle_Top_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Middle_Top_Left/Middle_Middle_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Middle_Top_Left/Middle_Middle_Left/Middle_Bottom_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Pinky_Top_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Pinky_Top_Left/Pinky_Middle_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Pinky_Top_Left/Pinky_Middle_Left/Pinky_Bottom_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Thumb_Top_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Thumb_Top_Left/Thum_Bottom_Left
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Index_Top_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Index_Top_Right/Index_Middle_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Index_Top_Right/Index_Middle_Right/Index_Bottom_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Middle_Top_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Middle_Top_Right/Middle_Middle_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Middle_Top_Right/Middle_Middle_Right/Middle_Bottom_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Pinky_Top_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Pinky_Top_Right/Pinky_Middle_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Pinky_Top_Right/Pinky_Middle_Right/Pinky_Bottom_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Thumb_Top_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Thumb_Top_Right/Thum_Bottom_Right
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Spine_Top
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/Hips/Spine_Bottom/Spine_Middle/Spine_Top/Head
+    m_Weight: 1
+  - m_Path: Glow_tpv/Root/IK_Left
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/IK_Right
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Pole_Left
+    m_Weight: 0
+  - m_Path: Glow_tpv/Root/Pole_Right
+    m_Weight: 0
+  - m_Path: Helmet
+    m_Weight: 1

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:FPS_Project/Assets/Scripts/GameState.meta
 guid: 7ba3574faf6fb784da59324e625949a0
+=======
+guid: bf88526d094a76e47b417ac2e77aea6d
+>>>>>>> 8adce8a4e51811c7eeaadae728d050f568f9e675:FPS_Project/Assets/Prefabs/Kitsunen.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

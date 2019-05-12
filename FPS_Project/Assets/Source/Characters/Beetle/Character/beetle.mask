@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: beetle
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: beetle_tpv
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Left/Leg_Bottom_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Left/Leg_Bottom_Left/Foot_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Left/Leg_Bottom_Left/Foot_Left/Toe_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Right
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Right/Leg_Bottom_Right
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Right/Leg_Bottom_Right/Foot_Right
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Leg_Top_Right/Leg_Bottom_Right/Foot_Right/Toe_Right
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Neck
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Neck/Head
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Fingers_Top_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Fingers_Top_Left/Fingers_Middle_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Fingers_Top_Left/Fingers_Middle_Left/Fingers_Bottom_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Index_Top_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Index_Top_Left/Index_Middle_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Index_Top_Left/Index_Middle_Left/Index_Bottom_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Thumb_Top_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Thumb_Top_Left/ThumbMiddle_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Left/Arm_Top_Left/Arm_Bottom_Left/Hand_left/Thumb_Top_Left/ThumbMiddle_Left/Thumb_Bottom_Left
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Fingers_Top_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Fingers_Top_Right/Fingers_Middle_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Fingers_Top_Right/Fingers_Middle_Right/Fingers_Bottom_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Index_Top_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Index_Top_Right/Index_Middle_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Index_Top_Right/Index_Middle_Right/Index_Bottom_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Thumb_Top_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Thumb_Top_Right/ThumbMiddle_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/Hips/Spine_Bottom/S_ne_Middle/Spine_Top/Shoulder_Right/Arm_Top_Right/Arm_Bottom_Right/Hand_right/Thumb_Top_Right/ThumbMiddle_Right/Thumb_Bottom_Right
+    m_Weight: 1
+  - m_Path: beetle_tpv/Root/IK_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/IK_Right
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Pole_Left
+    m_Weight: 0
+  - m_Path: beetle_tpv/Root/Pole_Right
+    m_Weight: 0
+  - m_Path: mesh
+    m_Weight: 0
