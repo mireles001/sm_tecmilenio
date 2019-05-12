@@ -57,6 +57,7 @@ public class PlayerCore : MonoBehaviour
     _playerMove.JumpSpeed = (float)characterParams["jump"];
     _playerMove.CharRb.radius = (float)characterParams["width"];
     _playerMove.CharRb.height = (float)characterParams["height"];
+    _playerMove.CharRb.center = new Vector3(0f, _playerMove.CharRb.height / 2f, 0f);
     _fpv = (FpvAnimation)characterParams["fpv"];
     _playerMove.StartUp((float)characterParams["camera"], _character.transform);
     _playerWeapons.StartUp();

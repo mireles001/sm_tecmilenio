@@ -1,108 +1,302 @@
 fileFormatVersion: 2
 guid: 4ab7a167bdb07f74692ba9099d45611d
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Arm_Mid_Left
-    100002: Arm_Mid_Right
-    100004: Arm_Top_Left
-    100006: Arm_Top_Right
-    100008: //RootNode
-    100010: Hand_Left
-    100012: Hand_Right
-    100014: Index_Bottom_Left
-    100016: Index_Bottom_Right
-    100018: Index_Mid_Left
-    100020: Index_Mid_Right
-    100022: Index_Top_Left
-    100024: Index_Top_Right
-    100026: kitt_e
-    100028: mesh
-    100030: Middle_Bottom_Left
-    100032: Middle_Bottom_Right
-    100034: Middle_Mid_Left
-    100036: Middle_Mid_Right
-    100038: Middle_Top_Left
-    100040: Middle_Top_Right
-    100042: Pinky_Bottom_Left
-    100044: Pinky_Bottom_Right
-    100046: Pinky_Mid_Left
-    100048: Pinky_Mid_Right
-    100050: Pinky_Top_Left
-    100052: Pinky_Top_Right
-    100054: Ring_Bottom_Left
-    100056: Ring_Bottom_Right
-    100058: Ring_Mid_Left
-    100060: Ring_Mid_Right
-    100062: Ring_Top_Left
-    100064: Ring_Top_Right
-    100066: Shoulder_Left
-    100068: Shoulder_Right
-    100070: Spine_Top
-    100072: Thumb_Bottom_Left
-    100074: Thumb_Bottom_Right
-    100076: Thumb_Mid_Left
-    100078: Thumb_Mid_Right
-    100080: Thumb_Top_Left
-    100082: Thumb_Top_Right
-    400000: Arm_Mid_Left
-    400002: Arm_Mid_Right
-    400004: Arm_Top_Left
-    400006: Arm_Top_Right
-    400008: //RootNode
-    400010: Hand_Left
-    400012: Hand_Right
-    400014: Index_Bottom_Left
-    400016: Index_Bottom_Right
-    400018: Index_Mid_Left
-    400020: Index_Mid_Right
-    400022: Index_Top_Left
-    400024: Index_Top_Right
-    400026: kitt_e
-    400028: mesh
-    400030: Middle_Bottom_Left
-    400032: Middle_Bottom_Right
-    400034: Middle_Mid_Left
-    400036: Middle_Mid_Right
-    400038: Middle_Top_Left
-    400040: Middle_Top_Right
-    400042: Pinky_Bottom_Left
-    400044: Pinky_Bottom_Right
-    400046: Pinky_Mid_Left
-    400048: Pinky_Mid_Right
-    400050: Pinky_Top_Left
-    400052: Pinky_Top_Right
-    400054: Ring_Bottom_Left
-    400056: Ring_Bottom_Right
-    400058: Ring_Mid_Left
-    400060: Ring_Mid_Right
-    400062: Ring_Top_Left
-    400064: Ring_Top_Right
-    400066: Shoulder_Left
-    400068: Shoulder_Right
-    400070: Spine_Top
-    400072: Thumb_Bottom_Left
-    400074: Thumb_Bottom_Right
-    400076: Thumb_Mid_Left
-    400078: Thumb_Mid_Right
-    400080: Thumb_Top_Left
-    400082: Thumb_Top_Right
-    2100000: lambert1__textura_kitte_diffuse
-    4300000: mesh
-    7400000: _t
-    7400002: change_weapon
-    7400004: damage
-    7400006: jump_faling
-    7400008: jump_impulse
-    7400010: jump_landing
-    7400012: run
-    7400014: idle
-    7400016: shooting
-    9500000: //RootNode
-    13700000: mesh
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Arm_Mid_Left
+  - first:
+      1: 100002
+    second: Arm_Mid_Right
+  - first:
+      1: 100004
+    second: Arm_Top_Left
+  - first:
+      1: 100006
+    second: Arm_Top_Right
+  - first:
+      1: 100008
+    second: //RootNode
+  - first:
+      1: 100010
+    second: Hand_Left
+  - first:
+      1: 100012
+    second: Hand_Right
+  - first:
+      1: 100014
+    second: Index_Bottom_Left
+  - first:
+      1: 100016
+    second: Index_Bottom_Right
+  - first:
+      1: 100018
+    second: Index_Mid_Left
+  - first:
+      1: 100020
+    second: Index_Mid_Right
+  - first:
+      1: 100022
+    second: Index_Top_Left
+  - first:
+      1: 100024
+    second: Index_Top_Right
+  - first:
+      1: 100026
+    second: kitt_e
+  - first:
+      1: 100028
+    second: mesh
+  - first:
+      1: 100030
+    second: Middle_Bottom_Left
+  - first:
+      1: 100032
+    second: Middle_Bottom_Right
+  - first:
+      1: 100034
+    second: Middle_Mid_Left
+  - first:
+      1: 100036
+    second: Middle_Mid_Right
+  - first:
+      1: 100038
+    second: Middle_Top_Left
+  - first:
+      1: 100040
+    second: Middle_Top_Right
+  - first:
+      1: 100042
+    second: Pinky_Bottom_Left
+  - first:
+      1: 100044
+    second: Pinky_Bottom_Right
+  - first:
+      1: 100046
+    second: Pinky_Mid_Left
+  - first:
+      1: 100048
+    second: Pinky_Mid_Right
+  - first:
+      1: 100050
+    second: Pinky_Top_Left
+  - first:
+      1: 100052
+    second: Pinky_Top_Right
+  - first:
+      1: 100054
+    second: Ring_Bottom_Left
+  - first:
+      1: 100056
+    second: Ring_Bottom_Right
+  - first:
+      1: 100058
+    second: Ring_Mid_Left
+  - first:
+      1: 100060
+    second: Ring_Mid_Right
+  - first:
+      1: 100062
+    second: Ring_Top_Left
+  - first:
+      1: 100064
+    second: Ring_Top_Right
+  - first:
+      1: 100066
+    second: Shoulder_Left
+  - first:
+      1: 100068
+    second: Shoulder_Right
+  - first:
+      1: 100070
+    second: Spine_Top
+  - first:
+      1: 100072
+    second: Thumb_Bottom_Left
+  - first:
+      1: 100074
+    second: Thumb_Bottom_Right
+  - first:
+      1: 100076
+    second: Thumb_Mid_Left
+  - first:
+      1: 100078
+    second: Thumb_Mid_Right
+  - first:
+      1: 100080
+    second: Thumb_Top_Left
+  - first:
+      1: 100082
+    second: Thumb_Top_Right
+  - first:
+      4: 400000
+    second: Arm_Mid_Left
+  - first:
+      4: 400002
+    second: Arm_Mid_Right
+  - first:
+      4: 400004
+    second: Arm_Top_Left
+  - first:
+      4: 400006
+    second: Arm_Top_Right
+  - first:
+      4: 400008
+    second: //RootNode
+  - first:
+      4: 400010
+    second: Hand_Left
+  - first:
+      4: 400012
+    second: Hand_Right
+  - first:
+      4: 400014
+    second: Index_Bottom_Left
+  - first:
+      4: 400016
+    second: Index_Bottom_Right
+  - first:
+      4: 400018
+    second: Index_Mid_Left
+  - first:
+      4: 400020
+    second: Index_Mid_Right
+  - first:
+      4: 400022
+    second: Index_Top_Left
+  - first:
+      4: 400024
+    second: Index_Top_Right
+  - first:
+      4: 400026
+    second: kitt_e
+  - first:
+      4: 400028
+    second: mesh
+  - first:
+      4: 400030
+    second: Middle_Bottom_Left
+  - first:
+      4: 400032
+    second: Middle_Bottom_Right
+  - first:
+      4: 400034
+    second: Middle_Mid_Left
+  - first:
+      4: 400036
+    second: Middle_Mid_Right
+  - first:
+      4: 400038
+    second: Middle_Top_Left
+  - first:
+      4: 400040
+    second: Middle_Top_Right
+  - first:
+      4: 400042
+    second: Pinky_Bottom_Left
+  - first:
+      4: 400044
+    second: Pinky_Bottom_Right
+  - first:
+      4: 400046
+    second: Pinky_Mid_Left
+  - first:
+      4: 400048
+    second: Pinky_Mid_Right
+  - first:
+      4: 400050
+    second: Pinky_Top_Left
+  - first:
+      4: 400052
+    second: Pinky_Top_Right
+  - first:
+      4: 400054
+    second: Ring_Bottom_Left
+  - first:
+      4: 400056
+    second: Ring_Bottom_Right
+  - first:
+      4: 400058
+    second: Ring_Mid_Left
+  - first:
+      4: 400060
+    second: Ring_Mid_Right
+  - first:
+      4: 400062
+    second: Ring_Top_Left
+  - first:
+      4: 400064
+    second: Ring_Top_Right
+  - first:
+      4: 400066
+    second: Shoulder_Left
+  - first:
+      4: 400068
+    second: Shoulder_Right
+  - first:
+      4: 400070
+    second: Spine_Top
+  - first:
+      4: 400072
+    second: Thumb_Bottom_Left
+  - first:
+      4: 400074
+    second: Thumb_Bottom_Right
+  - first:
+      4: 400076
+    second: Thumb_Mid_Left
+  - first:
+      4: 400078
+    second: Thumb_Mid_Right
+  - first:
+      4: 400080
+    second: Thumb_Top_Left
+  - first:
+      4: 400082
+    second: Thumb_Top_Right
+  - first:
+      21: 2100000
+    second: lambert1__textura_kitte_diffuse
+  - first:
+      43: 4300000
+    second: mesh
+  - first:
+      74: 7400000
+    second: _t
+  - first:
+      74: 7400002
+    second: f_kit_change_weapon
+  - first:
+      74: 7400004
+    second: f_kit_damage
+  - first:
+      74: 7400006
+    second: f_kit_jump_faling
+  - first:
+      74: 7400008
+    second: f_kit_jump_impulse
+  - first:
+      74: 7400010
+    second: f_kit_jump_landing
+  - first:
+      74: 7400012
+    second: f_kit_run
+  - first:
+      74: 7400014
+    second: f_kit_idle
+  - first:
+      74: 7400016
+    second: f_kit_shooting
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: mesh
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -131,8 +325,9 @@ ModelImporter:
     - serializedVersion: 16
       name: _t
       takeName: _t
-      firstFrame: -1
-      lastFrame: 5
+      internalID: 7400000
+      firstFrame: 0
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -157,9 +352,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: change_weapon
+      name: f_kit_change_weapon
       takeName: change_weapon
-      firstFrame: -1
+      internalID: 7400002
+      firstFrame: 0
       lastFrame: 75
       wrapMode: 0
       orientationOffsetY: 0
@@ -185,9 +381,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: damage
+      name: f_kit_damage
       takeName: damage
-      firstFrame: -1
+      internalID: 7400004
+      firstFrame: 0
       lastFrame: 92
       wrapMode: 0
       orientationOffsetY: 0
@@ -213,9 +410,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jump_faling
+      name: f_kit_jump_faling
       takeName: jump_faling
-      firstFrame: -1
+      internalID: 7400006
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -241,9 +439,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jump_impulse
+      name: f_kit_jump_impulse
       takeName: jump_impulse
-      firstFrame: -1
+      internalID: 7400008
+      firstFrame: 0
       lastFrame: 33
       wrapMode: 0
       orientationOffsetY: 0
@@ -269,9 +468,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jump_landing
+      name: f_kit_jump_landing
       takeName: jump_landing
-      firstFrame: -1
+      internalID: 7400010
+      firstFrame: 0
       lastFrame: 30
       wrapMode: 0
       orientationOffsetY: 0
@@ -297,9 +497,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: run
+      name: f_kit_run
       takeName: run
-      firstFrame: -1
+      internalID: 7400012
+      firstFrame: 0
       lastFrame: 120
       wrapMode: 0
       orientationOffsetY: 0
@@ -325,9 +526,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: idle
+      name: f_kit_idle
       takeName: idle
-      firstFrame: -1
+      internalID: 7400014
+      firstFrame: 0
       lastFrame: 99
       wrapMode: 0
       orientationOffsetY: 0
@@ -353,9 +555,10 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: shooting
+      name: f_kit_shooting
       takeName: shooting
-      firstFrame: -1
+      internalID: 7400016
+      firstFrame: 0
       lastFrame: 67
       wrapMode: 0
       orientationOffsetY: 0
@@ -386,6 +589,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -393,27 +597,32 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -423,8 +632,8 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
