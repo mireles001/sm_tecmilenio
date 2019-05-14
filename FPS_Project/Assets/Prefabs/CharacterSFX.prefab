@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &277141020744503559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055954357269043800}
+  - component: {fileID: 1494580135627786575}
+  m_Layer: 0
+  m_Name: CharacterSFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2055954357269043800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277141020744503559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494580135627786575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277141020744503559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f9f39252030cf4e9e5f798668a761e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _jump: {fileID: 8300000, guid: 1a4a09d0ca053604baa4ec1fc6337edd, type: 3}
+  _land: {fileID: 8300000, guid: cc0c9636a96958d4790cc658d4ff2696, type: 3}
+  _weaponSwap: {fileID: 8300000, guid: 3408ded5142ccb741bd770ea2100712b, type: 3}
+  _machineGun: {fileID: 8300000, guid: 776ee6e350d8df04c82cb16f0bcab347, type: 3}
+  _grenade: {fileID: 8300000, guid: 1cc352970c9ce6a4faa9c03e16d556ef, type: 3}
+  _rocket: {fileID: 8300000, guid: 910b324e7b6cf9645a497dcfe5a6e336, type: 3}
+  _damage: {fileID: 8300000, guid: ea23ad4cb6891b0438a688a6c1c18e78, type: 3}
+  _death: {fileID: 8300000, guid: c031a4886f2ec5b4ba65ecf1b4cfb85b, type: 3}
+  _health: {fileID: 8300000, guid: 430e73275af3b2f42b6e3127e8da4819, type: 3}
+  _ammo: {fileID: 8300000, guid: b3fbc6c94af97e949bcf648727591874, type: 3}

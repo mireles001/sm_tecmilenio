@@ -6,11 +6,17 @@ public class TpvAnimation : MonoBehaviour
   protected bool _isGrounded = false;
   protected Animator _animator;
   protected CharacterWeapons _weapons;
+  [SerializeField]
+  protected GameObject _sfxPrefab;
+  protected CharacterSFX _sfx;
+  protected int _weaponIndex;
 
   public virtual void Awake()
   {
     _animator = GetComponent<Animator>();
     _weapons = GetComponent<CharacterWeapons>();
+
+    _sfx = Instantiate(_sfxPrefab, transform).GetComponent<CharacterSFX>();
 
     if (changeWeaponAnimation.Length > 0)
     {
@@ -26,14 +32,20 @@ public class TpvAnimation : MonoBehaviour
     }
   }
 
-  public virtual void Jump()
+  public void Jump()
   {
     SetIsGrounded(false);
     _animator.Play("jump_impulse");
+    _sfx.Jump();
   }
 
   public void SetIsGrounded(bool value)
   {
+    if (!_isGrounded && value)
+    {
+      _sfx.Land();
+    }
+
     _isGrounded = value;
     _animator.SetBool("is_grounded", _isGrounded);
   }
@@ -52,11 +64,25 @@ public class TpvAnimation : MonoBehaviour
   {
     _animator.Play("weapon_change", -1, 0f);
     _weapons.WeaponChange(index);
+    _weaponIndex = index;
+    _sfx.WeaponSwap();
   }
 
   public void WeaponUse()
   {
     _animator.Play("weapon_use", -1, 0f);
+    switch (_weaponIndex)
+    {
+      case 2:
+        _sfx.FireGrenade();
+        break;
+      case 3:
+        _sfx.FireRocket();
+        break;
+      default:
+        _sfx.FireGun();
+        break;
+    }
   }
 
   public void Damage()
@@ -65,6 +91,7 @@ public class TpvAnimation : MonoBehaviour
     {
       _animator.Play("damage", -1, 0f);
     }
+    _sfx.Damage();
   }
 
   public void Death()
@@ -72,6 +99,15 @@ public class TpvAnimation : MonoBehaviour
     if (_isGrounded)
     {
       _animator.Play("death");
+    }
+    _sfx.Death();
+  }
+
+  public CharacterSFX Sfx
+  {
+    get
+    {
+      return _sfx;
     }
   }
 }

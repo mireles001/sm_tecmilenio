@@ -1992,12 +1992,12 @@ PrefabInstance:
     - target: {fileID: 5196339446903046776, guid: ceb1d2f3ca10fae4d8400ad888c907d1,
         type: 3}
       propertyPath: _grenades
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5196339446903046776, guid: ceb1d2f3ca10fae4d8400ad888c907d1,
         type: 3}
       propertyPath: _rockets
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5196339446903046776, guid: ceb1d2f3ca10fae4d8400ad888c907d1,
         type: 3}

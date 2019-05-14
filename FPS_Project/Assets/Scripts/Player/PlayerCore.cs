@@ -13,6 +13,7 @@ public class PlayerCore : MonoBehaviour
   private PlayerMovement _playerMove;
   private PlayerWeapons _playerWeapons;
   private FpvAnimation _fpv;
+  private CharacterSFX _sfx;
 
   private void Awake()
   {
@@ -68,6 +69,7 @@ public class PlayerCore : MonoBehaviour
   private void RegisterDeath()
   {
     Debug.Log("Register Death by player");
+    _sfx.Death();
   }
 
   public void ModifyHealth(int val)
@@ -78,9 +80,16 @@ public class PlayerCore : MonoBehaviour
     {
       _hp = _maxHp;
     }
-    else if (_hp <= 0)
+    else if (val < 0)
     {
-      RegisterDeath();
+      if (_hp <= 0)
+      {
+        RegisterDeath();
+      }
+      else
+      {
+        _sfx.Damage();
+      }
     }
   }
 
@@ -98,9 +107,10 @@ public class PlayerCore : MonoBehaviour
           {
             _playerWeapons.Grenades = _playerWeapons.MaxGrenades;
           }
+          _sfx.PickAmmo();
           valid = true;
         }
-        
+
         break;
       case 2:
         if (_playerWeapons.Rockets < _playerWeapons.MaxRockets)
@@ -110,6 +120,7 @@ public class PlayerCore : MonoBehaviour
           {
             _playerWeapons.Rockets = _playerWeapons.MaxRockets;
           }
+          _sfx.PickAmmo();
           valid = true;
         }
         break;
@@ -117,6 +128,7 @@ public class PlayerCore : MonoBehaviour
         if (_hp < _maxHp)
         {
           ModifyHealth(amount);
+          _sfx.PickHealth();
           valid = true;
         }
         break;
@@ -170,6 +182,18 @@ public class PlayerCore : MonoBehaviour
     get
     {
       return _fpv;
+    }
+  }
+
+  public CharacterSFX Sfx
+  {
+    get
+    {
+      return _sfx;
+    }
+    set
+    {
+      _sfx = value;
     }
   }
 }

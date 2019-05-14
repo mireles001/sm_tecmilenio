@@ -47,7 +47,7 @@ public class MenuManager : MonoBehaviour
   private bool _killApp = false;
   private bool _goToLimbo = false;
 
-  private string _username = "NewPlayer";
+  private string _username = "player";
   private string _myIp;
   private string _ip;
   private bool _isServer = false;

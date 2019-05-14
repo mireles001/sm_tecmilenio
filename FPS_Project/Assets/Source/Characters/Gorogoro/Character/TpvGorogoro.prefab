@@ -1805,7 +1805,7 @@ GameObject:
   - component: {fileID: 1605479941}
   - component: {fileID: 7225445569887436342}
   m_Layer: 0
-  m_Name: tpv
+  m_Name: TpvGorogoro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1859,6 +1859,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeWeaponAnimation: gorogoro|change_weapon
+  _sfxPrefab: {fileID: 277141020744503559, guid: 7a572c7ff3c3c9740bb76cec12f45a27,
+    type: 3}
 --- !u!114 &7225445569887436342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1871,13 +1873,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f3b2205b18c9f346a4a6223a230222b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterType: 0
   _weapons:
   - {fileID: 504071990095496787, guid: c6c00f209783c5b41902c11da0343dfd, type: 3}
   - {fileID: 5639862664436623730, guid: 208b72bbbd1eead4d9ed9b8fc3c15ed9, type: 3}
   - {fileID: 6770229581849315129, guid: 125fc7801eff154448a57ee702b8ace5, type: 3}
   _weaponHolder: {fileID: 6977104594629764017}
   _weaponSwapTimer: 0.33
-  _characterType: 0
 --- !u!1 &5443732701299875778
 GameObject:
   m_ObjectHideFlags: 0

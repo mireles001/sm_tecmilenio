@@ -2594,6 +2594,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeWeaponAnimation: kitt.e_tpv|change_weapon
+  _sfxPrefab: {fileID: 277141020744503559, guid: 7a572c7ff3c3c9740bb76cec12f45a27,
+    type: 3}
 --- !u!114 &5810851326944643210
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1301,7 +1301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca1ff78660c7744d99c771b45968d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterName: Kitt.e
+  _characterName: unnamed
   _movementSpeed: 4.5
   _jumpForce: 10
   _maxHealth: 80
@@ -1340,6 +1340,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeWeaponAnimation: change_weapon
+  _sfxPrefab: {fileID: 277141020744503559, guid: 7a572c7ff3c3c9740bb76cec12f45a27,
+    type: 3}
 --- !u!1 &6626052978531051736
 GameObject:
   m_ObjectHideFlags: 0

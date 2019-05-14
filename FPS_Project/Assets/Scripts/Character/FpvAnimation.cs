@@ -10,7 +10,9 @@ public class FpvAnimation : TpvAnimation
 
   public void StartUp()
   {
-    _char = GetComponent<CharacterCore>().PlayerCore.PlayerMovement.CharRb;
+    CharacterCore core = GetComponent<CharacterCore>();
+    _char = core.PlayerCore.PlayerMovement.CharRb;
+    core.PlayerCore.Sfx = _sfx;
   }
 
   private void Update()
@@ -22,6 +24,7 @@ public class FpvAnimation : TpvAnimation
         if (!_isGrounded)
         {
           _animator.SetBool("is_grounded", true);
+          _sfx.Land();
         }
 
         _isGrounded = true;
@@ -62,6 +65,7 @@ public class FpvAnimation : TpvAnimation
         if (_isGrounded)
         {
           _animator.SetBool("is_grounded", false);
+          _sfx.Jump();
         }
 
         _isGrounded = false;
@@ -69,10 +73,4 @@ public class FpvAnimation : TpvAnimation
       }
     }
   }
-
-  public override void Jump()
-  {
-    _animator.SetBool("is_grounded", false);
-  }
-
 }

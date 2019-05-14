@@ -884,6 +884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeWeaponAnimation: gorogoro_fpv|change_weapon
+  _sfxPrefab: {fileID: 277141020744503559, guid: 7a572c7ff3c3c9740bb76cec12f45a27,
+    type: 3}
 --- !u!114 &1606373090841398785
 MonoBehaviour:
   m_ObjectHideFlags: 0
