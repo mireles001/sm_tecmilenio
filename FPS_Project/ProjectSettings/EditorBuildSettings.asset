@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/network_dev.unity
     guid: 44db4c93d124fc844be4f339255461dc
+  - enabled: 1
+    path: Assets/Scenes/menu.unity
+    guid: 40fd9a6d805610f4c9f664ca14d87fb0
+  - enabled: 1
+    path: Assets/Scenes/limbo.unity
+    guid: ff919d75d2b93034baff6f1489f3d952
   m_configObjects: {}

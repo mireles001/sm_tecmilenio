@@ -485,14 +485,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 226076804}
   m_TextComponent: {fileID: 694518415}
   m_Placeholder: {fileID: 1963505008}
-  m_ContentType: 0
+  m_ContentType: 4
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 1
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterValidation: 3
+  m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 408746682}
   - component: {fileID: 408746684}
   - component: {fileID: 408746683}
+  - component: {fileID: 408746685}
   m_Layer: 5
   m_Name: title
   m_TagString: Untagged
@@ -779,6 +780,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408746681}
   m_CullTransparentMesh: 0
+--- !u!225 &408746685
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408746681}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &433194472
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,10 +927,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0, g: 0, b: 0, a: 0.3137255}
-    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.627451}
-    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.627451}
-    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.627451}
-    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.627451}
+    m_HighlightedColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+    m_PressedColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+    m_SelectedColor: {r: 0, g: 0, b: 0, a: 0.3137255}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 0.3137255}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1487,12 +1500,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a22b6bde4257042aeb0a27ff3ad229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gameMaster: {fileID: 4581414173714497993, guid: 9e15cb71938b7f549b76651dff698574,
+    type: 3}
   _fader: {fileID: 1890334325}
   _title: {fileID: 408746681}
   _create: {fileID: 1925850750}
   _join: {fileID: 2131204087}
   _click: {fileID: 8300000, guid: 4398e067bb8aa9a49b809281b19f6de7, type: 3}
   _exit: {fileID: 1277903697}
+  _goToCreate: {fileID: 100859847}
+  _goToJoin: {fileID: 611856885}
+  _goBackJoin: {fileID: 1323071708}
+  _goBackCreate: {fileID: 2066416313}
+  _createServer: {fileID: 2009994432}
+  _joinServer: {fileID: 1923724240}
+  _serverIp: {fileID: 492467404}
+  _connectIp: {fileID: 1238798481}
+  _setNameServer: {fileID: 226076803}
+  _setNameClient: {fileID: 972806911}
 --- !u!82 &801961657
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1908,14 +1933,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 972806912}
   m_TextComponent: {fileID: 1942149878}
   m_Placeholder: {fileID: 1862547388}
-  m_ContentType: 0
+  m_ContentType: 4
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 1
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterValidation: 3
+  m_CharacterLimit: 10
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
@@ -3650,6 +3675,7 @@ GameObject:
   - component: {fileID: 1925850751}
   - component: {fileID: 1925850753}
   - component: {fileID: 1925850752}
+  - component: {fileID: 1925850754}
   m_Layer: 5
   m_Name: create
   m_TagString: Untagged
@@ -3722,6 +3748,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925850750}
   m_CullTransparentMesh: 0
+--- !u!225 &1925850754
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925850750}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1942149876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4286,6 +4324,7 @@ GameObject:
   - component: {fileID: 2131204088}
   - component: {fileID: 2131204090}
   - component: {fileID: 2131204089}
+  - component: {fileID: 2131204091}
   m_Layer: 5
   m_Name: join
   m_TagString: Untagged
@@ -4357,3 +4396,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131204087}
   m_CullTransparentMesh: 0
+--- !u!225 &2131204091
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131204087}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
