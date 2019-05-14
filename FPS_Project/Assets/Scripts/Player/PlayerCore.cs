@@ -8,7 +8,7 @@ public class PlayerCore : MonoBehaviour
   public int _maxHp = 0;
 
   private bool _isLocked = true;
-  private string _characterName = "unnamed";
+  private string _characterName = "";
   private GameObject _character;
   private PlayerMovement _playerMove;
   private PlayerWeapons _playerWeapons;
@@ -84,20 +84,45 @@ public class PlayerCore : MonoBehaviour
     }
   }
 
-  public void GotPickUp(int pickUpType, int amount)
+  public bool GotPickUp(int pickUpType, int amount)
   {
+    bool valid = false;
+
     switch (pickUpType)
     {
       case 1:
-        _playerWeapons.Grenades += amount;
+        if (_playerWeapons.Grenades < _playerWeapons.MaxGrenades)
+        {
+          _playerWeapons.Grenades += amount;
+          if (_playerWeapons.Grenades > _playerWeapons.MaxGrenades)
+          {
+            _playerWeapons.Grenades = _playerWeapons.MaxGrenades;
+          }
+          valid = true;
+        }
+        
         break;
       case 2:
-        _playerWeapons.Rockets += amount;
+        if (_playerWeapons.Rockets < _playerWeapons.MaxRockets)
+        {
+          _playerWeapons.Rockets += amount;
+          if (_playerWeapons.Rockets > _playerWeapons.MaxRockets)
+          {
+            _playerWeapons.Rockets = _playerWeapons.MaxRockets;
+          }
+          valid = true;
+        }
         break;
       default:
-        ModifyHealth(amount);
+        if (_hp < _maxHp)
+        {
+          ModifyHealth(amount);
+          valid = true;
+        }
         break;
     }
+
+    return valid;
   }
 
   private void ToggleControls()

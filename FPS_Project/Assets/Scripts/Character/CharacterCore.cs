@@ -53,6 +53,14 @@ public class CharacterCore : MonoBehaviour
     }
   }
 
+  public string Name
+  {
+    get
+    {
+      return _characterName;
+    }
+  }
+
   public CharacterWeapons CharacterWeapons
   {
     get
@@ -60,16 +68,4 @@ public class CharacterCore : MonoBehaviour
       return _weapons;
     }
   }
-
-  /*public FpvAnimation Fpv
-  {
-    get
-    {
-      return _fpv;
-    }
-    set
-    {
-      _fpv = value;
-    }
-  }*/
 }

@@ -5,7 +5,11 @@ public class PlayerWeapons : MonoBehaviour
   [SerializeField]
   private int _grenades = 0;
   [SerializeField]
+  private int _maxGrenades = 20;
+  [SerializeField]
   private int _rockets = 0;
+  [SerializeField]
+  private int _maxRockets = 20;
   [SerializeField]
   private float _machineGunFireRate = 0.25f;
   [SerializeField]
@@ -168,6 +172,14 @@ public class PlayerWeapons : MonoBehaviour
     }
   }
 
+  public int MaxGrenades
+  {
+    get
+    {
+      return _maxGrenades;
+    }
+  }
+
   public int Rockets
   {
     get
@@ -177,6 +189,14 @@ public class PlayerWeapons : MonoBehaviour
     set
     {
       _rockets = value;
+    }
+  }
+
+  public int MaxRockets
+  {
+    get
+    {
+      return _maxRockets;
     }
   }
 
