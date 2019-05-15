@@ -84,6 +84,7 @@ public class Client : NetworkCore
   {
     if (!_isStarted)
       return;
+
     Debug.Log("send message number: " + _currentNumberUpdates++);
     var p = GameState.GetInstance().localPlayer;
     Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();

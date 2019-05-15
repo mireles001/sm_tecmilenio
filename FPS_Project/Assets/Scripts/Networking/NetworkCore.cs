@@ -9,8 +9,8 @@ public class NetworkCore : MonoBehaviour
   protected const int PORT = 26501;
   protected const int MAX_USERS = 16;
   protected const int BYTE_SIZE = 1024;
-  protected const int CLIENT_UPDATE_TIME_MS = 1000;
-  protected const int SERVER_UPDATE_TIME_MS = 1000;
+  protected const int CLIENT_UPDATE_TIME_MS = 500;
+  protected const int SERVER_UPDATE_TIME_MS = 500;
 
   protected byte _reliableChannel;
   protected byte _unreliableChannel;
@@ -46,11 +46,10 @@ public class NetworkCore : MonoBehaviour
   {
     _ui = ui;
 
-    _serverIp = ui._inputIP.textComponent.text;
+    _serverIp = ui._inputIP.text;
+
     if (_serverIp.Length == 0)
-    {
       _serverIp = "127.0.0.1";
-    }
 
     NetworkTransport.Init();
 
@@ -60,6 +59,7 @@ public class NetworkCore : MonoBehaviour
   public void Shutdown()
   {
     _isStarted = false;
+
     NetworkTransport.Shutdown();
 
     Destroy(gameObject);
@@ -84,7 +84,7 @@ public class NetworkCore : MonoBehaviour
     BinaryFormatter formatter = new BinaryFormatter();
     MemoryStream ms = new MemoryStream(buffer);
     formatter.Serialize(ms, msg);
-    NetworkTransport.Send(_hostId, _connectionId, chan , buffer, BYTE_SIZE, out _error);
+    NetworkTransport.Send(_hostId, _connectionId, chan, buffer, BYTE_SIZE, out _error);
   }
 
   // Server Code
@@ -99,10 +99,6 @@ public class NetworkCore : MonoBehaviour
     formatter.Serialize(ms, msg);
 
     NetworkTransport.Send(_hostId, cnnId, chan, buffer, BYTE_SIZE, out _error);
-    //NetworkTransport.GetBroadcastConnectionInfo;
-    //NetworkTransport.GetBroadcastConnectionMessage;
-    //NetworkTransport.SendMulticast()
-    
   }
 
   public void LameBroadCast(NetMsg msg, byte chan)
@@ -114,16 +110,4 @@ public class NetworkCore : MonoBehaviour
     }
   }
   #endregion
-
-  // public void TESTFUCNTION()
-  // {
-  //   Debug.Log("TESTFUNCTION");
-  //   var p = GameState.GetInstance().localPlayer;
-  //   Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
-  //   up.posX = p.position.x;
-  //   up.posY = p.position.y;
-  //   up.posZ = p.position.z;
-  //   SendServer(up);
-    
-  // }
 }

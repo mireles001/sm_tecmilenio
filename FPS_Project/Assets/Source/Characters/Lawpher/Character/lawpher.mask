@@ -8,4 +8,102 @@ AvatarMask:
   m_PrefabAsset: {fileID: 0}
   m_Name: lawpher
   m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-  m_Elements: []
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Lawpher_tpv
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_left/leg_bot_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_left/leg_bot_left/foot_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_left/leg_bot_left/foot_left/toe_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_right
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_right/leg_bot_right
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/leg_top_right/leg_bot_right/foot_right
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/neck
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/neck/head
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/index_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/index_top_left/index_botton_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/middle_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/middle_top_left/middle_bot_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/pinky_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/pinky_top_left/pinky_bot_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/ring_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/ring_top_left/ring_bot_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/thumb_top_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_left/arm_top_left/arm_bot_left/hand_left/thumb_top_left/thumb_bot_left
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/index_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/index_top_right/index_botton_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/middle_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/middle_top_right/middle_bot_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/pinky_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/pinky_top_right/pinky_bot_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/ring_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/ring_top_right/ring_bot_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/thumb_top_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/hips/spine_bot/spine_mid/spine_top/shoulder_right/arm_top_right/arm_bot_right/hand_right/thumb_top_right/thumb_bot_right
+    m_Weight: 1
+  - m_Path: Lawpher_tpv/Root/ik_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/ik_right
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/pole_left
+    m_Weight: 0
+  - m_Path: Lawpher_tpv/Root/pole_right
+    m_Weight: 0
+  - m_Path: mesh
+    m_Weight: 0

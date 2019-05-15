@@ -42,7 +42,7 @@ public class PlayerSpawnerControl : MonoBehaviour
         entry.Value.posZ
       );
       dict[entry.Key].transform.rotation = Quaternion.Euler(0, entry.Value.rotY, 0);
-      //dict[entry.Key].SetActive(entry.Key != GameState.GetInstance().localPlayer.id);
+      dict[entry.Key].SetActive(entry.Key != GameState.GetInstance().localPlayer.id);
     }
   }
 }

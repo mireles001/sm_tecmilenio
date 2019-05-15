@@ -5,15 +5,14 @@ using UnityEngine.Networking;
 
 public class Server : NetworkCore
 {
-  private int currentNumberOfData = 0;
-  private float _currentUpdateTime = 0;
-  
+  private int _currentNumberOfData = 0;
+  private float _currentUpdateTime = 0f;
+
   public override void Init(ManagerUI ui)
   {
     base.Init(ui);
 
     _isServer = true;
-
 
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
@@ -118,12 +117,11 @@ public class Server : NetworkCore
   private void SetUsername(int cnnId, int channelId, int recHostId, Net_SetUsername su)
   {
     _ui.ConsoleMsg(string.Format("Set username: {0}", su.Username));
-    
   }
 
   private void UpdatePlayer(int cnnId, int channelId, int recHostId, Net_PlayerPushUpdate playerDef)
   {
-    Debug.Log("got update fron cnnid: " + cnnId + " and p.id "+playerDef.player.id);
+    Debug.Log("got update fron cnnid: " + cnnId + " and p.id " + playerDef.player.id);
     GameState.GetInstance().updatePlayer(
       playerDef.player
     );
