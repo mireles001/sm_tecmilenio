@@ -368,7 +368,7 @@ ModelImporter:
       name: change_weapon
       takeName: change_weapon
       internalID: 7400000
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
@@ -397,7 +397,7 @@ ModelImporter:
       name: damage
       takeName: damage
       internalID: 7400002
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -426,7 +426,7 @@ ModelImporter:
       name: death
       takeName: death
       internalID: 7400004
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -455,7 +455,7 @@ ModelImporter:
       name: Idle
       takeName: Idle
       internalID: 7400006
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -484,7 +484,7 @@ ModelImporter:
       name: jump_falling
       takeName: jump_falling
       internalID: 7400008
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -513,7 +513,7 @@ ModelImporter:
       name: jump_impulse
       takeName: jump_impulse
       internalID: 7400010
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -542,7 +542,7 @@ ModelImporter:
       name: jump_landing
       takeName: jump_landing
       internalID: 7400012
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -571,7 +571,7 @@ ModelImporter:
       name: run
       takeName: run
       internalID: 7400014
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -600,7 +600,7 @@ ModelImporter:
       name: shooting
       takeName: shooting
       internalID: 7400016
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0

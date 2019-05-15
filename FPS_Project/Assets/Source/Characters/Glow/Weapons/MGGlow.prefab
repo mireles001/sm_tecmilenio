@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2365573264999199974}
   - component: {fileID: 6890242084530708371}
   m_Layer: 9
-  m_Name: Glow_MG
+  m_Name: MGGlow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339091308496317535}
-  m_LocalRotation: {x: 0.23496711, y: -0.75163573, z: -0.1309125, w: 0.60224265}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -140,11 +140,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 05a82700b32024cc28aaa5f16f411f9f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 100.000084
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 05a82700b32024cc28aaa5f16f411f9f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 100.00008
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05a82700b32024cc28aaa5f16f411f9f, type: 3}

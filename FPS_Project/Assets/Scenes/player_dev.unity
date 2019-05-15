@@ -1962,7 +1962,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _characterPrefab
       value: 
-      objectReference: {fileID: 6626052978531051734, guid: 5b6aa8faee15b6248a412bb0423220f6,
+      objectReference: {fileID: 6399119397182947711, guid: c0d6a911cbc9d2845863fe92cfedbc3a,
         type: 3}
     - target: {fileID: 2102443009903815937, guid: ceb1d2f3ca10fae4d8400ad888c907d1,
         type: 3}

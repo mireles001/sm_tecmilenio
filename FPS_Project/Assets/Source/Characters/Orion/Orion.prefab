@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d1c9750e375254d9f59ad344009ce7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fpv: {fileID: 0}
-  tpv: {fileID: 0}
+  fpv: {fileID: 3685966545884464230, guid: 578f5f86f8dbc5f47a7816180b7e4d5c, type: 3}
+  tpv: {fileID: 5355414762300261231, guid: 8dec80fbdeeb0ba48ac2f8f9bec6f0aa, type: 3}
   portrait: {fileID: 21300000, guid: 1951f781c122b51489bba2d3b1aa8465, type: 3}

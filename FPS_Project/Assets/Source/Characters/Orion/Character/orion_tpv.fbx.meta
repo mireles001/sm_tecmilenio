@@ -1,205 +1,627 @@
 fileFormatVersion: 2
 guid: 2ae32106511ca4b7b9cafe03b4ff25fb
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: arm_left
-    100002: arm_right
-    100004: Body
-    100006: Boot_l
-    100008: Boot_r
-    100010: chest
-    100012: chest 1
-    100014: foot_left
-    100016: foot_right
-    100018: forearm_left
-    100020: forearm_right
-    100022: guante_d
-    100024: guante_i
-    100026: hand_left
-    100028: hand_right
-    100030: head
-    100032: head_end
-    100034: hip
-    100036: ik_left
-    100038: ik_left_end
-    100040: ik_right
-    100042: ik_right_end
-    100044: index_bottom_left
-    100046: index_bottom_left_end
-    100048: index_bottom_right
-    100050: index_bottom_right_end
-    100052: index_middle_left
-    100054: index_middle_right
-    100056: index_top_left
-    100058: index_top_right
-    100060: leg_middle_left
-    100062: leg_middle_right
-    100064: leg_top_left
-    100066: leg_top_right
-    100068: middle_bottom_left
-    100070: middle_bottom_left_end
-    100072: middle_bottom_right
-    100074: middle_bottom_right_end
-    100076: middle_middle_left
-    100078: middle_middle_right
-    100080: middle_top_left
-    100082: middle_top_right
-    100084: neck
-    100086: orion_tpv
-    100088: //RootNode
-    100090: pinky_bottom_left
-    100092: pinky_bottom_left_end
-    100094: pinky_bottom_right
-    100096: pinky_bottom_right_end
-    100098: pinky_middle_left
-    100100: pinky_middle_right
-    100102: pinky_top_left
-    100104: pinky_top_right
-    100106: pole_left
-    100108: pole_left_end
-    100110: pole_right
-    100112: pole_right_end
-    100114: ring_bottom_left
-    100116: ring_bottom_left_end
-    100118: ring_bottom_right
-    100120: ring_bottom_right_end
-    100122: ring_middle_left
-    100124: ring_middle_right
-    100126: ring_top_left
-    100128: ring_top_right
-    100130: root
-    100132: shoulder_left
-    100134: shoulder_right
-    100136: spine_bottom
-    100138: spine_top
-    100140: thumb_bottom_left
-    100142: thumb_bottom_left_end
-    100144: thumb_bottom_right
-    100146: thumb_bottom_right_end
-    100148: thumb_middle_left
-    100150: thumb_middle_right
-    100152: thumb_top_left
-    100154: thumb_top_right
-    100156: toes_left
-    100158: toes_left_end
-    100160: toes_right
-    100162: toes_right_end
-    400000: arm_left
-    400002: arm_right
-    400004: Body
-    400006: Boot_l
-    400008: Boot_r
-    400010: chest
-    400012: chest 1
-    400014: foot_left
-    400016: foot_right
-    400018: forearm_left
-    400020: forearm_right
-    400022: guante_d
-    400024: guante_i
-    400026: hand_left
-    400028: hand_right
-    400030: head
-    400032: head_end
-    400034: hip
-    400036: ik_left
-    400038: ik_left_end
-    400040: ik_right
-    400042: ik_right_end
-    400044: index_bottom_left
-    400046: index_bottom_left_end
-    400048: index_bottom_right
-    400050: index_bottom_right_end
-    400052: index_middle_left
-    400054: index_middle_right
-    400056: index_top_left
-    400058: index_top_right
-    400060: leg_middle_left
-    400062: leg_middle_right
-    400064: leg_top_left
-    400066: leg_top_right
-    400068: middle_bottom_left
-    400070: middle_bottom_left_end
-    400072: middle_bottom_right
-    400074: middle_bottom_right_end
-    400076: middle_middle_left
-    400078: middle_middle_right
-    400080: middle_top_left
-    400082: middle_top_right
-    400084: neck
-    400086: orion_tpv
-    400088: //RootNode
-    400090: pinky_bottom_left
-    400092: pinky_bottom_left_end
-    400094: pinky_bottom_right
-    400096: pinky_bottom_right_end
-    400098: pinky_middle_left
-    400100: pinky_middle_right
-    400102: pinky_top_left
-    400104: pinky_top_right
-    400106: pole_left
-    400108: pole_left_end
-    400110: pole_right
-    400112: pole_right_end
-    400114: ring_bottom_left
-    400116: ring_bottom_left_end
-    400118: ring_bottom_right
-    400120: ring_bottom_right_end
-    400122: ring_middle_left
-    400124: ring_middle_right
-    400126: ring_top_left
-    400128: ring_top_right
-    400130: root
-    400132: shoulder_left
-    400134: shoulder_right
-    400136: spine_bottom
-    400138: spine_top
-    400140: thumb_bottom_left
-    400142: thumb_bottom_left_end
-    400144: thumb_bottom_right
-    400146: thumb_bottom_right_end
-    400148: thumb_middle_left
-    400150: thumb_middle_right
-    400152: thumb_top_left
-    400154: thumb_top_right
-    400156: toes_left
-    400158: toes_left_end
-    400160: toes_right
-    400162: toes_right_end
-    2100000: Material
-    2100002: Material.003
-    2100004: guante_d
-    2100006: Chest
-    2100008: Material.001
-    2100010: bota
-    4300000: Body
-    4300002: guante_i
-    4300004: guante_d
-    4300006: chest
-    4300008: Boot_r
-    4300010: Boot_l
-    7400000: running
-    7400002: orion_tpv|_t
-    7400004: orion_tpv|damage
-    7400006: orion_tpv|death
-    7400008: orion_tpv|idle
-    7400010: orion_tpv|jumping_complete
-    7400012: orion_tpv|jumping_falling
-    7400014: orion_tpv|jumping_impulse
-    7400016: orion_tpv|jumping_landing
-    7400018: orion_tpv|running
-    7400020: orion_tpv|running_thisone
-    7400022: orion_tpv|shooting
-    7400024: orion_tpv|weaponswap
-    9500000: //RootNode
-    13700000: Body
-    13700002: Boot_l
-    13700004: Boot_r
-    13700006: chest
-    13700008: guante_d
-    13700010: guante_i
-  externalObjects: {}
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: arm_left
+  - first:
+      1: 100002
+    second: arm_right
+  - first:
+      1: 100004
+    second: Body
+  - first:
+      1: 100006
+    second: Boot_l
+  - first:
+      1: 100008
+    second: Boot_r
+  - first:
+      1: 100010
+    second: chest
+  - first:
+      1: 100012
+    second: chest 1
+  - first:
+      1: 100014
+    second: foot_left
+  - first:
+      1: 100016
+    second: foot_right
+  - first:
+      1: 100018
+    second: forearm_left
+  - first:
+      1: 100020
+    second: forearm_right
+  - first:
+      1: 100022
+    second: guante_d
+  - first:
+      1: 100024
+    second: guante_i
+  - first:
+      1: 100026
+    second: hand_left
+  - first:
+      1: 100028
+    second: hand_right
+  - first:
+      1: 100030
+    second: head
+  - first:
+      1: 100032
+    second: head_end
+  - first:
+      1: 100034
+    second: hip
+  - first:
+      1: 100036
+    second: ik_left
+  - first:
+      1: 100038
+    second: ik_left_end
+  - first:
+      1: 100040
+    second: ik_right
+  - first:
+      1: 100042
+    second: ik_right_end
+  - first:
+      1: 100044
+    second: index_bottom_left
+  - first:
+      1: 100046
+    second: index_bottom_left_end
+  - first:
+      1: 100048
+    second: index_bottom_right
+  - first:
+      1: 100050
+    second: index_bottom_right_end
+  - first:
+      1: 100052
+    second: index_middle_left
+  - first:
+      1: 100054
+    second: index_middle_right
+  - first:
+      1: 100056
+    second: index_top_left
+  - first:
+      1: 100058
+    second: index_top_right
+  - first:
+      1: 100060
+    second: leg_middle_left
+  - first:
+      1: 100062
+    second: leg_middle_right
+  - first:
+      1: 100064
+    second: leg_top_left
+  - first:
+      1: 100066
+    second: leg_top_right
+  - first:
+      1: 100068
+    second: middle_bottom_left
+  - first:
+      1: 100070
+    second: middle_bottom_left_end
+  - first:
+      1: 100072
+    second: middle_bottom_right
+  - first:
+      1: 100074
+    second: middle_bottom_right_end
+  - first:
+      1: 100076
+    second: middle_middle_left
+  - first:
+      1: 100078
+    second: middle_middle_right
+  - first:
+      1: 100080
+    second: middle_top_left
+  - first:
+      1: 100082
+    second: middle_top_right
+  - first:
+      1: 100084
+    second: neck
+  - first:
+      1: 100086
+    second: orion_tpv
+  - first:
+      1: 100088
+    second: //RootNode
+  - first:
+      1: 100090
+    second: pinky_bottom_left
+  - first:
+      1: 100092
+    second: pinky_bottom_left_end
+  - first:
+      1: 100094
+    second: pinky_bottom_right
+  - first:
+      1: 100096
+    second: pinky_bottom_right_end
+  - first:
+      1: 100098
+    second: pinky_middle_left
+  - first:
+      1: 100100
+    second: pinky_middle_right
+  - first:
+      1: 100102
+    second: pinky_top_left
+  - first:
+      1: 100104
+    second: pinky_top_right
+  - first:
+      1: 100106
+    second: pole_left
+  - first:
+      1: 100108
+    second: pole_left_end
+  - first:
+      1: 100110
+    second: pole_right
+  - first:
+      1: 100112
+    second: pole_right_end
+  - first:
+      1: 100114
+    second: ring_bottom_left
+  - first:
+      1: 100116
+    second: ring_bottom_left_end
+  - first:
+      1: 100118
+    second: ring_bottom_right
+  - first:
+      1: 100120
+    second: ring_bottom_right_end
+  - first:
+      1: 100122
+    second: ring_middle_left
+  - first:
+      1: 100124
+    second: ring_middle_right
+  - first:
+      1: 100126
+    second: ring_top_left
+  - first:
+      1: 100128
+    second: ring_top_right
+  - first:
+      1: 100130
+    second: root
+  - first:
+      1: 100132
+    second: shoulder_left
+  - first:
+      1: 100134
+    second: shoulder_right
+  - first:
+      1: 100136
+    second: spine_bottom
+  - first:
+      1: 100138
+    second: spine_top
+  - first:
+      1: 100140
+    second: thumb_bottom_left
+  - first:
+      1: 100142
+    second: thumb_bottom_left_end
+  - first:
+      1: 100144
+    second: thumb_bottom_right
+  - first:
+      1: 100146
+    second: thumb_bottom_right_end
+  - first:
+      1: 100148
+    second: thumb_middle_left
+  - first:
+      1: 100150
+    second: thumb_middle_right
+  - first:
+      1: 100152
+    second: thumb_top_left
+  - first:
+      1: 100154
+    second: thumb_top_right
+  - first:
+      1: 100156
+    second: toes_left
+  - first:
+      1: 100158
+    second: toes_left_end
+  - first:
+      1: 100160
+    second: toes_right
+  - first:
+      1: 100162
+    second: toes_right_end
+  - first:
+      4: 400000
+    second: arm_left
+  - first:
+      4: 400002
+    second: arm_right
+  - first:
+      4: 400004
+    second: Body
+  - first:
+      4: 400006
+    second: Boot_l
+  - first:
+      4: 400008
+    second: Boot_r
+  - first:
+      4: 400010
+    second: chest
+  - first:
+      4: 400012
+    second: chest 1
+  - first:
+      4: 400014
+    second: foot_left
+  - first:
+      4: 400016
+    second: foot_right
+  - first:
+      4: 400018
+    second: forearm_left
+  - first:
+      4: 400020
+    second: forearm_right
+  - first:
+      4: 400022
+    second: guante_d
+  - first:
+      4: 400024
+    second: guante_i
+  - first:
+      4: 400026
+    second: hand_left
+  - first:
+      4: 400028
+    second: hand_right
+  - first:
+      4: 400030
+    second: head
+  - first:
+      4: 400032
+    second: head_end
+  - first:
+      4: 400034
+    second: hip
+  - first:
+      4: 400036
+    second: ik_left
+  - first:
+      4: 400038
+    second: ik_left_end
+  - first:
+      4: 400040
+    second: ik_right
+  - first:
+      4: 400042
+    second: ik_right_end
+  - first:
+      4: 400044
+    second: index_bottom_left
+  - first:
+      4: 400046
+    second: index_bottom_left_end
+  - first:
+      4: 400048
+    second: index_bottom_right
+  - first:
+      4: 400050
+    second: index_bottom_right_end
+  - first:
+      4: 400052
+    second: index_middle_left
+  - first:
+      4: 400054
+    second: index_middle_right
+  - first:
+      4: 400056
+    second: index_top_left
+  - first:
+      4: 400058
+    second: index_top_right
+  - first:
+      4: 400060
+    second: leg_middle_left
+  - first:
+      4: 400062
+    second: leg_middle_right
+  - first:
+      4: 400064
+    second: leg_top_left
+  - first:
+      4: 400066
+    second: leg_top_right
+  - first:
+      4: 400068
+    second: middle_bottom_left
+  - first:
+      4: 400070
+    second: middle_bottom_left_end
+  - first:
+      4: 400072
+    second: middle_bottom_right
+  - first:
+      4: 400074
+    second: middle_bottom_right_end
+  - first:
+      4: 400076
+    second: middle_middle_left
+  - first:
+      4: 400078
+    second: middle_middle_right
+  - first:
+      4: 400080
+    second: middle_top_left
+  - first:
+      4: 400082
+    second: middle_top_right
+  - first:
+      4: 400084
+    second: neck
+  - first:
+      4: 400086
+    second: orion_tpv
+  - first:
+      4: 400088
+    second: //RootNode
+  - first:
+      4: 400090
+    second: pinky_bottom_left
+  - first:
+      4: 400092
+    second: pinky_bottom_left_end
+  - first:
+      4: 400094
+    second: pinky_bottom_right
+  - first:
+      4: 400096
+    second: pinky_bottom_right_end
+  - first:
+      4: 400098
+    second: pinky_middle_left
+  - first:
+      4: 400100
+    second: pinky_middle_right
+  - first:
+      4: 400102
+    second: pinky_top_left
+  - first:
+      4: 400104
+    second: pinky_top_right
+  - first:
+      4: 400106
+    second: pole_left
+  - first:
+      4: 400108
+    second: pole_left_end
+  - first:
+      4: 400110
+    second: pole_right
+  - first:
+      4: 400112
+    second: pole_right_end
+  - first:
+      4: 400114
+    second: ring_bottom_left
+  - first:
+      4: 400116
+    second: ring_bottom_left_end
+  - first:
+      4: 400118
+    second: ring_bottom_right
+  - first:
+      4: 400120
+    second: ring_bottom_right_end
+  - first:
+      4: 400122
+    second: ring_middle_left
+  - first:
+      4: 400124
+    second: ring_middle_right
+  - first:
+      4: 400126
+    second: ring_top_left
+  - first:
+      4: 400128
+    second: ring_top_right
+  - first:
+      4: 400130
+    second: root
+  - first:
+      4: 400132
+    second: shoulder_left
+  - first:
+      4: 400134
+    second: shoulder_right
+  - first:
+      4: 400136
+    second: spine_bottom
+  - first:
+      4: 400138
+    second: spine_top
+  - first:
+      4: 400140
+    second: thumb_bottom_left
+  - first:
+      4: 400142
+    second: thumb_bottom_left_end
+  - first:
+      4: 400144
+    second: thumb_bottom_right
+  - first:
+      4: 400146
+    second: thumb_bottom_right_end
+  - first:
+      4: 400148
+    second: thumb_middle_left
+  - first:
+      4: 400150
+    second: thumb_middle_right
+  - first:
+      4: 400152
+    second: thumb_top_left
+  - first:
+      4: 400154
+    second: thumb_top_right
+  - first:
+      4: 400156
+    second: toes_left
+  - first:
+      4: 400158
+    second: toes_left_end
+  - first:
+      4: 400160
+    second: toes_right
+  - first:
+      4: 400162
+    second: toes_right_end
+  - first:
+      21: 2100000
+    second: Material
+  - first:
+      21: 2100002
+    second: Material.003
+  - first:
+      21: 2100004
+    second: guante_d
+  - first:
+      21: 2100006
+    second: Chest
+  - first:
+      21: 2100008
+    second: Material.001
+  - first:
+      21: 2100010
+    second: bota
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      43: 4300002
+    second: guante_i
+  - first:
+      43: 4300004
+    second: guante_d
+  - first:
+      43: 4300006
+    second: chest
+  - first:
+      43: 4300008
+    second: Boot_r
+  - first:
+      43: 4300010
+    second: Boot_l
+  - first:
+      74: 7400000
+    second: running
+  - first:
+      74: 7400002
+    second: orion_tpv|_t
+  - first:
+      74: 7400004
+    second: orion_tpv|damage
+  - first:
+      74: 7400006
+    second: orion_tpv|death
+  - first:
+      74: 7400008
+    second: orion_tpv|idle
+  - first:
+      74: 7400010
+    second: orion_tpv|jumping_complete
+  - first:
+      74: 7400012
+    second: orion_tpv|jumping_falling
+  - first:
+      74: 7400014
+    second: orion_tpv|jumping_impulse
+  - first:
+      74: 7400016
+    second: orion_tpv|jumping_landing
+  - first:
+      74: 7400018
+    second: orion_tpv|running
+  - first:
+      74: 7400020
+    second: orion_tpv|running_thisone
+  - first:
+      74: 7400022
+    second: orion_tpv|shooting
+  - first:
+      74: 7400024
+    second: orion_tpv|weaponswap
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: Boot_l
+  - first:
+      137: 13700004
+    second: Boot_r
+  - first:
+      137: 13700006
+    second: chest
+  - first:
+      137: 13700008
+    second: guante_d
+  - first:
+      137: 13700010
+    second: guante_i
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chest
+    second: {fileID: 2100000, guid: 7b03d78dedfbe455e98eadbb1ad0f788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 1ecb02bab602846918a1001e7dbd9101, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 90b0b047c9bfb4226a0d07d3903a82b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 6be05db9e5333449c8466f21eb0a7375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bota
+    second: {fileID: 2100000, guid: 7e537eea5bd1a4d5daf079825ae513bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guante_d
+    second: {fileID: 2100000, guid: 5db726e38553d49a8938f9272f20c9c5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -230,6 +652,7 @@ ModelImporter:
     - serializedVersion: 16
       name: running
       takeName: running
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -258,6 +681,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|_t
       takeName: orion_tpv|_t
+      internalID: 7400002
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -286,6 +710,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|damage
       takeName: orion_tpv|damage
+      internalID: 7400004
       firstFrame: 0
       lastFrame: 16
       wrapMode: 0
@@ -314,6 +739,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|death
       takeName: orion_tpv|death
+      internalID: 7400006
       firstFrame: 0
       lastFrame: 80
       wrapMode: 0
@@ -342,6 +768,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|idle
       takeName: orion_tpv|idle
+      internalID: 7400008
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -370,6 +797,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|jumping_complete
       takeName: orion_tpv|jumping_complete
+      internalID: 7400010
       firstFrame: 0
       lastFrame: 60
       wrapMode: 0
@@ -398,6 +826,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|jumping_falling
       takeName: orion_tpv|jumping_falling
+      internalID: 7400012
       firstFrame: 18
       lastFrame: 20
       wrapMode: 0
@@ -426,6 +855,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|jumping_impulse
       takeName: orion_tpv|jumping_impulse
+      internalID: 7400014
       firstFrame: 0
       lastFrame: 35
       wrapMode: 0
@@ -454,6 +884,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|jumping_landing
       takeName: orion_tpv|jumping_landing
+      internalID: 7400016
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
@@ -482,6 +913,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|running
       takeName: orion_tpv|running
+      internalID: 7400018
       firstFrame: 0
       lastFrame: 70
       wrapMode: 0
@@ -510,6 +942,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|running_thisone
       takeName: orion_tpv|running_thisone
+      internalID: 7400020
       firstFrame: 0
       lastFrame: 99
       wrapMode: 0
@@ -538,6 +971,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|shooting
       takeName: orion_tpv|shooting
+      internalID: 7400022
       firstFrame: 0
       lastFrame: 20
       wrapMode: 0
@@ -566,6 +1000,7 @@ ModelImporter:
     - serializedVersion: 16
       name: orion_tpv|weaponswap
       takeName: orion_tpv|weaponswap
+      internalID: 7400024
       firstFrame: 0
       lastFrame: 40
       wrapMode: 0
@@ -605,18 +1040,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -625,10 +1061,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -638,6 +1075,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

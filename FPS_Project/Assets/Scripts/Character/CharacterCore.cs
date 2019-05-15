@@ -6,15 +6,15 @@ public class CharacterCore : MonoBehaviour
   [SerializeField]
   private string _characterName = "unnamed";
   [SerializeField]
-  private float _movementSpeed = 10f;
+  private float _movementSpeed = 4f;
   [SerializeField]
   private float _jumpForce = 10f;
   [SerializeField]
   private int _maxHealth = 100;
   [SerializeField]
-  private float _cameraPosition = 1f;
+  private float _cameraPosition = 1.2f;
   [SerializeField]
-  private float _colliderWidth = 0.5f;
+  private float _colliderWidth = 0.3f;
   [SerializeField]
   private float _colliderHeight = 2f;
   private PlayerCore _core;

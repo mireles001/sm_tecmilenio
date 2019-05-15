@@ -263,7 +263,7 @@ ModelImporter:
       name: change_weapon
       takeName: change_weapon
       internalID: 7400000
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -292,7 +292,7 @@ ModelImporter:
       name: damage
       takeName: damage
       internalID: 7400002
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -321,7 +321,7 @@ ModelImporter:
       name: Idle
       takeName: Idle
       internalID: 7400004
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
@@ -330,7 +330,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -350,7 +350,7 @@ ModelImporter:
       name: jump_falling
       takeName: jump_falling
       internalID: 7400006
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 78
       wrapMode: 0
       orientationOffsetY: 0
@@ -359,7 +359,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -379,7 +379,7 @@ ModelImporter:
       name: jump_impulse
       takeName: jump_impulse
       internalID: 7400008
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
@@ -408,7 +408,7 @@ ModelImporter:
       name: jump_landing
       takeName: jump_landing
       internalID: 7400010
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -437,7 +437,7 @@ ModelImporter:
       name: run
       takeName: run
       internalID: 7400012
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 39
       wrapMode: 0
       orientationOffsetY: 0
@@ -466,7 +466,7 @@ ModelImporter:
       name: shooting
       takeName: shooting
       internalID: 7400014
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -495,7 +495,7 @@ ModelImporter:
       name: T
       takeName: T
       internalID: 7400016
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0

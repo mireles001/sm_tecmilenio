@@ -1,131 +1,371 @@
 fileFormatVersion: 2
 guid: 5312bd3e039106d4697dea62336b745f
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: brazo
-    100004: //RootNode
-    100006: Elbow_Left
-    100008: Elbow_Left_001
-    100010: Foot_Left
-    100012: Foot_Left_001
-    100014: Forearm_Left
-    100016: Forearm_Left_001
-    100018: Head
-    100020: Hips
-    100022: ik_left
-    100024: ik_left_001
-    100026: Index_Bottom_Left
-    100028: Index_Bottom_Left_001
-    100030: Index_Top_Left
-    100032: Index_Top_Left_001
-    100034: left_leg_top
-    100036: left_leg_top_001
-    100038: leg_bottom_left
-    100040: leg_bottom_left_001
-    100042: mesh
-    100044: Middle_Top_Left
-    100046: Middle_Top_Left_001
-    100048: Middle_Top_Left_002
-    100050: Middle_Top_Left_003
-    100052: Neck
-    100054: Pinky_Bottom_Left
-    100056: Pinky_Bottom_Left_001
-    100058: Pinky_Top_Left
-    100060: Pinky_Top_Left_001
-    100062: pole_left
-    100064: pole_left_001
-    100066: Ring_Bottom_Left_001
-    100068: Ring_Bottom_Left_002
-    100070: Ring_Top_Left
-    100072: Ring_Top_Left_001
-    100074: Root
-    100076: Shouder_Left
-    100078: Shouder_Left_001
-    100080: Spine_Bottom
-    100082: Spine_Middle
-    100084: Spine_Top
-    100086: Thumb_Bottom_Left
-    100088: Thumb_Bottom_Left_001
-    100090: Thumb_Top_Left
-    100092: Thumb_Top_Left_001
-    100094: Toes_Left
-    100096: Toes_Left_001
-    100098: Wrist_Left
-    100100: Wrist_Left_001
-    400000: Armature
-    400002: brazo
-    400004: //RootNode
-    400006: Elbow_Left
-    400008: Elbow_Left_001
-    400010: Foot_Left
-    400012: Foot_Left_001
-    400014: Forearm_Left
-    400016: Forearm_Left_001
-    400018: Head
-    400020: Hips
-    400022: ik_left
-    400024: ik_left_001
-    400026: Index_Bottom_Left
-    400028: Index_Bottom_Left_001
-    400030: Index_Top_Left
-    400032: Index_Top_Left_001
-    400034: left_leg_top
-    400036: left_leg_top_001
-    400038: leg_bottom_left
-    400040: leg_bottom_left_001
-    400042: mesh
-    400044: Middle_Top_Left
-    400046: Middle_Top_Left_001
-    400048: Middle_Top_Left_002
-    400050: Middle_Top_Left_003
-    400052: Neck
-    400054: Pinky_Bottom_Left
-    400056: Pinky_Bottom_Left_001
-    400058: Pinky_Top_Left
-    400060: Pinky_Top_Left_001
-    400062: pole_left
-    400064: pole_left_001
-    400066: Ring_Bottom_Left_001
-    400068: Ring_Bottom_Left_002
-    400070: Ring_Top_Left
-    400072: Ring_Top_Left_001
-    400074: Root
-    400076: Shouder_Left
-    400078: Shouder_Left_001
-    400080: Spine_Bottom
-    400082: Spine_Middle
-    400084: Spine_Top
-    400086: Thumb_Bottom_Left
-    400088: Thumb_Bottom_Left_001
-    400090: Thumb_Top_Left
-    400092: Thumb_Top_Left_001
-    400094: Toes_Left
-    400096: Toes_Left_001
-    400098: Wrist_Left
-    400100: Wrist_Left_001
-    2100000: Material_001__uv_nuevo_monito
-    2100002: Material_001
-    2100004: transparency__uvs_nuevos__png
-    4300000: mesh
-    4300002: brazo
-    7400000: change_weapon
-    7400002: damage
-    7400004: death
-    7400006: idle
-    7400008: jump_Falling
-    7400010: jump_impulse
-    7400012: jump_landing
-    7400014: run
-    7400016: shooting
-    7400018: T
-    9500000: //RootNode
-    13700000: brazo
-    13700002: mesh
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: brazo
+  - first:
+      1: 100004
+    second: //RootNode
+  - first:
+      1: 100006
+    second: Elbow_Left
+  - first:
+      1: 100008
+    second: Elbow_Left_001
+  - first:
+      1: 100010
+    second: Foot_Left
+  - first:
+      1: 100012
+    second: Foot_Left_001
+  - first:
+      1: 100014
+    second: Forearm_Left
+  - first:
+      1: 100016
+    second: Forearm_Left_001
+  - first:
+      1: 100018
+    second: Head
+  - first:
+      1: 100020
+    second: Hips
+  - first:
+      1: 100022
+    second: ik_left
+  - first:
+      1: 100024
+    second: ik_left_001
+  - first:
+      1: 100026
+    second: Index_Bottom_Left
+  - first:
+      1: 100028
+    second: Index_Bottom_Left_001
+  - first:
+      1: 100030
+    second: Index_Top_Left
+  - first:
+      1: 100032
+    second: Index_Top_Left_001
+  - first:
+      1: 100034
+    second: left_leg_top
+  - first:
+      1: 100036
+    second: left_leg_top_001
+  - first:
+      1: 100038
+    second: leg_bottom_left
+  - first:
+      1: 100040
+    second: leg_bottom_left_001
+  - first:
+      1: 100042
+    second: mesh
+  - first:
+      1: 100044
+    second: Middle_Top_Left
+  - first:
+      1: 100046
+    second: Middle_Top_Left_001
+  - first:
+      1: 100048
+    second: Middle_Top_Left_002
+  - first:
+      1: 100050
+    second: Middle_Top_Left_003
+  - first:
+      1: 100052
+    second: Neck
+  - first:
+      1: 100054
+    second: Pinky_Bottom_Left
+  - first:
+      1: 100056
+    second: Pinky_Bottom_Left_001
+  - first:
+      1: 100058
+    second: Pinky_Top_Left
+  - first:
+      1: 100060
+    second: Pinky_Top_Left_001
+  - first:
+      1: 100062
+    second: pole_left
+  - first:
+      1: 100064
+    second: pole_left_001
+  - first:
+      1: 100066
+    second: Ring_Bottom_Left_001
+  - first:
+      1: 100068
+    second: Ring_Bottom_Left_002
+  - first:
+      1: 100070
+    second: Ring_Top_Left
+  - first:
+      1: 100072
+    second: Ring_Top_Left_001
+  - first:
+      1: 100074
+    second: Root
+  - first:
+      1: 100076
+    second: Shouder_Left
+  - first:
+      1: 100078
+    second: Shouder_Left_001
+  - first:
+      1: 100080
+    second: Spine_Bottom
+  - first:
+      1: 100082
+    second: Spine_Middle
+  - first:
+      1: 100084
+    second: Spine_Top
+  - first:
+      1: 100086
+    second: Thumb_Bottom_Left
+  - first:
+      1: 100088
+    second: Thumb_Bottom_Left_001
+  - first:
+      1: 100090
+    second: Thumb_Top_Left
+  - first:
+      1: 100092
+    second: Thumb_Top_Left_001
+  - first:
+      1: 100094
+    second: Toes_Left
+  - first:
+      1: 100096
+    second: Toes_Left_001
+  - first:
+      1: 100098
+    second: Wrist_Left
+  - first:
+      1: 100100
+    second: Wrist_Left_001
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: brazo
+  - first:
+      4: 400004
+    second: //RootNode
+  - first:
+      4: 400006
+    second: Elbow_Left
+  - first:
+      4: 400008
+    second: Elbow_Left_001
+  - first:
+      4: 400010
+    second: Foot_Left
+  - first:
+      4: 400012
+    second: Foot_Left_001
+  - first:
+      4: 400014
+    second: Forearm_Left
+  - first:
+      4: 400016
+    second: Forearm_Left_001
+  - first:
+      4: 400018
+    second: Head
+  - first:
+      4: 400020
+    second: Hips
+  - first:
+      4: 400022
+    second: ik_left
+  - first:
+      4: 400024
+    second: ik_left_001
+  - first:
+      4: 400026
+    second: Index_Bottom_Left
+  - first:
+      4: 400028
+    second: Index_Bottom_Left_001
+  - first:
+      4: 400030
+    second: Index_Top_Left
+  - first:
+      4: 400032
+    second: Index_Top_Left_001
+  - first:
+      4: 400034
+    second: left_leg_top
+  - first:
+      4: 400036
+    second: left_leg_top_001
+  - first:
+      4: 400038
+    second: leg_bottom_left
+  - first:
+      4: 400040
+    second: leg_bottom_left_001
+  - first:
+      4: 400042
+    second: mesh
+  - first:
+      4: 400044
+    second: Middle_Top_Left
+  - first:
+      4: 400046
+    second: Middle_Top_Left_001
+  - first:
+      4: 400048
+    second: Middle_Top_Left_002
+  - first:
+      4: 400050
+    second: Middle_Top_Left_003
+  - first:
+      4: 400052
+    second: Neck
+  - first:
+      4: 400054
+    second: Pinky_Bottom_Left
+  - first:
+      4: 400056
+    second: Pinky_Bottom_Left_001
+  - first:
+      4: 400058
+    second: Pinky_Top_Left
+  - first:
+      4: 400060
+    second: Pinky_Top_Left_001
+  - first:
+      4: 400062
+    second: pole_left
+  - first:
+      4: 400064
+    second: pole_left_001
+  - first:
+      4: 400066
+    second: Ring_Bottom_Left_001
+  - first:
+      4: 400068
+    second: Ring_Bottom_Left_002
+  - first:
+      4: 400070
+    second: Ring_Top_Left
+  - first:
+      4: 400072
+    second: Ring_Top_Left_001
+  - first:
+      4: 400074
+    second: Root
+  - first:
+      4: 400076
+    second: Shouder_Left
+  - first:
+      4: 400078
+    second: Shouder_Left_001
+  - first:
+      4: 400080
+    second: Spine_Bottom
+  - first:
+      4: 400082
+    second: Spine_Middle
+  - first:
+      4: 400084
+    second: Spine_Top
+  - first:
+      4: 400086
+    second: Thumb_Bottom_Left
+  - first:
+      4: 400088
+    second: Thumb_Bottom_Left_001
+  - first:
+      4: 400090
+    second: Thumb_Top_Left
+  - first:
+      4: 400092
+    second: Thumb_Top_Left_001
+  - first:
+      4: 400094
+    second: Toes_Left
+  - first:
+      4: 400096
+    second: Toes_Left_001
+  - first:
+      4: 400098
+    second: Wrist_Left
+  - first:
+      4: 400100
+    second: Wrist_Left_001
+  - first:
+      21: 2100000
+    second: Material_001__uv_nuevo_monito
+  - first:
+      21: 2100002
+    second: Material_001
+  - first:
+      21: 2100004
+    second: transparency__uvs_nuevos__png
+  - first:
+      43: 4300000
+    second: mesh
+  - first:
+      43: 4300002
+    second: brazo
+  - first:
+      74: 7400000
+    second: change_weapon
+  - first:
+      74: 7400002
+    second: damage
+  - first:
+      74: 7400004
+    second: death
+  - first:
+      74: 7400006
+    second: idle
+  - first:
+      74: 7400008
+    second: jump_Falling
+  - first:
+      74: 7400010
+    second: jump_impulse
+  - first:
+      74: 7400012
+    second: jump_landing
+  - first:
+      74: 7400014
+    second: run
+  - first:
+      74: 7400016
+    second: shooting
+  - first:
+      74: 7400018
+    second: T
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: brazo
+  - first:
+      137: 13700002
+    second: mesh
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -154,6 +394,7 @@ ModelImporter:
     - serializedVersion: 16
       name: change_weapon
       takeName: change_weapon
+      internalID: 7400000
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -182,6 +423,7 @@ ModelImporter:
     - serializedVersion: 16
       name: damage
       takeName: damage
+      internalID: 7400002
       firstFrame: 0
       lastFrame: 17
       wrapMode: 0
@@ -210,6 +452,7 @@ ModelImporter:
     - serializedVersion: 16
       name: death
       takeName: death
+      internalID: 7400004
       firstFrame: 0
       lastFrame: 19
       wrapMode: 0
@@ -238,6 +481,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: idle
+      internalID: 7400006
       firstFrame: 0
       lastFrame: 19
       wrapMode: 0
@@ -266,6 +510,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_Falling
       takeName: jump_Falling
+      internalID: 7400008
       firstFrame: 0
       lastFrame: 19
       wrapMode: 0
@@ -294,6 +539,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_impulse
       takeName: jump_impulse
+      internalID: 7400010
       firstFrame: 0
       lastFrame: 19
       wrapMode: 0
@@ -322,6 +568,7 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_landing
       takeName: jump_landing
+      internalID: 7400012
       firstFrame: 0
       lastFrame: 24
       wrapMode: 0
@@ -350,6 +597,7 @@ ModelImporter:
     - serializedVersion: 16
       name: run
       takeName: run
+      internalID: 7400014
       firstFrame: 0
       lastFrame: 44
       wrapMode: 0
@@ -378,6 +626,7 @@ ModelImporter:
     - serializedVersion: 16
       name: shooting
       takeName: shooting
+      internalID: 7400016
       firstFrame: 0
       lastFrame: 4
       wrapMode: 0
@@ -406,6 +655,7 @@ ModelImporter:
     - serializedVersion: 16
       name: T
       takeName: T
+      internalID: 7400018
       firstFrame: 0
       lastFrame: 0
       wrapMode: 0
@@ -445,18 +695,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -465,10 +716,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -478,6 +730,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

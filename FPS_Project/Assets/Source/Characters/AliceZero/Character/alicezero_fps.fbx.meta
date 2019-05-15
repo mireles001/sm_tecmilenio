@@ -368,7 +368,7 @@ ModelImporter:
       name: _t
       takeName: _t
       internalID: 7400000
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 0
       wrapMode: 0
       orientationOffsetY: 0
@@ -397,7 +397,7 @@ ModelImporter:
       name: change_weapon
       takeName: change_weapon
       internalID: 7400002
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 77
       wrapMode: 0
       orientationOffsetY: 0
@@ -426,7 +426,7 @@ ModelImporter:
       name: damage
       takeName: damage
       internalID: 7400004
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
@@ -464,7 +464,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -513,7 +513,7 @@ ModelImporter:
       name: jump_impulse
       takeName: jump_impulse
       internalID: 7400010
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
@@ -542,7 +542,7 @@ ModelImporter:
       name: jump_landing
       takeName: jump_landing
       internalID: 7400012
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -580,7 +580,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -600,7 +600,7 @@ ModelImporter:
       name: shooting
       takeName: shooting
       internalID: 7400016
-      firstFrame: -1
+      firstFrame: 0
       lastFrame: 55
       wrapMode: 0
       orientationOffsetY: 0

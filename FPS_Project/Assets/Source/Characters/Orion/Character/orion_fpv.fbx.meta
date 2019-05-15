@@ -1,116 +1,345 @@
 fileFormatVersion: 2
 guid: bedfab4fe91e5439f91ab582e857d445
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: arm_left
-    100002: arm_right
-    100004: Body
-    100006: chest
-    100008: forearm_left
-    100010: forearm_right
-    100012: guante_d
-    100014: guante_i
-    100016: hand_left
-    100018: hand_right
-    100020: index_bottom_left
-    100022: index_bottom_right
-    100024: index_middle_left
-    100026: index_middle_right
-    100028: index_top_left
-    100030: index_top_right
-    100032: middle_bottom_left
-    100034: middle_bottom_right
-    100036: middle_middle_left
-    100038: middle_middle_right
-    100040: middle_top_left
-    100042: middle_top_right
-    100044: orion
-    100046: //RootNode
-    100048: pinky_bottom_left
-    100050: pinky_bottom_right
-    100052: pinky_middle_left
-    100054: pinky_middle_right
-    100056: pinky_top_left
-    100058: pinky_top_right
-    100060: ring_bottom_left
-    100062: ring_bottom_right
-    100064: ring_middle_left
-    100066: ring_middle_right
-    100068: ring_top_left
-    100070: ring_top_right
-    100072: shoulder_left
-    100074: shoulder_right
-    100076: thumb_bottom_left
-    100078: thumb_bottom_right
-    100080: thumb_middle_left
-    100082: thumb_middle_right
-    100084: thumb_top_left
-    100086: thumb_top_right
-    400000: arm_left
-    400002: arm_right
-    400004: Body
-    400006: chest
-    400008: forearm_left
-    400010: forearm_right
-    400012: guante_d
-    400014: guante_i
-    400016: hand_left
-    400018: hand_right
-    400020: index_bottom_left
-    400022: index_bottom_right
-    400024: index_middle_left
-    400026: index_middle_right
-    400028: index_top_left
-    400030: index_top_right
-    400032: middle_bottom_left
-    400034: middle_bottom_right
-    400036: middle_middle_left
-    400038: middle_middle_right
-    400040: middle_top_left
-    400042: middle_top_right
-    400044: orion
-    400046: //RootNode
-    400048: pinky_bottom_left
-    400050: pinky_bottom_right
-    400052: pinky_middle_left
-    400054: pinky_middle_right
-    400056: pinky_top_left
-    400058: pinky_top_right
-    400060: ring_bottom_left
-    400062: ring_bottom_right
-    400064: ring_middle_left
-    400066: ring_middle_right
-    400068: ring_top_left
-    400070: ring_top_right
-    400072: shoulder_left
-    400074: shoulder_right
-    400076: thumb_bottom_left
-    400078: thumb_bottom_right
-    400080: thumb_middle_left
-    400082: thumb_middle_right
-    400084: thumb_top_left
-    400086: thumb_top_right
-    2100000: Material__pintura
-    2100002: Material_003
-    2100004: guante_d
-    4300000: Body
-    4300002: guante_i
-    4300004: guante_d
-    7400000: _t
-    7400002: damage
-    7400004: idle
-    7400006: jump_falling
-    7400008: jump_impulse
-    7400010: jump_landing
-    7400012: running_new
-    7400014: shooting
-    7400016: weaponswap
-    9500000: //RootNode
-    13700000: Body
-    13700002: guante_d
-    13700004: guante_i
-  externalObjects: {}
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: arm_left
+  - first:
+      1: 100002
+    second: arm_right
+  - first:
+      1: 100004
+    second: Body
+  - first:
+      1: 100006
+    second: chest
+  - first:
+      1: 100008
+    second: forearm_left
+  - first:
+      1: 100010
+    second: forearm_right
+  - first:
+      1: 100012
+    second: guante_d
+  - first:
+      1: 100014
+    second: guante_i
+  - first:
+      1: 100016
+    second: hand_left
+  - first:
+      1: 100018
+    second: hand_right
+  - first:
+      1: 100020
+    second: index_bottom_left
+  - first:
+      1: 100022
+    second: index_bottom_right
+  - first:
+      1: 100024
+    second: index_middle_left
+  - first:
+      1: 100026
+    second: index_middle_right
+  - first:
+      1: 100028
+    second: index_top_left
+  - first:
+      1: 100030
+    second: index_top_right
+  - first:
+      1: 100032
+    second: middle_bottom_left
+  - first:
+      1: 100034
+    second: middle_bottom_right
+  - first:
+      1: 100036
+    second: middle_middle_left
+  - first:
+      1: 100038
+    second: middle_middle_right
+  - first:
+      1: 100040
+    second: middle_top_left
+  - first:
+      1: 100042
+    second: middle_top_right
+  - first:
+      1: 100044
+    second: orion
+  - first:
+      1: 100046
+    second: //RootNode
+  - first:
+      1: 100048
+    second: pinky_bottom_left
+  - first:
+      1: 100050
+    second: pinky_bottom_right
+  - first:
+      1: 100052
+    second: pinky_middle_left
+  - first:
+      1: 100054
+    second: pinky_middle_right
+  - first:
+      1: 100056
+    second: pinky_top_left
+  - first:
+      1: 100058
+    second: pinky_top_right
+  - first:
+      1: 100060
+    second: ring_bottom_left
+  - first:
+      1: 100062
+    second: ring_bottom_right
+  - first:
+      1: 100064
+    second: ring_middle_left
+  - first:
+      1: 100066
+    second: ring_middle_right
+  - first:
+      1: 100068
+    second: ring_top_left
+  - first:
+      1: 100070
+    second: ring_top_right
+  - first:
+      1: 100072
+    second: shoulder_left
+  - first:
+      1: 100074
+    second: shoulder_right
+  - first:
+      1: 100076
+    second: thumb_bottom_left
+  - first:
+      1: 100078
+    second: thumb_bottom_right
+  - first:
+      1: 100080
+    second: thumb_middle_left
+  - first:
+      1: 100082
+    second: thumb_middle_right
+  - first:
+      1: 100084
+    second: thumb_top_left
+  - first:
+      1: 100086
+    second: thumb_top_right
+  - first:
+      4: 400000
+    second: arm_left
+  - first:
+      4: 400002
+    second: arm_right
+  - first:
+      4: 400004
+    second: Body
+  - first:
+      4: 400006
+    second: chest
+  - first:
+      4: 400008
+    second: forearm_left
+  - first:
+      4: 400010
+    second: forearm_right
+  - first:
+      4: 400012
+    second: guante_d
+  - first:
+      4: 400014
+    second: guante_i
+  - first:
+      4: 400016
+    second: hand_left
+  - first:
+      4: 400018
+    second: hand_right
+  - first:
+      4: 400020
+    second: index_bottom_left
+  - first:
+      4: 400022
+    second: index_bottom_right
+  - first:
+      4: 400024
+    second: index_middle_left
+  - first:
+      4: 400026
+    second: index_middle_right
+  - first:
+      4: 400028
+    second: index_top_left
+  - first:
+      4: 400030
+    second: index_top_right
+  - first:
+      4: 400032
+    second: middle_bottom_left
+  - first:
+      4: 400034
+    second: middle_bottom_right
+  - first:
+      4: 400036
+    second: middle_middle_left
+  - first:
+      4: 400038
+    second: middle_middle_right
+  - first:
+      4: 400040
+    second: middle_top_left
+  - first:
+      4: 400042
+    second: middle_top_right
+  - first:
+      4: 400044
+    second: orion
+  - first:
+      4: 400046
+    second: //RootNode
+  - first:
+      4: 400048
+    second: pinky_bottom_left
+  - first:
+      4: 400050
+    second: pinky_bottom_right
+  - first:
+      4: 400052
+    second: pinky_middle_left
+  - first:
+      4: 400054
+    second: pinky_middle_right
+  - first:
+      4: 400056
+    second: pinky_top_left
+  - first:
+      4: 400058
+    second: pinky_top_right
+  - first:
+      4: 400060
+    second: ring_bottom_left
+  - first:
+      4: 400062
+    second: ring_bottom_right
+  - first:
+      4: 400064
+    second: ring_middle_left
+  - first:
+      4: 400066
+    second: ring_middle_right
+  - first:
+      4: 400068
+    second: ring_top_left
+  - first:
+      4: 400070
+    second: ring_top_right
+  - first:
+      4: 400072
+    second: shoulder_left
+  - first:
+      4: 400074
+    second: shoulder_right
+  - first:
+      4: 400076
+    second: thumb_bottom_left
+  - first:
+      4: 400078
+    second: thumb_bottom_right
+  - first:
+      4: 400080
+    second: thumb_middle_left
+  - first:
+      4: 400082
+    second: thumb_middle_right
+  - first:
+      4: 400084
+    second: thumb_top_left
+  - first:
+      4: 400086
+    second: thumb_top_right
+  - first:
+      21: 2100000
+    second: Material__pintura
+  - first:
+      21: 2100002
+    second: Material_003
+  - first:
+      21: 2100004
+    second: guante_d
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      43: 4300002
+    second: guante_i
+  - first:
+      43: 4300004
+    second: guante_d
+  - first:
+      74: 7400000
+    second: _t
+  - first:
+      74: 7400002
+    second: damage
+  - first:
+      74: 7400004
+    second: idle
+  - first:
+      74: 7400006
+    second: jump_falling
+  - first:
+      74: 7400008
+    second: jump_impulse
+  - first:
+      74: 7400010
+    second: jump_landing
+  - first:
+      74: 7400012
+    second: running_new
+  - first:
+      74: 7400014
+    second: shooting
+  - first:
+      74: 7400016
+    second: weaponswap
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: guante_d
+  - first:
+      137: 13700004
+    second: guante_i
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_003
+    second: {fileID: 2100000, guid: 90b0b047c9bfb4226a0d07d3903a82b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material__pintura
+    second: {fileID: 2100000, guid: 1ecb02bab602846918a1001e7dbd9101, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: guante_d
+    second: {fileID: 2100000, guid: 5db726e38553d49a8938f9272f20c9c5, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -141,6 +370,7 @@ ModelImporter:
     - serializedVersion: 16
       name: _t
       takeName: _t
+      internalID: 7400000
       firstFrame: -1
       lastFrame: 0
       wrapMode: 0
@@ -169,7 +399,8 @@ ModelImporter:
     - serializedVersion: 16
       name: damage
       takeName: damage
-      firstFrame: -1
+      internalID: 7400002
+      firstFrame: 0
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
@@ -197,7 +428,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: idle
-      firstFrame: -1
+      internalID: 7400004
+      firstFrame: 0
       lastFrame: 99
       wrapMode: 0
       orientationOffsetY: 0
@@ -225,7 +457,8 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_falling
       takeName: jump_falling
-      firstFrame: -1
+      internalID: 7400006
+      firstFrame: 0
       lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
@@ -253,7 +486,8 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_impulse
       takeName: jump_impulse
-      firstFrame: -1
+      internalID: 7400008
+      firstFrame: 0
       lastFrame: 59
       wrapMode: 0
       orientationOffsetY: 0
@@ -281,7 +515,8 @@ ModelImporter:
     - serializedVersion: 16
       name: jump_landing
       takeName: jump_landing
-      firstFrame: -1
+      internalID: 7400010
+      firstFrame: 0
       lastFrame: 44
       wrapMode: 0
       orientationOffsetY: 0
@@ -309,7 +544,8 @@ ModelImporter:
     - serializedVersion: 16
       name: running_new
       takeName: running_new
-      firstFrame: -1
+      internalID: 7400012
+      firstFrame: 0
       lastFrame: 79
       wrapMode: 0
       orientationOffsetY: 0
@@ -337,7 +573,8 @@ ModelImporter:
     - serializedVersion: 16
       name: shooting
       takeName: shooting
-      firstFrame: -1
+      internalID: 7400014
+      firstFrame: 0
       lastFrame: 24
       wrapMode: 0
       orientationOffsetY: 0
@@ -365,7 +602,8 @@ ModelImporter:
     - serializedVersion: 16
       name: weaponswap
       takeName: weaponswap
-      firstFrame: -1
+      internalID: 7400016
+      firstFrame: 0
       lastFrame: 34
       wrapMode: 0
       orientationOffsetY: 0
@@ -404,18 +642,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -424,10 +663,11 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -437,6 +677,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
