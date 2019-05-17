@@ -1,21 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerSpawnerControl : MonoBehaviour
 {
+  public Transform spawnContainer;
   public GameObject thirdpensonviewprefab;
   public Dictionary<int, GameObject> dict = new Dictionary<int, GameObject>();
 
-  public Transform spawnContainer;
-  // Start is called before the first frame update
-  void Start()
+  private void Start()
   {
-    GameState.GetInstance().init();
+    GameState.GetInstance().Init();
   }
 
-  // Update is called once per frame
-  void Update()
+  private void Update()
   {
     var pls = GameState.GetInstance().players;
     foreach (KeyValuePair<int, PlayerInstance> entry in pls)

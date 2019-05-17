@@ -3,32 +3,23 @@ using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
-  [SerializeField]
-  private RectTransform _characterSelect;
-  [SerializeField]
-  private Text _charLabelFront;
-  [SerializeField]
-  private Text _charLabelBack;
-  [SerializeField]
-  private Button _characterSelectButton;
-  [SerializeField]
-  private Button _charAccept;
-  [SerializeField]
-  private Button _charDisconnect;
-  [SerializeField]
-  private Button _charEndMatch;
-  [SerializeField]
-  private InputField _username;
+  public RectTransform characterSelect;
+  public Text charLabelFront;
+  public Text charLabelBack;
+  public Button characterSelectButton;
+  public Button charAccept;
+  public Button charDisconnect;
+  public Button charEndMatch;
+  public InputField username;
 
-  private Button[] _buttons;
-  [SerializeField]
-  private AudioClip _click;
-  private Animator _anim;
-  private AudioSource _buttonsSFX;
+  public Text consoleOutput;
+  public AudioClip click;
 
   private int _temporalCharacter = -1;
   private bool _characterSelectActive = false;
-
+  private Button[] _buttons;
+  private Animator _anim;
+  private AudioSource _buttonsSFX;
   private GameMaster _master;
 
   private void Awake()
@@ -41,8 +32,9 @@ public class GameUI : MonoBehaviour
     _anim = GetComponent<Animator>();
     _buttonsSFX = gameObject.AddComponent<AudioSource>();
     _buttonsSFX.playOnAwake = false;
-    _buttonsSFX.clip = _click;
-    _username.text = _master.Username;
+    _buttonsSFX.clip = click;
+    username.text = _master.Username;
+    consoleOutput.text = "";
 
     BuildCharacterSelect();
 
@@ -51,10 +43,12 @@ public class GameUI : MonoBehaviour
       ToogleCharacterSelect();
     }
 
-    _charEndMatch.gameObject.SetActive(_master.IsServer);
-    _charDisconnect.gameObject.SetActive(!_master.IsServer);
+    charEndMatch.gameObject.SetActive(_master.IsServer);
+    charDisconnect.gameObject.SetActive(!_master.IsServer);
 
-    _charAccept.onClick.AddListener(delegate () { ApplyChanges(); });
+    charAccept.onClick.AddListener(delegate () { ApplyChanges(); });
+    charEndMatch.onClick.AddListener(delegate () { _master.KillServer(); });
+    charDisconnect.onClick.AddListener(delegate () { _master.Disconnect(); });
   }
 
   private void LateUpdate()
@@ -83,14 +77,14 @@ public class GameUI : MonoBehaviour
   private void BuildCharacterSelect()
   {
     _buttons = new Button[_master.Roster.Length];
-    Vector2 btnSize = new Vector2(256f, 256f);
-    Vector2 btnPos = new Vector2(-550f, 50f);
+    Vector2 btnSize = new Vector2(128f, 128f);
+    Vector2 btnPos = new Vector2(-270f, 27f);
     Image image;
     RectTransform rect;
     CharacterData data;
     for (int i = 0; i < _master.Roster.Length; i++)
     {
-      Button newBtn = Instantiate(_characterSelectButton, _characterSelect);
+      Button newBtn = Instantiate(characterSelectButton, characterSelect);
       data = _master.Roster[i].GetComponent<CharacterData>();
       rect = newBtn.GetComponent<RectTransform>();
       image = newBtn.GetComponent<Image>();
@@ -105,11 +99,11 @@ public class GameUI : MonoBehaviour
       image.sprite = data.portrait;
       image.type = Image.Type.Simple;
 
-      btnPos.x += 256f;
+      btnPos.x += 128f;
       if (i == 4)
       {
-        btnPos.x = -676;
-        btnPos.y += -215f;
+        btnPos.x = -334f;
+        btnPos.y += -108f;
       }
     }
   }
@@ -125,24 +119,31 @@ public class GameUI : MonoBehaviour
     if (_temporalCharacter == index)
     {
       _temporalCharacter = -1;
-      _charLabelBack.text = _charLabelFront.text = "";
+      charLabelBack.text = charLabelFront.text = "";
       btn.OnDeselect(null);
     }
     else
     {
       _temporalCharacter = index;
       btn.OnSelect(null);
-      _charLabelBack.text = _charLabelFront.text = _master.Roster[index].name;
+      charLabelBack.text = charLabelFront.text = _master.Roster[index].name;
     }
   }
 
   private void ApplyChanges()
   {
-    if (_temporalCharacter > -1 && _username.text.Length > 0)
+    if (_temporalCharacter > -1 && username.text.Length > 0)
     {
-      _master.SelectCharacter(_temporalCharacter, _username.text);
-
+      _master.SelectCharacter(_temporalCharacter, username.text);
       ToogleCharacterSelect();
+    }
+  }
+
+  public Text ConsoleOutput
+  {
+    get
+    {
+      return consoleOutput;
     }
   }
 }

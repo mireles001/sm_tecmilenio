@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: d11959c47c4e5f74095bf3bbcfb847d0
+guid: 293ee1d060eec49488cce0b7a76e1fe1
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 42
+  fontSize: 16
   forceTextureCase: -2
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Bebas Neue
+  fontName: Consolas
   fontNames:
-  - Bebas Neue
+  - Consolas
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

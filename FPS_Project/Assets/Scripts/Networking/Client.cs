@@ -5,15 +5,13 @@ using UnityEngine.Networking;
 
 public class Client : NetworkCore
 {
-
+  private int _limitAttemptsBefore = 10;
   protected float _currentUpdateTime = 0;
   protected float _currentNumberUpdates = 0;
 
-  public override void Init(ManagerUI ui)
+  public override void Init(GameMaster master)
   {
-    base.Init(ui);
-
-    _isServer = false;
+    base.Init(master);
 
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
@@ -24,16 +22,13 @@ public class Client : NetworkCore
     _hostId = NetworkTransport.AddHost(topo, 0);
 
     _connectionId = NetworkTransport.Connect(_hostId, _serverIp, PORT, 0, out _error);
-
-    _ui.ConsoleMsg(string.Format("Attempting to connect on {0}", _serverIp));
+    _master.ConsoleMsg(string.Format("Attempting to connect on {0}", _serverIp));
   }
 
   public override void UpdateMessagePump()
   {
     if (!_isStarted)
-    {
       return;
-    }
 
     int recHostId;    // Is this from Web or Standalone?
     int connectionId; // Which user is sending me this?
@@ -50,12 +45,12 @@ public class Client : NetworkCore
         break;
 
       case NetworkEventType.ConnectEvent:
-        _ui.ConsoleMsg("We have connected to the server.");
+        _master.ConsoleMsg("We have connected to the server.");
         GameState.GetInstance().localPlayer.id = connectionId;
         break;
 
       case NetworkEventType.DisconnectEvent:
-        _ui.Disconnect();
+        _master.Disconnect();
         break;
 
       case NetworkEventType.DataEvent:
@@ -68,29 +63,40 @@ public class Client : NetworkCore
 
       default:
       case NetworkEventType.BroadcastEvent:
-        _ui.ConsoleMsg("Unexpected network event type");
+        _master.ConsoleMsg("Unexpected network event type");
         break;
     }
 
     _currentUpdateTime += Time.deltaTime * 1000;
-    if (_currentUpdateTime >= CLIENT_UPDATE_TIME_MS) {
+    if (_currentUpdateTime >= CLIENT_UPDATE_TIME_MS)
+    {
       _currentUpdateTime -= CLIENT_UPDATE_TIME_MS;
       UpdateGameState();
     }
 
   }
 
-  public virtual void UpdateGameState()
+  public void UpdateGameState()
   {
     if (!_isStarted)
       return;
 
-    Debug.Log("send message number: " + _currentNumberUpdates++);
     var p = GameState.GetInstance().localPlayer;
     Net_PlayerPushUpdate up = new Net_PlayerPushUpdate();
     up.player = p;
-    Debug.Log("toy mandando al server con id de: " + p.id);
+    _currentNumberUpdates++;
     SendServer(up, _stateUpdateChannel);
+
+    /*if (_currentNumberUpdates > _limitAttemptsBefore)
+    {
+      _master.ConsoleMsg(string.Format("Shutdown after {0} attempts.", _limitAttemptsBefore));
+      _master.Disconnect();
+    }*/
+  }
+
+  private void UpdateGameStateOnData(int cnnId, int channelId, int recHostId, Net_GameState gs)
+  {
+    GameState.GetInstance().UpdateState(gs.players);
   }
 
   private void OnData(int cnnId, int channelId, int recHostId, NetMsg msg)
@@ -98,26 +104,21 @@ public class Client : NetworkCore
     switch (msg.OP)
     {
       case NetOP.None:
-        _ui.ConsoleMsg("Unexpected NETOP");
+        _master.ConsoleMsg("Unexpected NETOP");
         break;
 
       case NetOP.SetConnectionId:
         SetConnectionId(cnnId, channelId, recHostId, (Net_ConnectionId)msg);
         break;
       case NetOP.GameState:
-        updateGameState(cnnId, channelId, recHostId, (Net_GameState)msg);
+        UpdateGameStateOnData(cnnId, channelId, recHostId, (Net_GameState)msg);
         break;
     }
   }
 
   private void SetConnectionId(int cnnId, int channelId, int recHostId, Net_ConnectionId ci)
   {
-    _ui.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
+    _master.ConsoleMsg(string.Format("Connection ID: {0}", ci.ConnectionId));
     GameState.GetInstance().localPlayer.id = ci.ConnectionId;
   }
-
-  private void updateGameState(int cnnId, int channelId, int recHostId, Net_GameState gs)
-  {
-    GameState.GetInstance().updateState(gs.players);
-  }
- }
+}

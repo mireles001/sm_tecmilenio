@@ -8,11 +8,9 @@ public class Server : NetworkCore
   private int _currentNumberOfData = 0;
   private float _currentUpdateTime = 0f;
 
-  public override void Init(ManagerUI ui)
+  public override void Init(GameMaster master)
   {
-    base.Init(ui);
-
-    _isServer = true;
+    base.Init(master);
 
     ConnectionConfig cc = new ConnectionConfig();
     _reliableChannel = cc.AddChannel(QosType.Reliable);
@@ -22,20 +20,18 @@ public class Server : NetworkCore
     HostTopology topo = new HostTopology(cc, MAX_USERS);
     _hostId = NetworkTransport.AddHost(topo, PORT, null);
 
-    _ui.ConsoleMsg(string.Format("Opening connection on port {0}", PORT));
+    _master.ConsoleMsg(string.Format("Opening connection on port {0}", PORT));
 
-    GameState.GetInstance().init();
-    PlayerInstance p = new PlayerInstance("server", 0);
+    /*GameState.GetInstance().Init();
+    PlayerInstance p = new PlayerInstance(_username, 0);
     GameState.GetInstance().localPlayer = p;
-    GameState.GetInstance().addPlayer(p);
+    GameState.GetInstance().AddPlayer(p);*/
   }
 
   public override void UpdateMessagePump()
   {
     if (!_isStarted)
-    {
       return;
-    }
 
     int recHostId;    // Is this from Web or Standalone?
     int connectionId; // Which user is sending me this?
@@ -52,16 +48,16 @@ public class Server : NetworkCore
         break;
 
       case NetworkEventType.ConnectEvent:
-        _ui.ConsoleMsg(string.Format("User {0} has connected!", connectionId));
+        _master.ConsoleMsg(string.Format("User {0} has connected!", connectionId));
         Net_ConnectionId cnnId = new Net_ConnectionId();
         cnnId.ConnectionId = connectionId;
-        GameState.GetInstance().addPlayer(new PlayerInstance("testUsername", connectionId));
+        GameState.GetInstance().AddPlayer(new PlayerInstance(_username, connectionId));
         SendClient(connectionId, cnnId, _reliableChannel);
         break;
 
       case NetworkEventType.DisconnectEvent:
-        _ui.ConsoleMsg(string.Format("User {0} has disconnected :(", connectionId));
-        GameState.GetInstance().removePlayer();
+        _master.ConsoleMsg(string.Format("User {0} has disconnected :(", connectionId));
+        GameState.GetInstance().RemovePlayer();
         break;
 
       case NetworkEventType.DataEvent:
@@ -74,7 +70,7 @@ public class Server : NetworkCore
 
       default:
       case NetworkEventType.BroadcastEvent:
-        _ui.ConsoleMsg("Unexpected network event type");
+        _master.ConsoleMsg("Unexpected network event type");
         break;
     }
 
@@ -90,7 +86,7 @@ public class Server : NetworkCore
   {
     if (!_isStarted)
       return;
-    var pls = GameState.GetInstance().getPlayerList();
+    var pls = GameState.GetInstance().GetPlayerList();
     Net_GameState gs = new Net_GameState();
     gs.players = pls;
     LameBroadCast(gs, _stateUpdateChannel);
@@ -101,7 +97,7 @@ public class Server : NetworkCore
     switch (msg.OP)
     {
       case NetOP.None:
-        _ui.ConsoleMsg("Unexpected NETOP");
+        _master.ConsoleMsg("Unexpected NETOP");
         break;
 
       case NetOP.SetUsername:
@@ -116,13 +112,13 @@ public class Server : NetworkCore
 
   private void SetUsername(int cnnId, int channelId, int recHostId, Net_SetUsername su)
   {
-    _ui.ConsoleMsg(string.Format("Set username: {0}", su.Username));
+    _master.ConsoleMsg(string.Format("Set username: {0}", su.Username));
   }
 
   private void UpdatePlayer(int cnnId, int channelId, int recHostId, Net_PlayerPushUpdate playerDef)
   {
     Debug.Log("got update fron cnnid: " + cnnId + " and p.id " + playerDef.player.id);
-    GameState.GetInstance().updatePlayer(
+    GameState.GetInstance().UpdatePlayer(
       playerDef.player
     );
   }

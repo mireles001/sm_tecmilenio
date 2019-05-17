@@ -2,26 +2,16 @@
 
 public class CharacterSFX : MonoBehaviour
 {
-  [SerializeField]
-  private AudioClip _jump;
-  [SerializeField]
-  private AudioClip _land;
-  [SerializeField]
-  private AudioClip _weaponSwap;
-  [SerializeField]
-  private AudioClip _machineGun;
-  [SerializeField]
-  private AudioClip _grenade;
-  [SerializeField]
-  private AudioClip _rocket;
-  [SerializeField]
-  private AudioClip _damage;
-  [SerializeField]
-  private AudioClip _death;
-  [SerializeField]
-  private AudioClip _health;
-  [SerializeField]
-  private AudioClip _ammo;
+  public AudioClip jump;
+  public AudioClip land;
+  public AudioClip weaponSwap;
+  public AudioClip machineGun;
+  public AudioClip grenade;
+  public AudioClip rocket;
+  public AudioClip damage;
+  public AudioClip death;
+  public AudioClip health;
+  public AudioClip ammo;
   private AudioSource _source;
 
   private void Awake()
@@ -37,51 +27,51 @@ public class CharacterSFX : MonoBehaviour
 
   public void Jump()
   {
-    PlaySound(_jump);
+    PlaySound(jump);
   }
 
   public void Land()
   {
-    PlaySound(_land);
+    PlaySound(land);
   }
 
   public void WeaponSwap()
   {
-    PlaySound(_weaponSwap);
+    PlaySound(weaponSwap);
   }
 
   public void FireGun()
   {
-    PlaySound(_machineGun);
+    PlaySound(machineGun);
   }
 
   public void FireGrenade()
   {
-    PlaySound(_grenade);
+    PlaySound(grenade);
   }
 
   public void FireRocket()
   {
-    PlaySound(_rocket);
+    PlaySound(rocket);
   }
 
   public void Death()
   {
-    PlaySound(_death);
+    PlaySound(death);
   }
 
   public void PickHealth()
   {
-    PlaySound(_health);
+    PlaySound(health);
   }
 
   public void PickAmmo()
   {
-    PlaySound(_ammo);
+    PlaySound(ammo);
   }
 
   public void Damage()
   {
-    PlaySound(_damage);
+    PlaySound(damage);
   }
 }

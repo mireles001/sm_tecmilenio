@@ -7,52 +7,34 @@ using System.Collections.Generic;
 public class NetworkCore : MonoBehaviour
 {
   protected const int PORT = 26501;
-  protected const int MAX_USERS = 16;
+  protected const int MAX_USERS = 8;
   protected const int BYTE_SIZE = 1024;
   protected const int CLIENT_UPDATE_TIME_MS = 500;
   protected const int SERVER_UPDATE_TIME_MS = 500;
-
   protected byte _reliableChannel;
   protected byte _unreliableChannel;
   protected byte _stateUpdateChannel;
   protected int _connectionId;
-
   protected bool _isStarted;
   protected bool _isServer;
   protected byte _error;
   protected int _hostId;
   protected string _serverIp;
-
-  protected ManagerUI _ui;
-
-  #region Monobehavior
-  private void Start()
-  {
-    DontDestroyOnLoad(gameObject);
-  }
+  protected string _username;
+  protected GameMaster _master;
 
   private void Update()
   {
     UpdateMessagePump();
   }
-  #endregion
 
-  public bool IsServer()
+  public virtual void Init(GameMaster master)
   {
-    return _isServer;
-  }
-
-  public virtual void Init(ManagerUI ui)
-  {
-    _ui = ui;
-
-    _serverIp = ui._inputIP.text;
-
-    if (_serverIp.Length == 0)
-      _serverIp = "127.0.0.1";
-
+    _master = master;
+    _serverIp = master.ServerIp;
+    _isServer = master.IsServer;
+    _username = master.Username;
     NetworkTransport.Init();
-
     _isStarted = true;
   }
 
@@ -68,9 +50,7 @@ public class NetworkCore : MonoBehaviour
   public virtual void UpdateMessagePump()
   {
     if (!_isStarted)
-    {
       return;
-    }
   }
 
   #region Send
@@ -110,4 +90,12 @@ public class NetworkCore : MonoBehaviour
     }
   }
   #endregion
+
+  public bool IsServer
+  {
+    get
+    {
+      return _isServer;
+    }
+  }
 }

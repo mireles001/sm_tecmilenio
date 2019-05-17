@@ -14,6 +14,7 @@ public class PlayerCore : MonoBehaviour
   private PlayerWeapons _playerWeapons;
   private FpvAnimation _fpv;
   private CharacterSFX _sfx;
+  private GameMaster _master;
 
   private void Awake()
   {
@@ -23,19 +24,18 @@ public class PlayerCore : MonoBehaviour
 
   private void Start()
   {
-    // TODO: Temporal internal call to character load
-    LoadCharacter(_characterPrefab);
-  }
+    GameObject masterGo = GameObject.FindGameObjectWithTag("GameMaster");
 
-  private void LateUpdate()
-  {
-    if (Input.GetKeyDown("escape"))
+    if (masterGo)
     {
-      ToggleControls();
+      _master = masterGo.GetComponent<GameMaster>();
+    }
+    else
+    {
+      LoadCharacter(_characterPrefab);
     }
   }
 
-  // Called by GameMaster Object to load character content
   public void LoadCharacter(GameObject prefab)
   {
     _isLocked = true;
@@ -63,10 +63,10 @@ public class PlayerCore : MonoBehaviour
     _playerMove.StartUp((float)characterParams["camera"], _character.transform);
     _playerWeapons.StartUp();
 
-    ToggleControls();
+    ToggleControls(false);
   }
 
-  private void RegisterDeath()
+  public void RegisterDeath()
   {
     Debug.Log("Register Death by player");
     _sfx.Death();
@@ -137,9 +137,9 @@ public class PlayerCore : MonoBehaviour
     return valid;
   }
 
-  private void ToggleControls()
+  public void ToggleControls(bool isLocked = false)
   {
-    _isLocked = !_isLocked;
+    _isLocked = isLocked;
 
     if (_isLocked)
     {
@@ -153,6 +153,7 @@ public class PlayerCore : MonoBehaviour
     }
   }
 
+  #region GetterSetters
   public bool IsLocked
   {
     get
@@ -196,4 +197,5 @@ public class PlayerCore : MonoBehaviour
       _sfx = value;
     }
   }
+  #endregion
 }

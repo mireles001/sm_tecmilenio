@@ -1,52 +1,49 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameState {
-    // public List<PlayerInstance> players = new List<PlayerInstance>();
-    public Dictionary<int, PlayerInstance> players;
-    public PlayerInstance localPlayer = new PlayerInstance("", 0);
+public class GameState
+{
+  public Dictionary<int, PlayerInstance> players;
+  public PlayerInstance localPlayer = new PlayerInstance("", 0);
 
-  //private List<PlayerInstance> _playerList;
-
-    #region Singleton Implementation
+  #region Singleton Implementation
   private static object locker = new object();
-    private static GameState _instance = null;
+  private static GameState _instance = null;
 
-    private GameState()
-    { 
-    }
-    
-    public static GameState GetInstance()
-    {
-        lock (locker)
-        {
-            if (_instance == null)
-            {
-                _instance = new GameState();
-            }
-            return _instance;
-        }
-    }
-  #endregion
-
-  public void init() {
-    players = new Dictionary<int, PlayerInstance>();
-    //_playerList = new List<PlayerInstance>();
-  }
-
-  public void addPlayer(PlayerInstance player) {
-    players.Add(player.id, player);
-    //_playerList.Add(player);
-  }
-
-  public void removePlayer()
+  private GameState()
   {
 
   }
 
-  public List<PlayerInstance> getPlayerList()
+  public static GameState GetInstance()
+  {
+    lock (locker)
+    {
+      if (_instance == null)
+      {
+        _instance = new GameState();
+      }
+      return _instance;
+    }
+  }
+  #endregion
+
+  public void Init()
+  {
+    players = new Dictionary<int, PlayerInstance>();
+  }
+
+  public void AddPlayer(PlayerInstance player)
+  {
+    players.Add(player.id, player);
+  }
+
+  public void RemovePlayer()
+  {
+
+  }
+
+  public List<PlayerInstance> GetPlayerList()
   {
     List<PlayerInstance> playerList = new List<PlayerInstance>();
     foreach (KeyValuePair<int, PlayerInstance> entry in players)
@@ -55,21 +52,23 @@ public class GameState {
     }
     return playerList;
   }
-    
-  public void updatePlayer(
-    PlayerInstance player
-  ) {
-    Debug.Log("updating from client " + player.id);
-    if (players.ContainsKey(player.id)) {
+
+  public void UpdatePlayer(PlayerInstance player)
+  {
+    Debug.Log("Updating from client " + player.id);
+    if (players.ContainsKey(player.id))
+    {
       players[player.id] = player;
-    } else {
-      Debug.Log("player not created " + player.id);
+    }
+    else
+    {
+      Debug.Log("Player not created " + player.id);
     }
   }
 
-  public void updateState(List<PlayerInstance> newList)
+  public void UpdateState(List<PlayerInstance> newList)
   {
-    Debug.Log("updating from server. mi id is: " + localPlayer.id);
+    Debug.Log("Updating from server. mi id is: " + localPlayer.id);
     for (int i = 0; i < newList.Count; i++)
     {
       Debug.Log("id " + newList[i].id);

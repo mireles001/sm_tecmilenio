@@ -4,22 +4,45 @@ using UnityEngine.SceneManagement;
 
 public class GameMaster : MonoBehaviour
 {
+  public GameObject rosterPrefab;
   private string _username = "player";
   private string _myIp;
   private string _serverIp;
   private bool _isServer = false;
-
-  [SerializeField]
-  private GameObject _rosterPrefab;
   private GameObject[] _roster;
   private int _selectedChar = -1;
-
   private bool _matchExists = false;
   private bool _matchResults = false;
+  private GameUI _ui;
+  private GameObject _networkGO;
 
   private void Awake()
   {
-    _roster = _rosterPrefab.GetComponent<CharactersReference>().characters;
+    gameObject.name = "GameMaster";
+    DontDestroyOnLoad(gameObject);
+
+    _roster = rosterPrefab.GetComponent<CharactersReference>().characters;
+    _ui = GetComponent<GameUI>();
+  }
+
+  private void OnEnable()
+  {
+    SceneManager.sceneLoaded += OnSceneLoaded;
+  }
+
+  private void OnDisable()
+  {
+    SceneManager.sceneLoaded -= OnSceneLoaded;
+  }
+
+  private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+  {
+    Debug.Log("OnSceneLoaded: " + scene.name + ", mode: " + mode);
+
+    if (scene.name == "limbo" && !_networkGO)
+    {
+      CreateNetwork();
+    }
   }
 
   public void StartUp(bool isServer, string myIp, string serverIp, string name)
@@ -28,8 +51,16 @@ public class GameMaster : MonoBehaviour
     _myIp = myIp;
     _serverIp = serverIp;
     _isServer = isServer;
+  }
 
-    Debug.Log("Is Server? " + _isServer);
+  private void CreateNetwork()
+  {
+    _networkGO = new GameObject("Network");
+    _networkGO.transform.parent = transform;
+    if (_isServer)
+      _networkGO.AddComponent<Server>().Init(this);
+    else
+      _networkGO.AddComponent<Client>().Init(this);
   }
 
   public void SelectCharacter(int charIndex, string name)
@@ -39,6 +70,41 @@ public class GameMaster : MonoBehaviour
     Debug.Log("Set values to create character later one");
   }
 
+  public void StartMatch()
+  {
+    Debug.Log("Start match");
+  }
+
+  public void EndMatch()
+  {
+    Debug.Log("End match");
+  }
+
+  public void Disconnect()
+  {
+    ConsoleMsg("Disconnect from Server");
+    Shutdown();
+  }
+
+  public void KillServer()
+  {
+    ConsoleMsg("Kill Server");
+    Shutdown();
+  }
+
+  private void Shutdown()
+  {
+    _networkGO.SendMessage("Shutdown");
+    SceneManager.LoadScene("menu");
+  }
+
+  public void ConsoleMsg(string msg)
+  {
+    _ui.ConsoleOutput.text += msg + "\n";
+    Debug.Log(msg);
+  }
+
+#region GetSets
   public string ServerIp
   {
     get
@@ -94,4 +160,13 @@ public class GameMaster : MonoBehaviour
       return _matchExists;
     }
   }
+
+  public GameObject NetworkGO
+  {
+    get
+    {
+      return _networkGO;
+    }
+  }
+  #endregion
 }

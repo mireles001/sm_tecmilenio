@@ -4,49 +4,31 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-  [SerializeField]
-  private GameObject _gameMaster;
+  public GameObject gameMaster;
 
-  [SerializeField]
-  private Image _fader;
-  [SerializeField]
-  private GameObject _title;
-  [SerializeField]
-  private GameObject _create;
-  [SerializeField]
-  private GameObject _join;
-  [SerializeField]
-  private AudioClip _click;
+  public Image fader;
+  public GameObject title;
+  public GameObject create;
+  public GameObject join;
+  public AudioClip click;
 
-  [SerializeField]
-  private Button _exit;
-  [SerializeField]
-  private Button _goToCreate;
-  [SerializeField]
-  private Button _goToJoin;
-  [SerializeField]
-  private Button _goBackJoin;
-  [SerializeField]
-  private Button _goBackCreate;
-  [SerializeField]
-  private Button _createServer;
-  [SerializeField]
-  private Button _joinServer;
-  [SerializeField]
-  private InputField _serverIp;
-  [SerializeField]
-  private InputField _connectIp;
-  [SerializeField]
-  private InputField _setNameServer;
-  [SerializeField]
-  private InputField _setNameClient;
+  public Button exit;
+  public Button goToCreate;
+  public Button goToJoin;
+  public Button goBackJoin;
+  public Button goBackCreate;
+  public Button createServer;
+  public Button joinServer;
+  public InputField serverIp;
+  public InputField connectIp;
+  public InputField setNameServer;
+  public InputField setNameClient;
 
   private Animator _anim;
   private AudioSource _bg;
   private AudioSource _buttonsSFX;
   private bool _killApp = false;
   private bool _goToLimbo = false;
-
   private string _username = "player";
   private string _myIp;
   private string _ip;
@@ -54,31 +36,33 @@ public class MenuManager : MonoBehaviour
 
   private void Start()
   {
-    _fader.gameObject.SetActive(true);
-    _title.SetActive(false);
-    _create.SetActive(false);
-    _join.SetActive(false);
+    fader.gameObject.SetActive(true);
+    title.SetActive(false);
+    create.SetActive(false);
+    join.SetActive(false);
 
-    _exit.onClick.AddListener(delegate () { BtnHandler("exit"); });
-    _goToCreate.onClick.AddListener(delegate () { BtnHandler("goToCreate"); });
-    _goToJoin.onClick.AddListener(delegate () { BtnHandler("goToJoin"); });
-    _goBackJoin.onClick.AddListener(delegate () { BtnHandler(); });
-    _goBackCreate.onClick.AddListener(delegate () { BtnHandler(); });
+    exit.onClick.AddListener(delegate () { BtnHandler("exit"); });
+    goToCreate.onClick.AddListener(delegate () { BtnHandler("goToCreate"); });
+    goToJoin.onClick.AddListener(delegate () { BtnHandler("goToJoin"); });
+    goBackJoin.onClick.AddListener(delegate () { BtnHandler(); });
+    goBackCreate.onClick.AddListener(delegate () { BtnHandler(); });
 
-    _createServer.onClick.AddListener(delegate () { BtnHandler("create"); });
-    _joinServer.onClick.AddListener(delegate () { BtnHandler("join"); });
+    createServer.onClick.AddListener(delegate () { BtnHandler("create"); });
+    joinServer.onClick.AddListener(delegate () { BtnHandler("join"); });
+
+    setNameServer.text = setNameClient.text = _username;
 
     _anim = GetComponent<Animator>();
     _bg = GetComponent<AudioSource>();
     _buttonsSFX = gameObject.AddComponent<AudioSource>();
     _buttonsSFX.playOnAwake = false;
-    _buttonsSFX.clip = _click;
+    _buttonsSFX.clip = click;
 
     _anim.SetBool("at_create", false);
     _anim.SetBool("at_join", false);
 
-    _serverIp.readOnly = true;
-    _myIp = _serverIp.text = new IP().GetIp();
+    serverIp.readOnly = true;
+    _myIp = serverIp.text = new IP().GetIp();
 
     CheckForGameMaster();
   }
@@ -116,18 +100,17 @@ public class MenuManager : MonoBehaviour
       case "create":
         _isServer = true;
         _goToLimbo = true;
-        SetName(_setNameServer.text);
+        _ip = _myIp;
+        SetName(setNameServer.text);
         _anim.Play("fadeIn");
         break;
       case "join":
-        if (_connectIp.text.Length > 0)
-        {
-          _isServer = false;
-          _goToLimbo = true;
-          _ip = _connectIp.text;
-          SetName(_setNameClient.text);
-          _anim.Play("fadeIn");
-        }
+        _isServer = false;
+        _goToLimbo = true;
+        _ip = connectIp.text;
+        SetIp(connectIp.text);
+        SetName(setNameClient.text);
+        _anim.Play("fadeIn");
         break;
       default:
         _anim.SetBool("at_join", false);
@@ -139,19 +122,20 @@ public class MenuManager : MonoBehaviour
   private void SetName(string name)
   {
     if (name.Length > 0)
-    {
       _username = name;
-    }
+  }
+
+  private void SetIp(string ip)
+  {
+    if (ip.Length == 0)
+      ip = "127.0.0.1";
+
+    _ip = ip;
   }
 
   public void GoToLimbo()
   {
-    GameObject master = Instantiate(_gameMaster);
-    master.name = "GameMaster";
-    DontDestroyOnLoad(master);
-
-    master.GetComponent<GameMaster>().StartUp(_isServer, _myIp, _ip, _username);
-
+    Instantiate(gameMaster).GetComponent<GameMaster>().StartUp(_isServer, _myIp, _ip, _username);
     SceneManager.LoadScene("limbo");
   }
 
