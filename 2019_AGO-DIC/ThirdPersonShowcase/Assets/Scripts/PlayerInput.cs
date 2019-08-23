@@ -6,21 +6,20 @@ public class PlayerInput : MonoBehaviour
   private float _minInput = 0.1f;
   public Vector3 MoveDirection { get; private set; } = Vector3.zero;
   public Vector3 LookDirection { get; private set; } = Vector3.zero;
-  private CharacterMovement _movement;
-
-  private void Awake()
-  {
-    _movement = GetComponent<CharacterMovement>();
-  }
+  public bool ForceWalk { get; private set; } = false;
 
   private void Update()
   {
     MoveDirection = GetInput("Horizontal", "Vertical");
     LookDirection = GetInput("Mouse X", "Mouse Y");
 
-    if (Input.GetButtonDown("Jump"))
+    if (Input.GetButton("Cancel"))
     {
-      _movement.Jump();
+      ForceWalk = true;
+    }
+    else
+    {
+      ForceWalk = false;
     }
   }
 

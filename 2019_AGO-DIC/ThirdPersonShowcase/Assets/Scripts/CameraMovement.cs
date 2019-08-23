@@ -3,11 +3,12 @@
 public class CameraMovement : MonoBehaviour
 {
   [SerializeField]
-  private float _smoothTime = 1f;
+  private float _panningDelay = 1f;
+  [SerializeField]
+  private float _rotationSpeed = 180f;
   private float _camAngle = 0f;
   [SerializeField]
   private float _zoomSpeed = 5f;
-  private float _camZoom = 0f;
   [SerializeField, Range(0, 100)]
   private float _lookAtPercentage = 70f;
   [SerializeField]
@@ -22,7 +23,6 @@ public class CameraMovement : MonoBehaviour
     _cam = Camera.main.transform;
     _player = GameObject.FindGameObjectWithTag("Player").transform;
     _input = _player.gameObject.GetComponent<PlayerInput>();
-    _camZoom = Vector3.Distance(_cam.position, transform.position);
 
     Vector3 characterHeight = Vector3.up * (_player.gameObject.GetComponent<CapsuleCollider>().height * (_lookAtPercentage / 100f));
 
@@ -31,19 +31,27 @@ public class CameraMovement : MonoBehaviour
 
   private void Update()
   {
-    if (_input && _input.LookDirection.x != 0)
+    if (_input)
     {
-      _camAngle -= _input.LookDirection.x * Time.deltaTime * 180f;
-      transform.rotation = Quaternion.Euler(0, _camAngle, 0);
+      InternalZoom();
+
+      if (_input.LookDirection.x != 0)
+      {
+        _camAngle += _input.LookDirection.x * Time.deltaTime * _rotationSpeed;
+        transform.rotation = Quaternion.Euler(0, _camAngle, 0);
+      }
     }
 
-    transform.position = Vector3.SmoothDamp(transform.position, _player.position, ref _velocity, _smoothTime);
+    transform.position = Vector3.SmoothDamp(transform.position, _player.position, ref _velocity, _panningDelay);
+  }
 
-    if (_input && _input.LookDirection.z != 0)
+  private void InternalZoom()
+  {
+    if (_input.LookDirection.z != 0)
     {
       Vector3 newZoom = _cam.position + _cam.forward * _input.LookDirection.z * _zoomSpeed * Time.deltaTime;
 
-      if (Vector3.Distance(newZoom, _player.position) > _minMaxZoom.x && Vector3.Distance(newZoom, _player.position) < _minMaxZoom.y)
+      if (Vector3.Distance(newZoom, transform.position) > _minMaxZoom.x && Vector3.Distance(newZoom, transform.position) < _minMaxZoom.y)
       {
         _cam.position = newZoom;
       }

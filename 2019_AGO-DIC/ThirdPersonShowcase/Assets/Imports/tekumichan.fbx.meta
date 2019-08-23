@@ -63,7 +63,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|_t
       takeName: Tekumichan|_t
-      internalID: 6287723604190081850
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -92,9 +92,9 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|falling
       takeName: Tekumichan|falling
-      internalID: -7480026793697411807
+      internalID: 0
       firstFrame: 1
-      lastFrame: 60
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -121,7 +121,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|idle
       takeName: Tekumichan|idle
-      internalID: 3400860615934073638
+      internalID: 0
       firstFrame: 1
       lastFrame: 80
       wrapMode: 0
@@ -150,8 +150,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|jump
       takeName: Tekumichan|jump
-      internalID: 1036176003893085219
-      firstFrame: 1
+      internalID: 0
+      firstFrame: 0
       lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
@@ -179,7 +179,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|landing
       takeName: Tekumichan|landing
-      internalID: -9092043367107956175
+      internalID: 0
       firstFrame: 1
       lastFrame: 25
       wrapMode: 0
@@ -208,7 +208,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|pose
       takeName: Tekumichan|pose
-      internalID: 4001450290710703053
+      internalID: 0
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -237,7 +237,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|run
       takeName: Tekumichan|run
-      internalID: 3259724924338312233
+      internalID: 0
       firstFrame: 1
       lastFrame: 60
       wrapMode: 0
@@ -266,7 +266,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Tekumichan|walk
       takeName: Tekumichan|walk
-      internalID: -1364868249036465805
+      internalID: 0
       firstFrame: 1
       lastFrame: 70
       wrapMode: 0

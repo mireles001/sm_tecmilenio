@@ -30,6 +30,11 @@ public class CharacterMovement : MonoBehaviour
 
   private void Update()
   {
+    if (Input.GetButtonDown("Jump"))
+    {
+      Jump();
+    }
+
     GetMovementDirection();
     Rotate();
   }
@@ -97,7 +102,15 @@ public class CharacterMovement : MonoBehaviour
     camForward = camForward.normalized;
     camRight = camRight.normalized;
 
-    _direction = (camForward * _input.MoveDirection.z + camRight * _input.MoveDirection.x);
+    Vector2 input = new Vector2(_input.MoveDirection.x, _input.MoveDirection.z);
+
+    if (_input.ForceWalk && IsGrounded)
+    {
+      input.x = Mathf.Clamp(input.x, -0.5f, 0.5f);
+      input.y = Mathf.Clamp(input.y, -0.5f, 0.5f);
+    }
+
+    _direction = (camForward * input.y + camRight * input.x);
   }
 
   private Vector3 GetVelocity(float timeScale)
