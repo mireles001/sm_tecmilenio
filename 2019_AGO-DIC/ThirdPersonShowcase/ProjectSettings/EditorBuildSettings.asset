@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Showcase.unity
+    path: Assets/Scenes/Menu.unity
+    guid: 821953c8e5923c941aa5930efe9a7783
+  - enabled: 1
+    path: Assets/Scenes/FirstPersonExplorer.unity
+    guid: 92f09b5a708285240bb1134b3342eaba
+  - enabled: 1
+    path: Assets/Scenes/ThirsPersonExplorer.unity
     guid: 82fea554f1c573844af0327e21d13f44
   m_configObjects: {}

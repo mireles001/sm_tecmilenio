@@ -21,6 +21,8 @@ public class CharacterMovement : MonoBehaviour
   {
     _rb = GetComponent<Rigidbody>();
     _input = GetComponent<PlayerInput>();
+
+    Physics.gravity = new Vector3(0, -20f, 0);
   }
 
   private void Start()
@@ -140,10 +142,5 @@ public class CharacterMovement : MonoBehaviour
   public void SetCharacterAnimations(CharacterAnimation target)
   {
     _charAnimations = target;
-  }
-
-  private void OnGUI()
-  {
-    GUI.Label(new Rect(10, Screen.height - 30, 300, 20), "Velocity: " + Velocity);
   }
 }

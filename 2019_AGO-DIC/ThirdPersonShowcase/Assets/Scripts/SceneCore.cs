@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneCore : MonoBehaviour
 {
@@ -7,7 +8,7 @@ public class SceneCore : MonoBehaviour
   public Image fader;
 
   [SerializeField]
-  private float _faderDuration = 1f;
+  private float _faderDuration = 0.5f;
   private float _timer = 0f;
   private Color _faderColor;
 
@@ -41,8 +42,7 @@ public class SceneCore : MonoBehaviour
 
   private void QuitApp()
   {
-    Debug.Log("Quit App");
-    Application.Quit();
+    SceneManager.LoadScene(0);
   }
 
   private void Update()
