@@ -1,0 +1,571 @@
+fileFormatVersion: 2
+guid: 3b43c13d53f39c8459ab29a92e39cfac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3019898676756119775
+    second: scott_run_0
+  - first:
+      213: 1264072200426173406
+    second: scott_run_1
+  - first:
+      213: -4948771129140796003
+    second: scott_run_2
+  - first:
+      213: -3515958904514259972
+    second: scott_run_3
+  - first:
+      213: 4711424087228296859
+    second: scott_run_4
+  - first:
+      213: -2372694927588958760
+    second: scott_run_5
+  - first:
+      213: 4667959401015839388
+    second: scott_run_6
+  - first:
+      213: 85157132670956671
+    second: scott_run_7
+  - first:
+      213: -3587380707505368121
+    second: scott_idle
+  - first:
+      213: -841483576597002488
+    second: scott_jump_0
+  - first:
+      213: -6755690538488676711
+    second: scott_jump_1
+  - first:
+      213: 8628813012109725738
+    second: scott_jump_2
+  - first:
+      213: 4667023593817928371
+    second: scott_jump_3
+  - first:
+      213: -9129283498461686329
+    second: scott_jump_4
+  - first:
+      213: 1310869293801004105
+    second: scott_jump_5
+  - first:
+      213: -97085573510937502
+    second: scott_jump_6
+  - first:
+      213: 4202512583519028082
+    second: scott_jump_7
+  - first:
+      213: -8368411413704694294
+    second: scott_jump_8
+  - first:
+      213: -3887096941979468198
+    second: scott_jump_9
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: scott_run_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 78
+        width: 45
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b37175fd978a4444b8a94472e62059ff
+      internalID: 3019898676756119775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 74
+        width: 48
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c41ce2ef3bb10d4194785485ac9ec46
+      internalID: 1264072200426173406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_2
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 78
+        width: 55
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7225adec24b9884ea5a6e7b2d50e5f3
+      internalID: -4948771129140796003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 80
+        width: 48
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6122e432b2ce42948a40bd70a7752158
+      internalID: -3515958904514259972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 82
+        width: 41
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f800ddab109a27f4d979a45ebc5c60e7
+      internalID: 4711424087228296859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_5
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 74
+        width: 43
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f2026b72681bb4490ee281638c5df8
+      internalID: -2372694927588958760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_6
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 77
+        width: 52
+        height: 63
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef73c9de17ce24419d258c7940502d5
+      internalID: 4667959401015839388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_run_7
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 79
+        width: 47
+        height: 61
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602bfd8c573a02e40a2963e348a98cc7
+      internalID: 85157132670956671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_idle
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 79
+        width: 37
+        height: 60
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b72d2d612fbd2f4bae5c277e69f4e75
+      internalID: -3587380707505368121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 1
+        width: 47
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb251ed90bd99144a98a930d07ad8564
+      internalID: -841483576597002488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 2
+        width: 39
+        height: 66
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61856f97b1a06854cbc1a53a21540485
+      internalID: -6755690538488676711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 2
+        width: 39
+        height: 65
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561ab8e0b7a45db4e815b0c118a186a9
+      internalID: 8628813012109725738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_3
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 3
+        width: 40
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6c14c4f6d65b14491d50f4c7bcf763
+      internalID: 4667023593817928371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_4
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 7
+        width: 40
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e671c7b197e4b341913f0b1ae4da336
+      internalID: -9129283498461686329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 11
+        width: 42
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e4d5b839806c844af2cc21fdab9120
+      internalID: 1310869293801004105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_6
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 13
+        width: 41
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758dba1e9be224b4f833490004f924f5
+      internalID: -97085573510937502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_7
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 9
+        width: 39
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 673586904d76617458cca932c26fb29e
+      internalID: 4202512583519028082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_8
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 4
+        width: 35
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4d13d3652f6ad4e859f1c0764504f6
+      internalID: -8368411413704694294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: scott_jump_9
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 47
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4237f86a2676f43b126b4288f2ad96
+      internalID: -3887096941979468198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 1379a0e368c1bee43b52fae61185a665
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
