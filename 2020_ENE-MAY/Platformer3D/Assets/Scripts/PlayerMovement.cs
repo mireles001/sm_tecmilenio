@@ -17,11 +17,14 @@ public class PlayerMovement : MonoBehaviour
   private GameObject _gameManager;
   private PlayerAnimation _playerAnim;
 
+  private SoundManager _sound;
+
   private void Start()
   {
     Rb = GetComponent<Rigidbody>();
     _playerAnim = GetComponent<PlayerAnimation>();
     _gameManager = GameObject.FindGameObjectWithTag("GameController");
+    _sound = GetComponent<SoundManager>();
   }
 
   private void Update()
@@ -33,10 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
   private void FixedUpdate()
   {
-    if (Direction != 0)
-    {
-      Move(Time.fixedDeltaTime);
-    }
+    if (Direction != 0) Move(Time.fixedDeltaTime);
   }
 
   // Keyboard input manager
@@ -46,10 +46,7 @@ public class PlayerMovement : MonoBehaviour
     Direction = Input.GetAxis("Horizontal");
 
     // Jump
-    if (Input.GetButtonDown("Jump"))
-    {
-      Jump();
-    }
+    if (Input.GetButtonDown("Jump")) Jump();
   }
 
   private void Move(float time)
@@ -71,12 +68,11 @@ public class PlayerMovement : MonoBehaviour
 
   private void Jump()
   {
-    if (IsGrounded)
-    {
-      IsGrounded = false;
-      _playerAnim.Jump();
-      Rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
-    }
+    if (!IsGrounded) return;
+
+    IsGrounded = false;
+    _playerAnim.PlayJump();
+    Rb.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
   }
 
   private void OnTriggerStay(Collider collision)
@@ -97,31 +93,31 @@ public class PlayerMovement : MonoBehaviour
     }
     else if (collision.gameObject.tag == "Respawn" && !_isLocked)
     {
+      if (_sound) _sound.SfxPickup();
       collision.gameObject.SendMessage("Use", _gameManager, SendMessageOptions.DontRequireReceiver);
     }
     else if (collision.gameObject.tag == "Finish" && !_isLocked)
     {
       LockPlayer();
-      _gameManager.SendMessage("Finish", SendMessageOptions.DontRequireReceiver);
+      if (_sound) _sound.SfxWin();
+      _gameManager.GetComponent<GameController>().Finish(transform.position);
     }
   }
 
   private void OnCollisionEnter(Collision collision)
   {
-    if (collision.gameObject.tag == "Death" && !_isLocked)
-    {
-      Death();
-    }
+    if (collision.gameObject.tag == "Death" && !_isLocked) Death();
   }
 
-  private void Death()
+  public void Death()
   {
+    if (_sound) _sound.SfxDeath();
     LockPlayer();
-    _playerAnim.Death();
+    _playerAnim.PlayDeath();
     _gameManager.SendMessage("GameOver", SendMessageOptions.DontRequireReceiver);
   }
 
-  private void LockPlayer()
+  public void LockPlayer()
   {
     _isLocked = true;
     Direction = 0;
