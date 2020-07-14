@@ -1,0 +1,11 @@
+Actividad 2
+
+0. Encabezado institucional
+
+1. Pelicula
+2. Videojuego
+
+a) historia (minimo 1 parrafo)
+b) director
+c) Como se manejo la teoria color, y que mensaje se busco transmitir (minimo 1 parrafo)
+d) agregar minimo 2 fotitos con ejemplos de cuadros de color (patrones de color)

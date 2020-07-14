@@ -1,0 +1,13 @@
+Actividad 1
+
+Requistos: Nombre materia, nombre de ustedes, nombre profe ENCABEZADO INSTITUCONAL
+
+1. Selecciona un juego.
+2. 
+	0) Historia (anio que lanzado, quien lo desarrollo, para que consola) 
+	a) Story (narrativa, de lo que trata el juego)
+	b) Genero (de pelea, de aventura, hybrido, mezclado, etc)
+	c) Disenio del mundo y sus personajes (hablar 1 parrafo como los visuales estan integrados entre ellos)
+3. Conclusion de porque les gusta el juego (1 parrafo).
+
+Viernes mediodia 12pm

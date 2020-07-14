@@ -1,0 +1,6 @@
+A5:
+- Personaje CAMINANDO hecho con figuras primitivas (circulos, rectangulos, ovalos, y figuras no perfectas) ANIMADO en 12 cuadros.
+
+- Sin colorear ni limpiar (sketch)
+
+- Entregar un archivo GIF con la animacion del monito EN LOOP
