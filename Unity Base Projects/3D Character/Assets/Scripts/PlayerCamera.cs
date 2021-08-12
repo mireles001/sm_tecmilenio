@@ -92,7 +92,7 @@ namespace Player
         private void OnGUI()
         {
             GUI.Label(new Rect(10, 50, 200, 25), "Camera follow damp: " + _currentFollowerDamp.ToString("F3"));
-            GUI.Label(new Rect(10, 75, 200, 25), "Vertical append: " + _currentVerticalAppend.y.ToString("F2"));
+            GUI.Label(new Rect(10, 70, 200, 25), "Vertical append: " + _currentVerticalAppend.y.ToString("F2"));
         }
 
         private void OnDrawGizmos()

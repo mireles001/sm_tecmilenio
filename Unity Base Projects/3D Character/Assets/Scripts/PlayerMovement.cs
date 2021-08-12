@@ -85,7 +85,7 @@ namespace Player
 
             if (groundCheck)
             {
-                if (!IsGrounded) Landing();
+                if (!IsGrounded) Landing(VerticalVelocity);
 
                 Quaternion qTo = Quaternion.FromToRotation(Ground.up, _hit.normal) * Ground.rotation;
                 Ground.rotation = Quaternion.Slerp(Ground.rotation, qTo, _groundRotationSpeed * Time.fixedDeltaTime);
@@ -117,11 +117,9 @@ namespace Player
 
             _rigidbody.AddForce(Vector3.up * _jumpForce, ForceMode.Impulse);
             JumpCallback();
-
-            IsGrounded = false;
         }
 
-        public void Landing()
+        public void Landing(float velocity)
         {
             LandingCallback();
         }
@@ -151,7 +149,7 @@ namespace Player
             foreach (KeyValuePair<string, ICanJump> cb in _jumpComponents)
             {
                 if (_jumpComponents[cb.Key] == null) _jumpComponents.Remove(cb.Key);
-                else cb.Value.Landing();
+                else cb.Value.Landing(VerticalVelocity);
             }
         }
 

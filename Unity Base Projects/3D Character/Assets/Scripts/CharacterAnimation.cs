@@ -29,7 +29,7 @@ public class CharacterAnimation : MonoBehaviour, ICanJump
 
     public void Jump() { _animator.Play(_animJumpId, -1, 0); }
 
-    public void Landing() { }
+    public void Landing(float velocity) { }
 
     public string ID { get { return GetInstanceID().ToString(); } }
 }

@@ -16,9 +16,13 @@ public class CharacterFx : MonoBehaviour, ICanJump
         //Debug.Log("Jumping FX");
     }
 
-    public void Landing()
+    public void Landing(float velocity)
     {
-        //Debug.Log("Landing FX");
+        if (velocity > -2) return;
+
+        Transform particle = Instantiate(_landingParticles).transform;
+        particle.SetPositionAndRotation(transform.position, transform.rotation);
+
     }
 
     public string ID { get { return GetInstanceID().ToString(); } }
