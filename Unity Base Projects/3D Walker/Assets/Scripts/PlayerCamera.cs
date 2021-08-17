@@ -89,8 +89,13 @@ namespace Player
         }
 
 #if UNITY_EDITOR
+        [SerializeField]
+        private bool _showGuiDebug = false;
+
         private void OnGUI()
         {
+            if (!_showGuiDebug) return;
+
             GUI.Label(new Rect(10, 50, 200, 25), "Camera follow damp: " + _currentFollowerDamp.ToString("F3"));
             GUI.Label(new Rect(10, 70, 200, 25), "Vertical append: " + _currentVerticalAppend.y.ToString("F2"));
         }

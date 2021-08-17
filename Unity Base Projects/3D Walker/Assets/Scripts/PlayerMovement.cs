@@ -154,8 +154,13 @@ namespace Player
         }
 
 #if UNITY_EDITOR
+        [SerializeField]
+        private bool _showGuiDebug = false;
+
         private void OnGUI()
         {
+            if (!_showGuiDebug) return;
+
             GUI.Label(new Rect(10, 10, 150, 25), "Vertical velocity: " + VerticalVelocity.ToString("F2"));
             GUI.Label(new Rect(10, 30, 150, 25), "Input direction: " + _inputDirection.magnitude.ToString("F2"));
         }
