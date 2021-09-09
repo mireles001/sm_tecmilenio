@@ -526,6 +526,7 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 8
+  _showGuiDebug: 0
 --- !u!114 &674199774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,6 +581,7 @@ MonoBehaviour:
   _lookAtHeight: 60
   _lookAtMaxDistance: 1
   _followerDamp: 0.1
+  _showGuiDebug: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
