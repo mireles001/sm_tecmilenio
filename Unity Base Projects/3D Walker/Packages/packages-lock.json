@@ -1,14 +1,7 @@
 {
   "dependencies": {
-    "com.coffee.softmask-for-ugui": {
-      "version": "https://github.com/mob-sakai/SoftMaskForUGUI.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "f59d147fe04be6a84b3cd7eb93bce149410911be"
-    },
     "com.unity.cinemachine": {
-      "version": "2.6.11",
+      "version": "2.8.4",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -22,16 +15,16 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "2.0.7",
+      "version": "3.0.14",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.test-framework": "1.1.1"
+        "com.unity.ext.nunit": "1.0.6"
       },
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.12",
+      "version": "2.0.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -40,7 +33,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.30",
+      "version": "1.1.31",
       "depth": 0,
       "source": "registry",
       "dependencies": {
